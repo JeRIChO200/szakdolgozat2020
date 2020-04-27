@@ -58,16 +58,56 @@
 		6BDFF7C7245774DD002A75F2 /* szakdolgozat2020 */ = {
 			isa = PBXGroup;
 			children = (
+				6BDFF7E124578617002A75F2 /* DI */,
+				6BDFF7DE245785D8002A75F2 /* Model */,
+				6BDFF7DF245785F0002A75F2 /* View */,
+				6BDFF7E0245785FC002A75F2 /* Controller */,
+				6BDFF7E22457861C002A75F2 /* Others */,
+			);
+			path = szakdolgozat2020;
+			sourceTree = "<group>";
+		};
+		6BDFF7DE245785D8002A75F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BDFF7DF245785F0002A75F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BDFF7CE245774DD002A75F2 /* Main.storyboard */,
+				6BDFF7D3245774DE002A75F2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BDFF7E0245785FC002A75F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6BDFF7CC245774DD002A75F2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6BDFF7E124578617002A75F2 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		6BDFF7E22457861C002A75F2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
 				6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */,
 				6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */,
-				6BDFF7CC245774DD002A75F2 /* ViewController.swift */,
-				6BDFF7CE245774DD002A75F2 /* Main.storyboard */,
 				6BDFF7D1245774DE002A75F2 /* Assets.xcassets */,
-				6BDFF7D3245774DE002A75F2 /* LaunchScreen.storyboard */,
 				6BDFF7D6245774DE002A75F2 /* Info.plist */,
 				6BDFF7DC245774F4002A75F2 /* Localizable.strings */,
 			);
-			path = szakdolgozat2020;
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
