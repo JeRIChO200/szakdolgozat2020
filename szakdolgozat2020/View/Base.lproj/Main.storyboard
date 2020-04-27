@@ -48,14 +48,14 @@
         <!--Protokollok-->
         <scene sceneID="ZgL-FI-eQc">
             <objects>
-                <viewController id="aUO-5Q-KH6" sceneMemberID="viewController">
+                <viewController id="aUO-5Q-KH6" customClass="ProtocolViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZeH-1s-WI0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="HXe-sp-dwC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Protokollok" id="L0o-gj-eXB"/>
+                    <navigationItem key="navigationItem" title="Protokollok" id="L0o-gj-eXB" customClass="ProtocolViewController"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AGC-Hj-bHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,14 +64,14 @@
         <!--Kórházak-->
         <scene sceneID="w4d-Iv-PvK">
             <objects>
-                <viewController id="gHF-QE-XzA" sceneMemberID="viewController">
+                <viewController id="gHF-QE-XzA" customClass="HospitalViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bsv-Yd-8dm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bZ3-Re-U6D"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Kórházak" id="iOy-Tt-E7D"/>
+                    <navigationItem key="navigationItem" title="Kórházak" id="iOy-Tt-E7D" customClass="HospitalViewController"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jU-oX-z78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +81,7 @@
         <scene sceneID="tjT-F7-RYC">
             <objects>
                 <navigationController id="lFK-5m-K9G" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Kórházak" image="bed.double" catalog="system" id="IdS-XN-Gi8"/>
+                    <tabBarItem key="tabBarItem" title="Kórházak" id="IdS-XN-Gi8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gvu-2n-eL0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -131,14 +131,14 @@
         <!--Kedvencek-->
         <scene sceneID="L5a-og-iGN">
             <objects>
-                <viewController id="HJG-36-GVf" sceneMemberID="viewController">
+                <viewController id="HJG-36-GVf" customClass="FavouriteViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJn-dq-yzf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JTA-No-L3g"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Kedvencek" id="Iwd-l8-Jjk"/>
+                    <navigationItem key="navigationItem" title="Kedvencek" id="Iwd-l8-Jjk" customClass="FavouritesViewController"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ga-kN-rka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,14 +164,14 @@
         <!--Gyógyszerek-->
         <scene sceneID="ino-S6-8Qf">
             <objects>
-                <viewController id="nE0-1g-dtr" sceneMemberID="viewController">
+                <viewController id="nE0-1g-dtr" customClass="MedicineViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcV-St-BLA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cDg-O8-D0t"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Gyógyszerek" id="4Pp-Vi-v9U"/>
+                    <navigationItem key="navigationItem" title="Gyógyszerek" id="4Pp-Vi-v9U" customClass="MedicinesViewController"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2G-J5-HR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,14 +180,14 @@
         <!--Beállítások-->
         <scene sceneID="tOC-11-g8j">
             <objects>
-                <viewController id="xG4-eJ-V4j" sceneMemberID="viewController">
+                <viewController id="xG4-eJ-V4j" customClass="SettingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qkv-gV-l90">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Na1-tz-zuC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Beállítások" id="rTi-Yb-01K"/>
+                    <navigationItem key="navigationItem" title="Beállítások" id="rTi-Yb-01K" customClass="SettingsViewController"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz0-9A-2a5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +196,6 @@
     </scenes>
     <resources>
         <image name="bandage" catalog="system" width="128" height="116"/>
-        <image name="bed.double" catalog="system" width="128" height="80"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="heart.circle" catalog="system" width="128" height="121"/>
         <image name="staroflife" catalog="system" width="124" height="128"/>
