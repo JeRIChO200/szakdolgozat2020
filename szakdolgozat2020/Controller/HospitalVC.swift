@@ -1,5 +1,5 @@
 //
-//  MedicineViewController.swift
+//  HospitalViewController.swift
 //  szakdolgozat2020
 //
 //  Created by Tóth Zoltán on 2020. 04. 27..
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-// Medicines page - UIViewController
-class MedicineViewController: UIViewController {
+// Hospital page - UIViewController
+class HospitalVC: UIViewController {
     
-    // Medicine tab
+    // Hospital tab
     
 }

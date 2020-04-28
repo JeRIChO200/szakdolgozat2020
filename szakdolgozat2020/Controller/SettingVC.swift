@@ -1,5 +1,5 @@
 //
-//  ProtocolViewController.swift
+//  SettingViewController.swift
 //  szakdolgozat2020
 //
 //  Created by Tóth Zoltán on 2020. 04. 27..
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-// Protocol page - UIViewController
-class ProtocolViewController: UIViewController {
+// Setting page - UIViewController
+class SettingVC: UIViewController {
     
-    // Protocol tab
+    // Setting tab
     
 }

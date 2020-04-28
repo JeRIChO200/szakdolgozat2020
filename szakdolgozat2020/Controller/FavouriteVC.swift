@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // Favourite page - UIViewController
-class FavouriteViewController: UIViewController {
+class FavouriteVC: UIViewController {
     
     // Favourite tab
     
