@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-hospital-sign-50-2.png",
+      "filename" : "hospital.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "hospital@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "hospital@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

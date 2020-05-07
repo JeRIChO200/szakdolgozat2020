@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "hospital.fill.png",
+      "filename" : "syringe.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hospital.fill@2x.png",
+      "filename" : "syringe@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "hospital.fill@3x.png",
+      "filename" : "syringe@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
