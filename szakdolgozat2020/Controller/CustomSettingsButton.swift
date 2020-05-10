@@ -25,13 +25,14 @@ class CustomSettingsButton: UIButton {
     
     // Button settings
     func setupButton() {
-        // setShadow()
-        setTitleColor(.white, for: .normal)
-        backgroundColor     = Colors.appBlue
+        setShadow()
+        setTitleColor(.red, for: .normal)
+        backgroundColor     = Colors.appLightBlue
         titleLabel?.font    = UIFont(name: "Helvetica Neue", size: 18)
+        titleLabel?.font    = UIFont.boldSystemFont(ofSize: 16)
         layer.cornerRadius  = 15
-        layer.borderWidth   = 1.0
-        layer.borderColor   = UIColor.darkGray.cgColor
+        layer.borderWidth   = 1.5
+        layer.borderColor   = Colors.appBlue.cgColor
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 90).isActive = true
         widthAnchor.constraint(equalToConstant: 374).isActive = true
@@ -40,7 +41,7 @@ class CustomSettingsButton: UIButton {
     
     // Button's shadow
     private func setShadow() {
-        layer.shadowColor   = UIColor.black.cgColor
+        layer.shadowColor   = Colors.appBlue.cgColor
         layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
         layer.shadowRadius  = 8
         layer.shadowOpacity = 0.5

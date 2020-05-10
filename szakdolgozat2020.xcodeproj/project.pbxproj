@@ -7,38 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3F1D0B2464F6A50024D7A8 /* MedicineDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0A2464F6A50024D7A8 /* MedicineDetailVC.swift */; };
+		6B3F1D0D2464FBCE0024D7A8 /* DosageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0C2464FBCE0024D7A8 /* DosageVC.swift */; };
+		6B50B6342458B389002F1C6F /* szakdolgozat2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */; };
+		6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */; };
+		6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */; };
+		6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD2B24646F3E00DED1A6 /* Constants.swift */; };
 		6BDFF7C9245774DD002A75F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */; };
 		6BDFF7CB245774DD002A75F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */; };
-		6BDFF7CD245774DD002A75F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CC245774DD002A75F2 /* ViewController.swift */; };
+		6BDFF7CD245774DD002A75F2 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CC245774DD002A75F2 /* MainVC.swift */; };
 		6BDFF7D0245774DD002A75F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CE245774DD002A75F2 /* Main.storyboard */; };
 		6BDFF7D2245774DE002A75F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7D1245774DE002A75F2 /* Assets.xcassets */; };
 		6BDFF7D5245774DE002A75F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7D3245774DE002A75F2 /* LaunchScreen.storyboard */; };
 		6BDFF7DD245774F4002A75F2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7DC245774F4002A75F2 /* Localizable.strings */; };
-		6BDFF7E424578B64002A75F2 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E324578B64002A75F2 /* MedicineViewController.swift */; };
-		6BDFF7E624578B8A002A75F2 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E524578B8A002A75F2 /* FavouriteViewController.swift */; };
-		6BDFF7E824578BAB002A75F2 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E724578BAB002A75F2 /* ProtocolViewController.swift */; };
-		6BDFF7EA24578BC4002A75F2 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E924578BC4002A75F2 /* HospitalViewController.swift */; };
-		6BDFF7EC24578BD0002A75F2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7EB24578BD0002A75F2 /* SettingViewController.swift */; };
+		6BDFF7E424578B64002A75F2 /* MedicineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E324578B64002A75F2 /* MedicineVC.swift */; };
+		6BDFF7E624578B8A002A75F2 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E524578B8A002A75F2 /* FavouriteVC.swift */; };
+		6BDFF7E824578BAB002A75F2 /* ProtocolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E724578BAB002A75F2 /* ProtocolVC.swift */; };
+		6BDFF7EA24578BC4002A75F2 /* HospitalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E924578BC4002A75F2 /* HospitalVC.swift */; };
+		6BDFF7EC24578BD0002A75F2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7EB24578BD0002A75F2 /* SettingVC.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6B50B6362458B389002F1C6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BDFF7BD245774DD002A75F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BDFF7C4245774DD002A75F2;
+			remoteInfo = szakdolgozat2020;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		6BDFF7C5245774DD002A75F2 /* szakdolgozat2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = szakdolgozat2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailVC.swift; sourceTree = "<group>"; };
+		6B3F1D0C2464FBCE0024D7A8 /* DosageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageVC.swift; sourceTree = "<group>"; };
+		6B50B6312458B389002F1C6F /* szakdolgozat2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = szakdolgozat2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = szakdolgozat2020Tests.swift; sourceTree = "<group>"; };
+		6B50B6352458B389002F1C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsButton.swift; sourceTree = "<group>"; };
+		6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ER - Szakdolgozat specifikáció.pdf"; sourceTree = "<group>"; };
+		6BACFD2B24646F3E00DED1A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6BDFF7C5245774DD002A75F2 /* Ambulance Aid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambulance Aid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6BDFF7CC245774DD002A75F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BDFF7CC245774DD002A75F2 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		6BDFF7CF245774DD002A75F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BDFF7D1245774DE002A75F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BDFF7D4245774DE002A75F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BDFF7D6245774DE002A75F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BDFF7DC245774F4002A75F2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		6BDFF7E324578B64002A75F2 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E524578B8A002A75F2 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E724578BAB002A75F2 /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E924578BC4002A75F2 /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
-		6BDFF7EB24578BD0002A75F2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6BDFF7E324578B64002A75F2 /* MedicineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineVC.swift; sourceTree = "<group>"; };
+		6BDFF7E524578B8A002A75F2 /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		6BDFF7E724578BAB002A75F2 /* ProtocolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolVC.swift; sourceTree = "<group>"; };
+		6BDFF7E924578BC4002A75F2 /* HospitalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalVC.swift; sourceTree = "<group>"; };
+		6BDFF7EB24578BD0002A75F2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6B50B62E2458B389002F1C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BDFF7C2245774DD002A75F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +80,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B50B6322458B389002F1C6F /* szakdolgozat2020Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */,
+				6B50B6352458B389002F1C6F /* Info.plist */,
+			);
+			path = szakdolgozat2020Tests;
+			sourceTree = "<group>";
+		};
 		6BDFF7BC245774DD002A75F2 = {
 			isa = PBXGroup;
 			children = (
 				6BDFF7C7245774DD002A75F2 /* szakdolgozat2020 */,
+				6B50B6322458B389002F1C6F /* szakdolgozat2020Tests */,
 				6BDFF7C6245774DD002A75F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,7 +101,8 @@
 		6BDFF7C6245774DD002A75F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BDFF7C5245774DD002A75F2 /* szakdolgozat2020.app */,
+				6BDFF7C5245774DD002A75F2 /* Ambulance Aid.app */,
+				6B50B6312458B389002F1C6F /* szakdolgozat2020Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +139,15 @@
 		6BDFF7E0245785FC002A75F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6BDFF7CC245774DD002A75F2 /* ViewController.swift */,
-				6BDFF7E324578B64002A75F2 /* MedicineViewController.swift */,
-				6BDFF7E524578B8A002A75F2 /* FavouriteViewController.swift */,
-				6BDFF7E724578BAB002A75F2 /* ProtocolViewController.swift */,
-				6BDFF7E924578BC4002A75F2 /* HospitalViewController.swift */,
-				6BDFF7EB24578BD0002A75F2 /* SettingViewController.swift */,
+				6BDFF7CC245774DD002A75F2 /* MainVC.swift */,
+				6BDFF7E324578B64002A75F2 /* MedicineVC.swift */,
+				6BDFF7E524578B8A002A75F2 /* FavouriteVC.swift */,
+				6B3F1D0A2464F6A50024D7A8 /* MedicineDetailVC.swift */,
+				6B3F1D0C2464FBCE0024D7A8 /* DosageVC.swift */,
+				6BDFF7E724578BAB002A75F2 /* ProtocolVC.swift */,
+				6BDFF7E924578BC4002A75F2 /* HospitalVC.swift */,
+				6BDFF7EB24578BD0002A75F2 /* SettingVC.swift */,
+				6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,7 +165,9 @@
 				6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */,
 				6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */,
 				6BDFF7D1245774DE002A75F2 /* Assets.xcassets */,
+				6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */,
 				6BDFF7DC245774F4002A75F2 /* Localizable.strings */,
+				6BACFD2B24646F3E00DED1A6 /* Constants.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -128,6 +175,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6B50B6302458B389002F1C6F /* szakdolgozat2020Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B50B6382458B389002F1C6F /* Build configuration list for PBXNativeTarget "szakdolgozat2020Tests" */;
+			buildPhases = (
+				6B50B62D2458B389002F1C6F /* Sources */,
+				6B50B62E2458B389002F1C6F /* Frameworks */,
+				6B50B62F2458B389002F1C6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B50B6372458B389002F1C6F /* PBXTargetDependency */,
+			);
+			name = szakdolgozat2020Tests;
+			productName = szakdolgozat2020Tests;
+			productReference = 6B50B6312458B389002F1C6F /* szakdolgozat2020Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6BDFF7C4245774DD002A75F2 /* szakdolgozat2020 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BDFF7D9245774DE002A75F2 /* Build configuration list for PBXNativeTarget "szakdolgozat2020" */;
@@ -142,7 +207,7 @@
 			);
 			name = szakdolgozat2020;
 			productName = szakdolgozat2020;
-			productReference = 6BDFF7C5245774DD002A75F2 /* szakdolgozat2020.app */;
+			productReference = 6BDFF7C5245774DD002A75F2 /* Ambulance Aid.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,6 +220,9 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Tóth Zoltán";
 				TargetAttributes = {
+					6B50B6302458B389002F1C6F = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
 					6BDFF7C4245774DD002A75F2 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -174,15 +242,24 @@
 			projectRoot = "";
 			targets = (
 				6BDFF7C4245774DD002A75F2 /* szakdolgozat2020 */,
+				6B50B6302458B389002F1C6F /* szakdolgozat2020Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6B50B62F2458B389002F1C6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BDFF7C3245774DD002A75F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */,
 				6BDFF7D5245774DE002A75F2 /* LaunchScreen.storyboard in Resources */,
 				6BDFF7DD245774F4002A75F2 /* Localizable.strings in Resources */,
 				6BDFF7D2245774DE002A75F2 /* Assets.xcassets in Resources */,
@@ -193,22 +270,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6B50B62D2458B389002F1C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B50B6342458B389002F1C6F /* szakdolgozat2020Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6BDFF7C1245774DD002A75F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BDFF7E424578B64002A75F2 /* MedicineViewController.swift in Sources */,
-				6BDFF7CD245774DD002A75F2 /* ViewController.swift in Sources */,
+				6BDFF7E424578B64002A75F2 /* MedicineVC.swift in Sources */,
+				6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */,
+				6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */,
+				6BDFF7CD245774DD002A75F2 /* MainVC.swift in Sources */,
 				6BDFF7C9245774DD002A75F2 /* AppDelegate.swift in Sources */,
-				6BDFF7EC24578BD0002A75F2 /* SettingViewController.swift in Sources */,
-				6BDFF7EA24578BC4002A75F2 /* HospitalViewController.swift in Sources */,
-				6BDFF7E624578B8A002A75F2 /* FavouriteViewController.swift in Sources */,
-				6BDFF7E824578BAB002A75F2 /* ProtocolViewController.swift in Sources */,
+				6B3F1D0D2464FBCE0024D7A8 /* DosageVC.swift in Sources */,
+				6BDFF7EC24578BD0002A75F2 /* SettingVC.swift in Sources */,
+				6BDFF7EA24578BC4002A75F2 /* HospitalVC.swift in Sources */,
+				6BDFF7E624578B8A002A75F2 /* FavouriteVC.swift in Sources */,
+				6BDFF7E824578BAB002A75F2 /* ProtocolVC.swift in Sources */,
 				6BDFF7CB245774DD002A75F2 /* SceneDelegate.swift in Sources */,
+				6B3F1D0B2464F6A50024D7A8 /* MedicineDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B50B6372458B389002F1C6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BDFF7C4245774DD002A75F2 /* szakdolgozat2020 */;
+			targetProxy = 6B50B6362458B389002F1C6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6BDFF7CE245774DD002A75F2 /* Main.storyboard */ = {
@@ -230,6 +327,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6B50B6392458B389002F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPTZMP389Q;
+				INFOPLIST_FILE = szakdolgozat2020Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoltantoth.szakdolgozat2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B50B63A2458B389002F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TPTZMP389Q;
+				INFOPLIST_FILE = szakdolgozat2020Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoltantoth.szakdolgozat2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6BDFF7D7245774DE002A75F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -280,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -334,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -351,12 +486,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPTZMP389Q;
 				INFOPLIST_FILE = szakdolgozat2020/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoltantoth.szakdolgozat2020;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ambulance Aid";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,12 +505,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPTZMP389Q;
 				INFOPLIST_FILE = szakdolgozat2020/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoltantoth.szakdolgozat2020;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ambulance Aid";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,6 +520,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6B50B6382458B389002F1C6F /* Build configuration list for PBXNativeTarget "szakdolgozat2020Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B50B6392458B389002F1C6F /* Debug */,
+				6B50B63A2458B389002F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6BDFF7C0245774DD002A75F2 /* Build configuration list for PBXProject "szakdolgozat2020" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

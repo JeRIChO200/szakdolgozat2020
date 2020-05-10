@@ -6,12 +6,21 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 // Protocol page - UIViewController
 class ProtocolVC: UIViewController {
     
-    // Protocol tab
+    @IBOutlet weak var protocolSearchBar: UISearchBar!
+    @IBOutlet weak var protocolTableView: UITableView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        protocolTableView.backgroundColor                   = .white
+        protocolSearchBar.searchTextField.backgroundColor   = Colors.appBlue
+        protocolSearchBar.searchTextField.textColor         = .white
+        protocolSearchBar.searchTextField.tintColor         = .white
+        protocolSearchBar.image(for: .search, state: .normal)
+    }
 }

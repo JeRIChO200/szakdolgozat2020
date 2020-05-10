@@ -6,12 +6,20 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 // Hospital page - UIViewController
 class HospitalVC: UIViewController {
     
-    // Hospital tab
+    @IBOutlet weak var hospitalTableView: HospitalTV!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        hospitalTableView.backgroundColor                  = .white
+    }
+}
+
+class HospitalTV: UITableView {
     
 }

@@ -7,13 +7,23 @@
 //
 
 import UIKit
+//import ConstantStrings
 
-class MainVC: UIViewController {
-
+class MainVC: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if !UserDefaults.standard.bool(forKey: "hasAlreadyLaunched") {
+            let alert = UIAlertController(title: "Figyelmeztetés!", message: ConstantStrings.launchingMessage, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Elfogadom", style: .default, handler: { (action) -> Void in
+                UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
-
