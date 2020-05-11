@@ -9,11 +9,10 @@
 import UIKit
 
 // Medicines details page - UIViewController
-class MedicineDetailViewController: UIViewController {
+class MedicineDetailsViewController: UIViewController {
     
     @IBOutlet weak var dosageButton: CustomSettingsButton!
     
     @IBAction func dosageButtonTapped(_ sender: CustomSettingsButton) {
     }
-    
 }

@@ -7,36 +7,34 @@
 */
 
 // Strings
-"warningMessage" = "Figyelmeztetés!";
-"launchMessage" = "Az adagolásnál megjelenített értékek CSAK ajánlások, a gyári adatokon, valamint a nemzetközi és hazai gyakorlaton alapulnak. A SZERZŐK NEM VÁLLALNAK FELELŐSSÉGET. A program használatba vétele előtt ezt a figyelmeztetést tudomásul kell venni és el kell fogadni!";
-"cancelMessage" = "Vissza";
-"accpetedMessage" = "Elfogadom";
-
-// Page titles
+"warningMessage"                                = "Figyelmeztetés!";
+"launchMessage"                                 = "Az adagolásnál megjelenített értékek CSAK ajánlások, a gyári adatokon, valamint a nemzetközi és hazai gyakorlaton alapulnak. A SZERZŐK NEM VÁLLALNAK FELELŐSSÉGET. A program használatba vétele előtt ezt a figyelmeztetést tudomásul kell venni és el kell fogadni!";
+"cancelMessage"                                 = "Vissza";
+"accpetedMessage"                               = "Elfogadom";
 
 // Page strings
 // Medicines
-"medicinesTab.title" = "Gyógyszerek";
-"medicinesTab.searchBar.placeholder.text" = "Keresés: gyógyszer neve";
+"medicinesTab.title"                            = "Gyógyszerek";
+"medicinesTab.searchBar.placeholder.text"       = "Keresés: gyógyszer neve";
 
 // Favourites
-"favouritesTab.title" = "Kedvencek";
-"favouritesTab.searchBar.placeholder.text" = "Keresés: kedvenc gyógyszer neve";
+"favouritesTab.title"                           = "Kedvencek";
+"favouritesTab.searchBar.placeholder.text"      = "Keresés: kedvenc gyógyszer neve";
 
 // Protocols
-"protocolsTab.title" = "Protokollok";
-"protocolsTab.searchBar.placeholder.text" = "Keresés: protokoll neve";
+"protocolsTab.title"                            = "Protokollok";
+"protocolsTab.searchBar.placeholder.text"       = "Keresés: protokoll neve";
 
 // Hospitals
-"hospitalsTab.title" = "Kórházak";
-"hospitalsTab.informationLabel.title" = "Itt találja, az Önhöz legközelebb található kórházak listáját.";
+"hospitalsTab.title"                            = "Kórházak";
+"hospitalsTab.informationLabel.title"           = "Itt találja, az Önhöz legközelebb található kórházak listáját.";
 
 // Settings
-"settingsTab.title" = "Beállítások";
-"settingsTab.updateMedicinesButton.title" = "Gyógyszerek frissítése";
-"settingsTab.otherOptionsButton.title" = "További lehetőségek";
-"settingsTab.contactsLabel.title" = "Elérhetőségek:";
-"settingsTab.contactsEMailLabel.title" = "e-mail cím: tothzoltan01181996@gmail.com";
-"settingsTab.contactsPhoneNumberLabel.title" = "telefonszám: +36 30 332 1906";
-"settingsTab.versionNumberLabel.title" = "Verzió: 0.1.";
-"settingsTab.copyRightLabel.title" = "Copyright © 2020 Tóth Zoltán. Minden jog fenntartva.";
+"settingsTab.title"                             = "Beállítások";
+"settingsTab.updateMedicinesButton.title"       = "Gyógyszerek frissítése";
+"settingsTab.otherOptionsButton.title"          = "További lehetőségek";
+"settingsTab.contactsLabel.title"               = "Elérhetőségek:";
+"settingsTab.contactsEMailLabel.title"          = "e-mail cím: tothzoltan01181996@gmail.com";
+"settingsTab.contactsPhoneNumberLabel.title"    = "telefonszám: +36 30 332 1906";
+"settingsTab.versionNumberLabel.title"          = "Verzió: 0.1.";
+"settingsTab.copyRightLabel.title"              = "Copyright © 2020 Tóth Zoltán. Minden jog fenntartva.";

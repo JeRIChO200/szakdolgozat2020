@@ -24,7 +24,7 @@ class CustomSettingsButton: UIButton {
     }
     
     // Button settings
-    func setupButton() {
+    private func setupButton() {
         setShadow()
         setTitleColor(.red, for: .normal)
         backgroundColor     = Colors.appLightBlue
@@ -45,6 +45,7 @@ class CustomSettingsButton: UIButton {
         layer.masksToBounds = false
     }
     
+    // Function for set the button title
     func setButtonTitle(_ title: String?) {
         setTitle(title, for: .normal)
     }

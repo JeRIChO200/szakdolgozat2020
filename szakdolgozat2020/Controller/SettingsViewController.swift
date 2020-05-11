@@ -9,7 +9,7 @@
 import UIKit
 
 // Setting page - UIViewController
-class SettingViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     // IB Outlets
     @IBOutlet weak var medicinesUpdateButton: CustomSettingsButton!

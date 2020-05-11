@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B3F1D0B2464F6A50024D7A8 /* MedicineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0A2464F6A50024D7A8 /* MedicineDetailViewController.swift */; };
+		6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */; };
 		6B3F1D0D2464FBCE0024D7A8 /* DosageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */; };
 		6B45E1172468B7CE00D6A8CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B45E1192468B7CE00D6A8CA /* Localizable.strings */; };
+		6B45E1232468D9F500D6A8CA /* ProtocolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */; };
+		6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1242468DA0500D6A8CA /* HospitalModel.swift */; };
+		6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1272468DED700D6A8CA /* MedicineModel.swift */; };
+		6B45E12A2468DEE500D6A8CA /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */; };
 		6B50B6342458B389002F1C6F /* szakdolgozat2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */; };
 		6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */; };
 		6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */; };
@@ -20,11 +24,11 @@
 		6BDFF7D0245774DD002A75F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CE245774DD002A75F2 /* Main.storyboard */; };
 		6BDFF7D2245774DE002A75F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7D1245774DE002A75F2 /* Assets.xcassets */; };
 		6BDFF7D5245774DE002A75F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7D3245774DE002A75F2 /* LaunchScreen.storyboard */; };
-		6BDFF7E424578B64002A75F2 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E324578B64002A75F2 /* MedicineViewController.swift */; };
-		6BDFF7E624578B8A002A75F2 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E524578B8A002A75F2 /* FavouriteViewController.swift */; };
-		6BDFF7E824578BAB002A75F2 /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E724578BAB002A75F2 /* ProtocolViewController.swift */; };
-		6BDFF7EA24578BC4002A75F2 /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E924578BC4002A75F2 /* HospitalViewController.swift */; };
-		6BDFF7EC24578BD0002A75F2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7EB24578BD0002A75F2 /* SettingViewController.swift */; };
+		6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */; };
+		6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */; };
+		6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E724578BAB002A75F2 /* ProtocolsViewController.swift */; };
+		6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */; };
+		6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailViewController.swift; sourceTree = "<group>"; };
+		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailsViewController.swift; sourceTree = "<group>"; };
 		6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
 		6B45E1182468B7CE00D6A8CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B45E1212468D8B000D6A8CA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolModel.swift; sourceTree = "<group>"; };
+		6B45E1242468DA0500D6A8CA /* HospitalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalModel.swift; sourceTree = "<group>"; };
+		6B45E1272468DED700D6A8CA /* MedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineModel.swift; sourceTree = "<group>"; };
+		6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
 		6B50B6312458B389002F1C6F /* szakdolgozat2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = szakdolgozat2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = szakdolgozat2020Tests.swift; sourceTree = "<group>"; };
 		6B50B6352458B389002F1C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,11 +64,11 @@
 		6BDFF7D1245774DE002A75F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BDFF7D4245774DE002A75F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BDFF7D6245774DE002A75F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BDFF7E324578B64002A75F2 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E524578B8A002A75F2 /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E724578BAB002A75F2 /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E924578BC4002A75F2 /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
-		6BDFF7EB24578BD0002A75F2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesViewController.swift; sourceTree = "<group>"; };
+		6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		6BDFF7E724578BAB002A75F2 /* ProtocolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsViewController.swift; sourceTree = "<group>"; };
+		6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalsViewController.swift; sourceTree = "<group>"; };
+		6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,14 @@
 				6B45E1192468B7CE00D6A8CA /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B45E1262468DA7400D6A8CA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6BDFF7D6245774DE002A75F2 /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		6B50B6322458B389002F1C6F /* szakdolgozat2020Tests */ = {
@@ -129,8 +145,8 @@
 				6BDFF7DF245785F0002A75F2 /* View */,
 				6BDFF7E0245785FC002A75F2 /* Controller */,
 				6B45E1142468939900D6A8CA /* Resources */,
+				6B45E1262468DA7400D6A8CA /* Config */,
 				6BDFF7E22457861C002A75F2 /* Others */,
-				6BDFF7D6245774DE002A75F2 /* Info.plist */,
 			);
 			path = szakdolgozat2020;
 			sourceTree = "<group>";
@@ -138,6 +154,10 @@
 		6BDFF7DE245785D8002A75F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B45E1272468DED700D6A8CA /* MedicineModel.swift */,
+				6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */,
+				6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */,
+				6B45E1242468DA0500D6A8CA /* HospitalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,13 +175,13 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7CC245774DD002A75F2 /* MainTabBarController.swift */,
-				6BDFF7E324578B64002A75F2 /* MedicineViewController.swift */,
-				6BDFF7E524578B8A002A75F2 /* FavouriteViewController.swift */,
-				6B3F1D0A2464F6A50024D7A8 /* MedicineDetailViewController.swift */,
+				6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */,
+				6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */,
+				6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */,
 				6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */,
-				6BDFF7E724578BAB002A75F2 /* ProtocolViewController.swift */,
-				6BDFF7E924578BC4002A75F2 /* HospitalViewController.swift */,
-				6BDFF7EB24578BD0002A75F2 /* SettingViewController.swift */,
+				6BDFF7E724578BAB002A75F2 /* ProtocolsViewController.swift */,
+				6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */,
+				6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */,
 				6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */,
 			);
 			path = Controller;
@@ -293,18 +313,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BDFF7E424578B64002A75F2 /* MedicineViewController.swift in Sources */,
+				6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */,
+				6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */,
 				6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */,
 				6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */,
 				6BDFF7CD245774DD002A75F2 /* MainTabBarController.swift in Sources */,
+				6B45E12A2468DEE500D6A8CA /* FavouriteModel.swift in Sources */,
 				6BDFF7C9245774DD002A75F2 /* AppDelegate.swift in Sources */,
 				6B3F1D0D2464FBCE0024D7A8 /* DosageViewController.swift in Sources */,
-				6BDFF7EC24578BD0002A75F2 /* SettingViewController.swift in Sources */,
-				6BDFF7EA24578BC4002A75F2 /* HospitalViewController.swift in Sources */,
-				6BDFF7E624578B8A002A75F2 /* FavouriteViewController.swift in Sources */,
-				6BDFF7E824578BAB002A75F2 /* ProtocolViewController.swift in Sources */,
+				6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */,
+				6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */,
+				6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */,
+				6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */,
+				6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */,
 				6BDFF7CB245774DD002A75F2 /* SceneDelegate.swift in Sources */,
-				6B3F1D0B2464F6A50024D7A8 /* MedicineDetailViewController.swift in Sources */,
+				6B45E1232468D9F500D6A8CA /* ProtocolModel.swift in Sources */,
+				6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPTZMP389Q;
-				INFOPLIST_FILE = szakdolgozat2020/Info.plist;
+				INFOPLIST_FILE = szakdolgozat2020/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,7 +550,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPTZMP389Q;
-				INFOPLIST_FILE = szakdolgozat2020/Info.plist;
+				INFOPLIST_FILE = szakdolgozat2020/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

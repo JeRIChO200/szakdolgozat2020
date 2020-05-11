@@ -11,14 +11,13 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    var medicinePage: MedicineViewController!
-    var favouritePage: FavouriteViewController!
+    var medicinePage: MedicinesViewController!
+    var favouritePage: FavouritesViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //medicinePage.title = NSLocalizedString("medicinesTab.title", comment: "")
         //favouritePage.title = NSLocalizedString("favouriteTab.title", comment: "")
-        self.tabBarController?.title = "asd"
     }
     
     override func viewDidAppear(_ animated: Bool) {

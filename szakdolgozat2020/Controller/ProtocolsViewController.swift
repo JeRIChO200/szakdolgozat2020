@@ -9,7 +9,7 @@
 import UIKit
 
 // Protocol page - UIViewController
-class ProtocolViewController: UIViewController {
+class ProtocolsViewController: UIViewController {
     
     @IBOutlet weak var protocolSearchBar: UISearchBar!
     @IBOutlet weak var protocolTableView: UITableView!

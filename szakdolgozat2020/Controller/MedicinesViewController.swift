@@ -9,7 +9,7 @@
 import UIKit
 
 // Medicines page - UIViewController
-class MedicineViewController: UIViewController {
+class MedicinesViewController: UIViewController {
     
     @IBOutlet weak var medicineSearchBar: UISearchBar!
     @IBOutlet weak var medicineQrCodeReaderButton: UIButton!
@@ -27,5 +27,4 @@ class MedicineViewController: UIViewController {
         medicineSearchBar.searchTextField.tintColor         = .white
         medicineSearchBar.image(for: .search, state: .normal)
     }
-    
 }

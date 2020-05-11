@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="-1804" y="-678"/>
         </scene>
-        <!--Protocol View Controller-->
+        <!--Protocols View Controller-->
         <scene sceneID="VzD-S7-Noe">
             <objects>
-                <viewController id="Plt-cL-dal" customClass="ProtocolViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Plt-cL-dal" customClass="ProtocolsViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IQd-HY-F4X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="-177" y="-286"/>
         </scene>
-        <!--Favourite View Controller-->
+        <!--Favourites View Controller-->
         <scene sceneID="L5a-og-iGN">
             <objects>
-                <viewController id="HJG-36-GVf" customClass="FavouriteViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HJG-36-GVf" customClass="FavouritesViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJn-dq-yzf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="-178" y="-1034"/>
         </scene>
-        <!--Medicine View Controller-->
+        <!--Medicines View Controller-->
         <scene sceneID="ino-S6-8Qf">
             <objects>
-                <viewController id="nE0-1g-dtr" customClass="MedicineViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nE0-1g-dtr" customClass="MedicinesViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcV-St-BLA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -442,10 +442,10 @@
             </objects>
             <point key="canvasLocation" x="688.40579710144937" y="-1035.2678571428571"/>
         </scene>
-        <!--Hospital View Controller-->
+        <!--Hospitals View Controller-->
         <scene sceneID="kRH-cF-QbU">
             <objects>
-                <viewController id="cRz-gx-YOt" customClass="HospitalViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cRz-gx-YOt" customClass="HospitalsViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zh2-u5-v2L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -536,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="-1804.3478260869567" y="760.71428571428567"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="tOC-11-g8j">
             <objects>
-                <viewController id="xG4-eJ-V4j" customClass="SettingViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xG4-eJ-V4j" customClass="SettingsViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qkv-gV-l90">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -643,7 +643,7 @@
         <!--Adatok-->
         <scene sceneID="Tyo-3C-X2G">
             <objects>
-                <viewController id="nMd-tp-AKK" customClass="MedicineDetailViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nMd-tp-AKK" customClass="MedicineDetailsViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKv-jB-Lxz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

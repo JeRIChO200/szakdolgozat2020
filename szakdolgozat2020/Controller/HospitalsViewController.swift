@@ -9,7 +9,7 @@
 import UIKit
 
 // Hospital page - UIViewController
-class HospitalViewController: UIViewController {
+class HospitalsViewController: UIViewController {
     
     @IBOutlet weak var hospitalTableView: UITableView!
     @IBOutlet weak var informationLabel: UILabel!

@@ -9,7 +9,7 @@
 import UIKit
 
 // Favourite page - UIViewController
-class FavouriteViewController: UIViewController {
+class FavouritesViewController: UIViewController {
     
     @IBOutlet weak var favouriteSearchBar: UISearchBar!
     @IBOutlet weak var favouriteQrCodeReaderButton: UIButton!
