@@ -41,7 +41,7 @@
 		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailViewController.swift; sourceTree = "<group>"; };
 		6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
 		6B45E1182468B7CE00D6A8CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		6B45E11D2468B86F00D6A8CA /* hu-HU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "hu-HU"; path = "hu-HU.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6B45E1212468D8B000D6A8CA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B50B6312458B389002F1C6F /* szakdolgozat2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = szakdolgozat2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = szakdolgozat2020Tests.swift; sourceTree = "<group>"; };
 		6B50B6352458B389002F1C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +84,10 @@
 		6B45E1142468939900D6A8CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */,
+				6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */,
+				6BDFF7D1245774DE002A75F2 /* Assets.xcassets */,
+				6BACFD2B24646F3E00DED1A6 /* Constants.swift */,
 				6B45E1192468B7CE00D6A8CA /* Localizable.strings */,
 			);
 			path = Resources;
@@ -106,6 +110,7 @@
 				6BDFF7C6245774DD002A75F2 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		6BDFF7C6245774DD002A75F2 /* Products */ = {
 			isa = PBXGroup;
@@ -172,11 +177,7 @@
 		6BDFF7E22457861C002A75F2 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */,
-				6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */,
-				6BDFF7D1245774DE002A75F2 /* Assets.xcassets */,
 				6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */,
-				6BACFD2B24646F3E00DED1A6 /* Constants.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -244,7 +245,7 @@
 			knownRegions = (
 				en,
 				Base,
-				"hu-HU",
+				hu,
 			);
 			mainGroup = 6BDFF7BC245774DD002A75F2;
 			productRefGroup = 6BDFF7C6245774DD002A75F2 /* Products */;
@@ -322,7 +323,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B45E1182468B7CE00D6A8CA /* en */,
-				6B45E11D2468B86F00D6A8CA /* hu-HU */,
+				6B45E1212468D8B000D6A8CA /* hu */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
