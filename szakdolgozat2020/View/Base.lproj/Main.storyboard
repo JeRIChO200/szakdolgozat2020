@@ -125,6 +125,7 @@
                     <connections>
                         <outlet property="protocolSearchBar" destination="WKS-sZ-cYs" id="xFX-XQ-I53"/>
                         <outlet property="protocolTableView" destination="IYo-sc-P3U" id="E7d-V5-ZXx"/>
+                        <outlet property="updateProtocolButton" destination="lyI-5l-EQY" id="UxR-SO-CbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujN-4m-pJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -469,6 +470,9 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="mappin.and.ellipse" catalog="system"/>
+                                <connections>
+                                    <action selector="updateLocationButtonTapped:" destination="cRz-gx-YOt" eventType="touchUpInside" id="pNd-7P-ctp"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-D5-DCr">
                                 <rect key="frame" x="0.0" y="70" width="414" height="1"/>
@@ -530,6 +534,7 @@
                     <connections>
                         <outlet property="hospitalTableView" destination="23I-El-vDR" id="gKm-Fk-Bj6"/>
                         <outlet property="informationLabel" destination="a0s-X8-zi3" id="zsn-Kc-oY4"/>
+                        <outlet property="updateLocationButton" destination="g4E-3c-Vbs" id="N4I-Wb-4qB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SJ-sI-Yc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

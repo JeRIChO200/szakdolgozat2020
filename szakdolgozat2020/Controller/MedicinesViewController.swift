@@ -19,7 +19,6 @@ class MedicinesViewController: UIViewController {
         super.viewDidLoad()
         
         title                                               = NSLocalizedString("medicinesTab.title", comment: "")
-        
         medicineTableView.backgroundColor                   = .white
         medicineSearchBar.placeholder                       = NSLocalizedString("medicinesTab.searchBar.placeholder.text", comment: "")
         medicineSearchBar.searchTextField.backgroundColor   = Colors.appBlue

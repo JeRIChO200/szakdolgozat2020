@@ -19,7 +19,6 @@ class FavouritesViewController: UIViewController {
         super.viewDidLoad()
         
         title                                               = NSLocalizedString("favouritesTab.title", comment: "")
-        
         favouriteTableView.backgroundColor                  = .white
         favouriteSearchBar.placeholder                      = NSLocalizedString("favouritesTab.searchBar.placeholder.text", comment: "")
         favouriteSearchBar.searchTextField.backgroundColor  = Colors.appBlue

@@ -13,13 +13,14 @@ class ProtocolsViewController: UIViewController {
     
     // IB Outlets
     @IBOutlet weak var protocolSearchBar: UISearchBar!
+    @IBOutlet weak var updateProtocolButton: UIButton!
     @IBOutlet weak var protocolTableView: UITableView!
     
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title                                               = NSLocalizedString("protocolsTab.title", comment: "")
-        
         protocolTableView.backgroundColor                   = .white
         protocolSearchBar.placeholder                       = NSLocalizedString("protocolsTab.searchBar.placeholder.text", comment: "")
         protocolSearchBar.searchTextField.backgroundColor   = Colors.appBlue

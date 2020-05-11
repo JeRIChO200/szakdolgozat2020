@@ -11,8 +11,8 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    var medicinePage: MedicinesViewController!
-    var favouritePage: FavouritesViewController!
+    //var medicinePage: MedicinesViewController!
+    //var favouritePage: FavouritesViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
