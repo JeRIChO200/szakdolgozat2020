@@ -23,6 +23,7 @@ class SettingsViewController: UIViewController {
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title                           = NSLocalizedString("settingsTab.title", comment: "")
         medicinesUpdateButton.setButtonTitle(NSLocalizedString("settingsTab.updateMedicinesButton.title", comment: ""))
         otherOptionsButton.setButtonTitle(NSLocalizedString("settingsTab.otherOptionsButton.title", comment: ""))

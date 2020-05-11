@@ -34,11 +34,40 @@ class ProtocolsViewController: UIViewController, ProtocolProvidingInjecting {
         
         controller.start(with: args.protocolSource)
         
-        protocolTableView.backgroundColor                   = .white
+        self.dismissKey()
+        protocolSearchBar.delegate                          = self
+        protocolSearchBar.enablesReturnKeyAutomatically     = true
         protocolSearchBar.placeholder                       = NSLocalizedString("protocolsTab.searchBar.placeholder.text", comment: "")
         protocolSearchBar.searchTextField.backgroundColor   = Colors.appBlue
         protocolSearchBar.searchTextField.textColor         = .white
         protocolSearchBar.searchTextField.tintColor         = .white
         protocolSearchBar.image(for: .search, state: .normal)
+        
+        protocolTableView.backgroundColor                   = .white
+    }
+}
+
+//MARK: - ProtocolViewController - #1 Extension: Hide keyboard
+
+extension ProtocolsViewController {
+    func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProtocolsViewController.dismissKeyboard))
+        tap.cancelsTouchesInView        = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        protocolSearchBar.text          = ""
+        view.endEditing(true)
+    }
+}
+
+//MARK: - UISearchBarDelegate
+
+extension ProtocolsViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        protocolSearchBar.text = ""
+        protocolSearchBar.resignFirstResponder()
     }
 }

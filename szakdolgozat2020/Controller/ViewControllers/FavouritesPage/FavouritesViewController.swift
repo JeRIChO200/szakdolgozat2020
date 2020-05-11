@@ -21,11 +21,41 @@ class FavouritesViewController: UIViewController {
         super.viewDidLoad()
         
         title                                               = NSLocalizedString("favouritesTab.title", comment: "")
-        favouriteTableView.backgroundColor                  = .white
+        
+        self.dismissKey()
+        favouriteSearchBar.delegate                         = self
+        favouriteSearchBar.enablesReturnKeyAutomatically    = true
         favouriteSearchBar.placeholder                      = NSLocalizedString("favouritesTab.searchBar.placeholder.text", comment: "")
         favouriteSearchBar.searchTextField.backgroundColor  = Colors.appBlue
         favouriteSearchBar.searchTextField.textColor        = .white
         favouriteSearchBar.searchTextField.tintColor        = .white
         favouriteSearchBar.image(for: .search, state: .normal)
+        
+        favouriteTableView.backgroundColor                  = .white
+    }
+}
+
+//MARK: - FavouritesViewController - #1 Extension: Hide keyboard
+
+extension FavouritesViewController {
+    func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FavouritesViewController.dismissKeyboard))
+        tap.cancelsTouchesInView        = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        favouriteSearchBar.text         = ""
+        view.endEditing(true)
+    }
+}
+
+//MARK: - UISearchBarDelegate
+
+extension FavouritesViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        favouriteSearchBar.text = ""
+        favouriteSearchBar.resignFirstResponder()
     }
 }

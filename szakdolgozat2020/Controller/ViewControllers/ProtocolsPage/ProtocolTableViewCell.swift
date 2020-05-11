@@ -11,7 +11,8 @@ import UIKit
 class ProtocolTableViewCell: UITableViewCell {
     
     func display(protocolModel: ProtocolModel) {
-        textLabel?.text = protocolModel.name
+        textLabel?.text     = protocolModel.name
+        imageView?.image    = UIImage(systemName: "staroflife.fill")
+        tintColor           = .red
     }
-    
 }

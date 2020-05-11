@@ -21,11 +21,41 @@ class MedicinesViewController: UIViewController {
         super.viewDidLoad()
         
         title                                               = NSLocalizedString("medicinesTab.title", comment: "")
-        medicineTableView.backgroundColor                   = .white
+        
+        self.dismissKey()
+        medicineSearchBar.delegate                          = self
+        medicineSearchBar.enablesReturnKeyAutomatically     = true
         medicineSearchBar.placeholder                       = NSLocalizedString("medicinesTab.searchBar.placeholder.text", comment: "")
         medicineSearchBar.searchTextField.backgroundColor   = Colors.appBlue
         medicineSearchBar.searchTextField.textColor         = .white
         medicineSearchBar.searchTextField.tintColor         = .white
         medicineSearchBar.image(for: .search, state: .normal)
+        
+        medicineTableView.backgroundColor                   = .white
+    }
+}
+
+//MARK: - MedicinesViewController - #1 Extension: Hide keyboard
+
+extension MedicinesViewController {
+    func dismissKey() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MedicinesViewController.dismissKeyboard))
+        tap.cancelsTouchesInView        = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        medicineSearchBar.text         = ""
+        view.endEditing(true)
+    }
+}
+
+//MARK: - UISearchBarDelegate
+
+extension MedicinesViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        medicineSearchBar.text = ""
+        medicineSearchBar.resignFirstResponder()
     }
 }

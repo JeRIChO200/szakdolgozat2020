@@ -18,6 +18,7 @@ class MedicinesNavigationController : UINavigationController {
     // awakeFromNib func
     override func awakeFromNib() {
         super.awakeFromNib()
-        tabBarItem.title    = NSLocalizedString("medicinesTab.title", comment: "")
+        tabBarItem.title        = NSLocalizedString("medicinesTab.title", comment: "")
+        navigationItem.title    = NSLocalizedString("medicinesTab.title", comment: "")
     }
 }
