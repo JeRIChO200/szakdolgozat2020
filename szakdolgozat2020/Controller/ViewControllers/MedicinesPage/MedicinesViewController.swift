@@ -11,10 +11,12 @@ import UIKit
 // Medicines page - UIViewController
 class MedicinesViewController: UIViewController {
     
+    // IB Outlets
     @IBOutlet weak var medicineSearchBar: UISearchBar!
     @IBOutlet weak var medicineQrCodeReaderButton: UIButton!
     @IBOutlet weak var medicineTableView: UITableView!
     
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         

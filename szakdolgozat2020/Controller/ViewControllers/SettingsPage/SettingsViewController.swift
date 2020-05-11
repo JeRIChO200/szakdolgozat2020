@@ -20,6 +20,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var versionNumberLabel: UILabel!
     @IBOutlet weak var copyrightLabel: UILabel!
     
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         title                           = NSLocalizedString("settingsTab.title", comment: "")
@@ -31,7 +32,7 @@ class SettingsViewController: UIViewController {
         versionNumberLabel.text         = NSLocalizedString("settingsTab.versionNumberLabel.title", comment: "")
         copyrightLabel.text             = NSLocalizedString("settingsTab.copyRightLabel.title", comment: "")
     }
-    
+
     // IB Actions
     @IBAction func MedicinesUpdateButtonTapped(_ sender: CustomSettingsButton) {
         if 1 == 1 {

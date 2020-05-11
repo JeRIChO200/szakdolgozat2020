@@ -11,10 +11,12 @@ import UIKit
 // Favourite page - UIViewController
 class FavouritesViewController: UIViewController {
     
+    // IB Outlets
     @IBOutlet weak var favouriteSearchBar: UISearchBar!
     @IBOutlet weak var favouriteQrCodeReaderButton: UIButton!
     @IBOutlet weak var favouriteTableView: UITableView!
     
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         

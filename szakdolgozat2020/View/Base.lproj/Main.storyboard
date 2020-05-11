@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Tab Bar Controller-->
+        <!--Main Controller-->
         <scene sceneID="qEX-PC-tbK">
             <objects>
-                <tabBarController id="hKI-B4-quW" customClass="MainTabBarController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="hKI-B4-quW" customClass="MainController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wf5-eB-BfE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,28 +40,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Keresés: protokoll neve" translatesAutoresizingMaskIntoConstraints="NO" id="WKS-sZ-cYs">
-                                <rect key="frame" x="6" y="0.0" width="338" height="70"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKS-sZ-cYs">
+                                <rect key="frame" x="6" y="0.0" width="402" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="8JD-b0-Gc0"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardAppearance="light" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyI-5l-EQY">
-                                <rect key="frame" x="349" y="5" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Fqi-Ot-mgB"/>
-                                    <constraint firstAttribute="height" constant="60" id="uyu-Th-eKr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" backgroundImage="arrow.up.doc" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBG-xy-LLW">
                                 <rect key="frame" x="0.0" y="70" width="414" height="1"/>
                                 <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,49 +67,50 @@
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexColor" red="0.0" green="0.27450980392156865" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="NgY-4N-JbN" imageView="YtD-aE-MRw" style="IBUITableViewCellStyleDefault" id="hJC-I7-AO1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="protocolCell" textLabel="NgY-4N-JbN" detailTextLabel="9SW-7x-cjb" style="IBUITableViewCellStyleValue1" id="hJC-I7-AO1" customClass="ProtocolTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJC-I7-AO1" id="KMZ-XU-itp">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NgY-4N-JbN">
-                                                    <rect key="frame" x="59" y="0.0" width="316" height="43.5"/>
+                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="staroflife.fill" catalog="system" id="YtD-aE-MRw">
-                                                    <rect key="frame" x="23.25" y="12.5" width="17.5" height="18"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9SW-7x-cjb">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="g3I-AP-yhE" firstAttribute="trailing" secondItem="WKS-sZ-cYs" secondAttribute="trailing" constant="70" id="0Hd-eU-xFH"/>
                             <constraint firstItem="IYo-sc-P3U" firstAttribute="top" secondItem="oBG-xy-LLW" secondAttribute="bottom" id="57J-gZ-lkU"/>
-                            <constraint firstItem="g3I-AP-yhE" firstAttribute="trailing" secondItem="lyI-5l-EQY" secondAttribute="trailing" constant="5" id="64d-qQ-qJk"/>
                             <constraint firstItem="IYo-sc-P3U" firstAttribute="leading" secondItem="g3I-AP-yhE" secondAttribute="leading" id="6RD-BJ-kry"/>
                             <constraint firstItem="oBG-xy-LLW" firstAttribute="leading" secondItem="IQd-HY-F4X" secondAttribute="leading" id="BXy-1B-u9P"/>
                             <constraint firstAttribute="trailing" secondItem="oBG-xy-LLW" secondAttribute="trailing" id="CJo-NG-BXD"/>
                             <constraint firstItem="IYo-sc-P3U" firstAttribute="bottom" secondItem="g3I-AP-yhE" secondAttribute="bottom" id="CQS-cI-UE5"/>
+                            <constraint firstItem="g3I-AP-yhE" firstAttribute="trailing" secondItem="WKS-sZ-cYs" secondAttribute="trailing" constant="6" id="EPy-M6-mT5"/>
                             <constraint firstItem="IYo-sc-P3U" firstAttribute="trailing" secondItem="g3I-AP-yhE" secondAttribute="trailing" id="LgA-aw-CbI"/>
-                            <constraint firstItem="WKS-sZ-cYs" firstAttribute="leading" secondItem="g3I-AP-yhE" secondAttribute="leading" constant="6" id="kxW-W8-pOn"/>
-                            <constraint firstItem="lyI-5l-EQY" firstAttribute="top" secondItem="g3I-AP-yhE" secondAttribute="top" constant="5" id="tuE-dG-tzR"/>
-                            <constraint firstItem="oBG-xy-LLW" firstAttribute="top" secondItem="WKS-sZ-cYs" secondAttribute="bottom" id="u5G-Y6-ZUZ"/>
-                            <constraint firstItem="WKS-sZ-cYs" firstAttribute="top" secondItem="g3I-AP-yhE" secondAttribute="top" id="x6i-cR-Lh9"/>
+                            <constraint firstItem="WKS-sZ-cYs" firstAttribute="leading" secondItem="g3I-AP-yhE" secondAttribute="leading" constant="6" id="gSa-FN-l0W"/>
+                            <constraint firstItem="oBG-xy-LLW" firstAttribute="top" secondItem="WKS-sZ-cYs" secondAttribute="bottom" id="pj1-4R-Rv3"/>
+                            <constraint firstItem="WKS-sZ-cYs" firstAttribute="top" secondItem="g3I-AP-yhE" secondAttribute="top" id="skY-3O-nCc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3I-AP-yhE"/>
                     </view>
@@ -125,7 +118,6 @@
                     <connections>
                         <outlet property="protocolSearchBar" destination="WKS-sZ-cYs" id="xFX-XQ-I53"/>
                         <outlet property="protocolTableView" destination="IYo-sc-P3U" id="E7d-V5-ZXx"/>
-                        <outlet property="updateProtocolButton" destination="lyI-5l-EQY" id="UxR-SO-CbY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujN-4m-pJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -135,7 +127,7 @@
         <!--Kórházak-->
         <scene sceneID="tjT-F7-RYC">
             <objects>
-                <navigationController id="lFK-5m-K9G" sceneMemberID="viewController">
+                <navigationController id="lFK-5m-K9G" customClass="HospitalsNavigationController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Kórházak" image="hospital" selectedImage="hospital.fill" id="IdS-XN-Gi8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Gvu-2n-eL0">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -157,7 +149,7 @@
         <!--Beállítások-->
         <scene sceneID="sjK-Zz-1WY">
             <objects>
-                <navigationController id="OoK-On-7hK" sceneMemberID="viewController">
+                <navigationController id="OoK-On-7hK" customClass="SettingsNavigationController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Beállítások" image="rectangle.3.offgrid" catalog="system" selectedImage="rectangle.3.offgrid.fill" id="KC0-ho-bA2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="OcA-XF-8kg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -181,7 +173,7 @@
         <!--Kedvencek-->
         <scene sceneID="mv4-Fj-LDh">
             <objects>
-                <navigationController id="Thq-b9-hOh" sceneMemberID="viewController">
+                <navigationController id="Thq-b9-hOh" customClass="FavouritesNavigationController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Kedvencek" image="star" catalog="system" landscapeImage="star" largeContentSizeImage="star" selectedImage="star.fill" id="zaA-6p-8d8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="lg9-PH-Uzs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -269,9 +261,9 @@
                         <constraints>
                             <constraint firstItem="WZp-lz-LRD" firstAttribute="leading" secondItem="JTA-No-L3g" secondAttribute="leading" id="1fe-8w-TP4"/>
                             <constraint firstItem="CbZ-5M-8HB" firstAttribute="leading" secondItem="LJn-dq-yzf" secondAttribute="leading" id="2cl-wp-3Yo"/>
-                            <constraint firstItem="JTA-No-L3g" firstAttribute="trailing" secondItem="jbv-80-rQB" secondAttribute="trailing" constant="70" id="8lU-qp-rUp"/>
                             <constraint firstItem="WZp-lz-LRD" firstAttribute="trailing" secondItem="JTA-No-L3g" secondAttribute="trailing" id="D9L-3f-sDY"/>
                             <constraint firstItem="alE-ks-Le1" firstAttribute="top" secondItem="JTA-No-L3g" secondAttribute="top" constant="5" id="M8n-ay-wfv"/>
+                            <constraint firstItem="alE-ks-Le1" firstAttribute="leading" secondItem="jbv-80-rQB" secondAttribute="trailing" constant="5" id="Mik-nC-0wV"/>
                             <constraint firstAttribute="trailing" secondItem="CbZ-5M-8HB" secondAttribute="trailing" id="NWl-Ex-cmb"/>
                             <constraint firstItem="CbZ-5M-8HB" firstAttribute="top" secondItem="jbv-80-rQB" secondAttribute="bottom" id="PWc-I6-E7U"/>
                             <constraint firstItem="jbv-80-rQB" firstAttribute="top" secondItem="JTA-No-L3g" secondAttribute="top" id="VBT-Te-7Ju"/>
@@ -297,7 +289,7 @@
         <!--Protokollok-->
         <scene sceneID="QGj-96-d44">
             <objects>
-                <navigationController id="H04-N8-HIc" sceneMemberID="viewController">
+                <navigationController id="H04-N8-HIc" customClass="ProtocolsNavigationController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Protokollok" image="doc" catalog="system" selectedImage="doc.fill" id="CmA-sr-K4P"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Gbl-B1-FAI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -321,7 +313,7 @@
         <!--Gyógyszerek-->
         <scene sceneID="wXi-Hj-aJv">
             <objects>
-                <navigationController id="4JP-V5-Leb" sceneMemberID="viewController">
+                <navigationController id="4JP-V5-Leb" customClass="MedicinesNavigationController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gyógyszerek" image="syringe" selectedImage="syringe.fill" id="aBT-Ao-6Ox"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="nPu-wq-U7Q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -356,11 +348,6 @@
                                 <color key="tintColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="textfield.backgroundColor">
-                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se8-Ti-WLh">
                                 <rect key="frame" x="349" y="6" width="60" height="57.5"/>
@@ -696,7 +683,6 @@
         <segue reference="bIq-Bs-hgJ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.up.doc" catalog="system" width="115" height="128"/>
         <image name="doc" catalog="system" width="115" height="128"/>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="hospital" width="25" height="25"/>
@@ -707,7 +693,6 @@
         <image name="rectangle.3.offgrid.fill" catalog="system" width="128" height="81"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="staroflife.fill" catalog="system" width="124" height="128"/>
         <image name="syringe" width="25" height="25"/>
         <image name="syringe.fill" width="25" height="25"/>
     </resources>

@@ -9,7 +9,7 @@
 import UIKit
 //import ConstantStrings
 
-class MainTabBarController: UITabBarController {
+class MainController: UITabBarController {
     
     //var medicinePage: MedicinesViewController!
     //var favouritePage: FavouritesViewController!

@@ -37,7 +37,6 @@ class HospitalsViewController: UIViewController {
     @IBAction func updateLocationButtonTapped(_ sender: Any) {
         locationManager.requestLocation()
     }
-    
 }
 
 //MARK: - CLLocationManagerDelegate

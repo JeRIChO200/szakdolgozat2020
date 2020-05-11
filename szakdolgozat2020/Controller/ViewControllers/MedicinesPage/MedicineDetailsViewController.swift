@@ -11,6 +11,7 @@ import UIKit
 // Medicines details page - UIViewController
 class MedicineDetailsViewController: UIViewController {
     
+    // IB Outlets
     @IBOutlet weak var dosageButton: CustomSettingsButton!
     
     @IBAction func dosageButtonTapped(_ sender: CustomSettingsButton) {

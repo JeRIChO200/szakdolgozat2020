@@ -12,4 +12,5 @@ struct Hospital {
     var name: String
     var latitude: Double
     var longitude: Double
+    var distanceFromTheUser: Double
 }
