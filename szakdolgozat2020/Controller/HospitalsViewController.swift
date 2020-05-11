@@ -17,9 +17,9 @@ class HospitalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title                                               = NSLocalizedString("hospitalsTab.title", comment: "")
+        title                               = NSLocalizedString("hospitalsTab.title", comment: "")
         
-        hospitalTableView.backgroundColor                   = .white
-        informationLabel.text                               = NSLocalizedString("hospitalsTab.informationLabel.title", comment: "")
+        hospitalTableView.backgroundColor   = .white
+        informationLabel.text               = NSLocalizedString("hospitalsTab.informationLabel.title", comment: "")
     }
 }

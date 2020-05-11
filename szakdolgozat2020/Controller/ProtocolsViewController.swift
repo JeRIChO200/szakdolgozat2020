@@ -11,6 +11,7 @@ import UIKit
 // Protocol page - UIViewController
 class ProtocolsViewController: UIViewController {
     
+    // IB Outlets
     @IBOutlet weak var protocolSearchBar: UISearchBar!
     @IBOutlet weak var protocolTableView: UITableView!
     

@@ -22,14 +22,14 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSLocalizedString("settingsTab.title", comment: "")
+        title                   = NSLocalizedString("settingsTab.title", comment: "")
         medicinesUpdateButton.setButtonTitle(NSLocalizedString("settingsTab.updateMedicinesButton.title", comment: ""))
         otherOptionsButton.setButtonTitle(NSLocalizedString("settingsTab.otherOptionsButton.title", comment: ""))
-        contactsLabel.text = NSLocalizedString("settingsTab.contactsLabel.title", comment: "")
-        eMailLabel.text = NSLocalizedString("settingsTab.contactsEMailLabel.title", comment: "")
-        phoneNumberLabel.text = NSLocalizedString("settingsTab.contactsPhoneNumberLabel.title", comment: "")
+        contactsLabel.text      = NSLocalizedString("settingsTab.contactsLabel.title", comment: "")
+        eMailLabel.text         = NSLocalizedString("settingsTab.contactsEMailLabel.title", comment: "")
+        phoneNumberLabel.text   = NSLocalizedString("settingsTab.contactsPhoneNumberLabel.title", comment: "")
         versionNumberLabel.text = NSLocalizedString("settingsTab.versionNumberLabel.title", comment: "")
-        copyrightLabel.text = NSLocalizedString("settingsTab.copyRightLabel.title", comment: "")
+        copyrightLabel.text     = NSLocalizedString("settingsTab.copyRightLabel.title", comment: "")
     }
     
     // IB Actions
