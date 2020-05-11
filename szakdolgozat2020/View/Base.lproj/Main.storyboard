@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="qEX-PC-tbK">
             <objects>
-                <tabBarController id="hKI-B4-quW" customClass="MainVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="hKI-B4-quW" customClass="MainTabBarController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wf5-eB-BfE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -20,6 +20,7 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="tabBar" destination="wf5-eB-BfE" id="XWa-nP-kzG"/>
                         <segue destination="4JP-V5-Leb" kind="relationship" relationship="viewControllers" id="ZcH-FF-kac"/>
                         <segue destination="Thq-b9-hOh" kind="relationship" relationship="viewControllers" id="Kco-CB-905"/>
                         <segue destination="H04-N8-HIc" kind="relationship" relationship="viewControllers" id="RlA-Fa-Wyu"/>
@@ -31,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="-1804" y="-678"/>
         </scene>
-        <!--Protokollok-->
+        <!--Protocol View Controller-->
         <scene sceneID="VzD-S7-Noe">
             <objects>
-                <viewController id="Plt-cL-dal" customClass="ProtocolVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Plt-cL-dal" customClass="ProtocolViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IQd-HY-F4X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,9 +71,8 @@
                                     <constraint firstAttribute="height" constant="1" id="Pmi-F1-4w2"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IYo-sc-P3U">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IYo-sc-P3U">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,9 +107,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="g3I-AP-yhE" firstAttribute="trailing" secondItem="WKS-sZ-cYs" secondAttribute="trailing" constant="70" id="0Hd-eU-xFH"/>
+                            <constraint firstItem="IYo-sc-P3U" firstAttribute="top" secondItem="oBG-xy-LLW" secondAttribute="bottom" id="57J-gZ-lkU"/>
                             <constraint firstItem="g3I-AP-yhE" firstAttribute="trailing" secondItem="lyI-5l-EQY" secondAttribute="trailing" constant="5" id="64d-qQ-qJk"/>
+                            <constraint firstItem="IYo-sc-P3U" firstAttribute="leading" secondItem="g3I-AP-yhE" secondAttribute="leading" id="6RD-BJ-kry"/>
                             <constraint firstItem="oBG-xy-LLW" firstAttribute="leading" secondItem="IQd-HY-F4X" secondAttribute="leading" id="BXy-1B-u9P"/>
                             <constraint firstAttribute="trailing" secondItem="oBG-xy-LLW" secondAttribute="trailing" id="CJo-NG-BXD"/>
+                            <constraint firstItem="IYo-sc-P3U" firstAttribute="bottom" secondItem="g3I-AP-yhE" secondAttribute="bottom" id="CQS-cI-UE5"/>
+                            <constraint firstItem="IYo-sc-P3U" firstAttribute="trailing" secondItem="g3I-AP-yhE" secondAttribute="trailing" id="LgA-aw-CbI"/>
                             <constraint firstItem="WKS-sZ-cYs" firstAttribute="leading" secondItem="g3I-AP-yhE" secondAttribute="leading" constant="6" id="kxW-W8-pOn"/>
                             <constraint firstItem="lyI-5l-EQY" firstAttribute="top" secondItem="g3I-AP-yhE" secondAttribute="top" constant="5" id="tuE-dG-tzR"/>
                             <constraint firstItem="oBG-xy-LLW" firstAttribute="top" secondItem="WKS-sZ-cYs" secondAttribute="bottom" id="u5G-Y6-ZUZ"/>
@@ -117,7 +121,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g3I-AP-yhE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Protokollok" id="iks-gP-FSt"/>
+                    <navigationItem key="navigationItem" id="iks-gP-FSt"/>
                     <connections>
                         <outlet property="protocolSearchBar" destination="WKS-sZ-cYs" id="xFX-XQ-I53"/>
                         <outlet property="protocolTableView" destination="IYo-sc-P3U" id="E7d-V5-ZXx"/>
@@ -194,10 +198,10 @@
             </objects>
             <point key="canvasLocation" x="-177" y="-286"/>
         </scene>
-        <!--Kedvencek-->
+        <!--Favourite View Controller-->
         <scene sceneID="L5a-og-iGN">
             <objects>
-                <viewController id="HJG-36-GVf" customClass="FavouriteVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HJG-36-GVf" customClass="FavouriteViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJn-dq-yzf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,9 +234,8 @@
                                     <constraint firstAttribute="height" constant="1" id="kyd-15-mMn"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-lz-LRD" customClass="FavouriteTV" customModule="Ambulance_Aid" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WZp-lz-LRD">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -263,8 +266,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="WZp-lz-LRD" firstAttribute="leading" secondItem="JTA-No-L3g" secondAttribute="leading" id="1fe-8w-TP4"/>
                             <constraint firstItem="CbZ-5M-8HB" firstAttribute="leading" secondItem="LJn-dq-yzf" secondAttribute="leading" id="2cl-wp-3Yo"/>
                             <constraint firstItem="JTA-No-L3g" firstAttribute="trailing" secondItem="jbv-80-rQB" secondAttribute="trailing" constant="70" id="8lU-qp-rUp"/>
+                            <constraint firstItem="WZp-lz-LRD" firstAttribute="trailing" secondItem="JTA-No-L3g" secondAttribute="trailing" id="D9L-3f-sDY"/>
                             <constraint firstItem="alE-ks-Le1" firstAttribute="top" secondItem="JTA-No-L3g" secondAttribute="top" constant="5" id="M8n-ay-wfv"/>
                             <constraint firstAttribute="trailing" secondItem="CbZ-5M-8HB" secondAttribute="trailing" id="NWl-Ex-cmb"/>
                             <constraint firstItem="CbZ-5M-8HB" firstAttribute="top" secondItem="jbv-80-rQB" secondAttribute="bottom" id="PWc-I6-E7U"/>
@@ -272,10 +277,12 @@
                             <constraint firstItem="JTA-No-L3g" firstAttribute="trailing" secondItem="alE-ks-Le1" secondAttribute="trailing" constant="5" id="Vta-Hh-aNm"/>
                             <constraint firstAttribute="trailing" secondItem="alE-ks-Le1" secondAttribute="trailing" constant="5" id="g3l-ov-I4R"/>
                             <constraint firstItem="jbv-80-rQB" firstAttribute="leading" secondItem="JTA-No-L3g" secondAttribute="leading" constant="6" id="g6d-Yr-u60"/>
+                            <constraint firstItem="WZp-lz-LRD" firstAttribute="bottom" secondItem="JTA-No-L3g" secondAttribute="bottom" id="iEf-PZ-Jgl"/>
+                            <constraint firstItem="WZp-lz-LRD" firstAttribute="top" secondItem="CbZ-5M-8HB" secondAttribute="bottom" id="kBD-Yv-DaJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JTA-No-L3g"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Kedvencek" id="Iwd-l8-Jjk" customClass="FavouritesViewController"/>
+                    <navigationItem key="navigationItem" id="Iwd-l8-Jjk" customClass="FavouritesViewController"/>
                     <connections>
                         <outlet property="favouriteQrCodeReaderButton" destination="alE-ks-Le1" id="gYP-k7-dl6"/>
                         <outlet property="favouriteSearchBar" destination="jbv-80-rQB" id="sN8-hz-qgK"/>
@@ -331,10 +338,10 @@
             </objects>
             <point key="canvasLocation" x="-178" y="-1034"/>
         </scene>
-        <!--Gyógyszerek-->
+        <!--Medicine View Controller-->
         <scene sceneID="ino-S6-8Qf">
             <objects>
-                <viewController id="nE0-1g-dtr" customClass="MedicineVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nE0-1g-dtr" customClass="MedicineViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcV-St-BLA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,9 +380,8 @@
                                     <constraint firstAttribute="height" constant="1" id="vRP-pO-YRi"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-A9-zha" customClass="MedicineTV" customModule="Ambulance_Aid" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-A9-zha">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -407,17 +413,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VY3-b9-kxR" firstAttribute="leading" secondItem="FcV-St-BLA" secondAttribute="leading" id="2Fb-MX-17M"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="top" secondItem="VY3-b9-kxR" secondAttribute="bottom" id="2kS-Fh-ZTO"/>
                             <constraint firstItem="bVJ-bV-wCv" firstAttribute="leading" secondItem="cDg-O8-D0t" secondAttribute="leading" constant="6" id="63S-Mz-ZJM"/>
                             <constraint firstItem="cDg-O8-D0t" firstAttribute="trailing" secondItem="se8-Ti-WLh" secondAttribute="trailing" constant="5" id="64n-b0-bmy"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="trailing" secondItem="cDg-O8-D0t" secondAttribute="trailing" id="6F7-Vb-eFO"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="top" secondItem="VY3-b9-kxR" secondAttribute="bottom" id="9Nq-tP-dxQ"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="trailing" secondItem="cDg-O8-D0t" secondAttribute="trailing" id="Beu-3Z-Tk1"/>
                             <constraint firstAttribute="trailing" secondItem="VY3-b9-kxR" secondAttribute="trailing" id="C2G-bf-UnR"/>
                             <constraint firstItem="cDg-O8-D0t" firstAttribute="trailing" secondItem="bVJ-bV-wCv" secondAttribute="trailing" constant="70" id="YYe-9W-hcj"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="leading" secondItem="cDg-O8-D0t" secondAttribute="leading" id="Yqm-Ia-JW2"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="bottom" secondItem="cDg-O8-D0t" secondAttribute="bottom" id="i5n-El-rrH"/>
                             <constraint firstItem="se8-Ti-WLh" firstAttribute="top" secondItem="cDg-O8-D0t" secondAttribute="top" constant="5" id="jCX-Bi-J0m"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="leading" secondItem="cDg-O8-D0t" secondAttribute="leading" id="jSt-oB-wic"/>
+                            <constraint firstItem="Syg-A9-zha" firstAttribute="bottom" secondItem="cDg-O8-D0t" secondAttribute="bottom" id="tEj-9q-TbH"/>
                             <constraint firstItem="bVJ-bV-wCv" firstAttribute="top" secondItem="cDg-O8-D0t" secondAttribute="top" id="tco-Q3-dsu"/>
                             <constraint firstItem="VY3-b9-kxR" firstAttribute="top" secondItem="bVJ-bV-wCv" secondAttribute="bottom" id="wAC-ZD-D7z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cDg-O8-D0t"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Gyógyszerek" id="4Pp-Vi-v9U"/>
+                    <navigationItem key="navigationItem" id="4Pp-Vi-v9U"/>
                     <connections>
                         <outlet property="medicineQrCodeReaderButton" destination="se8-Ti-WLh" id="oC6-lL-yQx"/>
                         <outlet property="medicineSearchBar" destination="bVJ-bV-wCv" id="bDM-x3-TYZ"/>
@@ -428,10 +442,10 @@
             </objects>
             <point key="canvasLocation" x="688.40579710144937" y="-1035.2678571428571"/>
         </scene>
-        <!--Kórházak-->
+        <!--Hospital View Controller-->
         <scene sceneID="kRH-cF-QbU">
             <objects>
-                <viewController id="cRz-gx-YOt" customClass="HospitalVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cRz-gx-YOt" customClass="HospitalViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zh2-u5-v2L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,9 +478,8 @@
                                     <constraint firstAttribute="height" constant="1" id="mvl-jZ-yhQ"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23I-El-vDR" customClass="HospitalTV" customModule="Ambulance_Aid" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23I-El-vDR">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -503,25 +516,30 @@
                             <constraint firstItem="g4E-3c-Vbs" firstAttribute="top" secondItem="Tjl-Og-W4X" secondAttribute="top" constant="5" id="EId-A3-UUp"/>
                             <constraint firstItem="a0s-X8-zi3" firstAttribute="leading" secondItem="Tjl-Og-W4X" secondAttribute="leading" constant="10" id="Fna-aW-6vu"/>
                             <constraint firstItem="Tjl-Og-W4X" firstAttribute="trailing" secondItem="g4E-3c-Vbs" secondAttribute="trailing" constant="5" id="Ly7-vl-HOJ"/>
+                            <constraint firstItem="23I-El-vDR" firstAttribute="bottom" secondItem="Tjl-Og-W4X" secondAttribute="bottom" id="MmF-xx-CFu"/>
+                            <constraint firstItem="23I-El-vDR" firstAttribute="trailing" secondItem="Tjl-Og-W4X" secondAttribute="trailing" id="Q5e-IZ-4HZ"/>
                             <constraint firstItem="jWO-D5-DCr" firstAttribute="leading" secondItem="Zh2-u5-v2L" secondAttribute="leading" id="Qzi-ZK-cB2"/>
+                            <constraint firstItem="23I-El-vDR" firstAttribute="top" secondItem="jWO-D5-DCr" secondAttribute="bottom" id="fAq-w3-1nW"/>
                             <constraint firstItem="a0s-X8-zi3" firstAttribute="top" secondItem="Tjl-Og-W4X" secondAttribute="top" id="nFO-6A-CWG"/>
+                            <constraint firstItem="23I-El-vDR" firstAttribute="leading" secondItem="Tjl-Og-W4X" secondAttribute="leading" id="pmR-3b-8ug"/>
                             <constraint firstItem="jWO-D5-DCr" firstAttribute="top" secondItem="a0s-X8-zi3" secondAttribute="bottom" id="s6E-tV-2ob"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tjl-Og-W4X"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Kórházak" id="291-Yy-6Cf"/>
+                    <navigationItem key="navigationItem" id="291-Yy-6Cf"/>
                     <connections>
                         <outlet property="hospitalTableView" destination="23I-El-vDR" id="gKm-Fk-Bj6"/>
+                        <outlet property="informationLabel" destination="a0s-X8-zi3" id="zsn-Kc-oY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SJ-sI-Yc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1804.3478260869567" y="760.71428571428567"/>
         </scene>
-        <!--Beállítások-->
+        <!--Setting View Controller-->
         <scene sceneID="tOC-11-g8j">
             <objects>
-                <viewController id="xG4-eJ-V4j" customClass="SettingVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xG4-eJ-V4j" customClass="SettingViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qkv-gV-l90">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -531,7 +549,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="89t-Gf-tdA"/>
                                 </constraints>
-                                <state key="normal" title="Gyógyszerek frissítése">
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -543,40 +562,41 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="ZBy-cT-4Wh"/>
                                 </constraints>
-                                <state key="normal" title="További lehetőségek">
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="OtherOptionsButtonTapped:" destination="xG4-eJ-V4j" eventType="touchUpInside" id="Q8M-XZ-vt5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elérhetőségek:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-Hh-MGv">
-                                <rect key="frame" x="30" y="330" width="130.5" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-Hh-MGv">
+                                <rect key="frame" x="30" y="330" width="47.5" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail: tothzoltan01181996@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-Kf-n4L">
-                                <rect key="frame" x="45" y="362" width="287" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxG-Kf-n4L">
+                                <rect key="frame" x="45" y="362" width="39.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="telefonszám: +36 30 332 1906" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUs-NH-dbR">
-                                <rect key="frame" x="45" y="392" width="224.5" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUs-NH-dbR">
+                                <rect key="frame" x="45" y="392" width="39.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f0-bL-JgF">
-                                <rect key="frame" x="30" y="684" width="354" height="16"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey7-Ie-C9p">
+                                <rect key="frame" x="30" y="641" width="354" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verzió: 0.1." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey7-Ie-C9p">
-                                <rect key="frame" x="30" y="641" width="354" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0f0-bL-JgF">
+                                <rect key="frame" x="30" y="684" width="354" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -605,11 +625,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Na1-tz-zuC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Beállítások" id="rTi-Yb-01K"/>
+                    <navigationItem key="navigationItem" id="rTi-Yb-01K"/>
                     <connections>
+                        <outlet property="contactsLabel" destination="uVH-Hh-MGv" id="LaM-TR-Bq3"/>
                         <outlet property="copyrightLabel" destination="0f0-bL-JgF" id="cJ8-2S-RXU"/>
+                        <outlet property="eMailLabel" destination="pxG-Kf-n4L" id="q5H-AX-5vu"/>
                         <outlet property="medicinesUpdateButton" destination="fsX-Bw-dlU" id="Q9W-zg-VU3"/>
-                        <outlet property="otherOptionsButtion" destination="JO1-zK-mz5" id="pVn-nH-4ba"/>
+                        <outlet property="otherOptionsButton" destination="JO1-zK-mz5" id="pVn-nH-4ba"/>
+                        <outlet property="phoneNumberLabel" destination="PUs-NH-dbR" id="cd0-2f-E1C"/>
+                        <outlet property="versionNumberLabel" destination="Ey7-Ie-C9p" id="lM2-YC-r6o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz0-9A-2a5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -619,7 +643,7 @@
         <!--Adatok-->
         <scene sceneID="Tyo-3C-X2G">
             <objects>
-                <viewController id="nMd-tp-AKK" customClass="MedicineDetailVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nMd-tp-AKK" customClass="MedicineDetailViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HKv-jB-Lxz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -649,7 +673,7 @@
         <!--Adagolás-->
         <scene sceneID="MaT-rs-DlU">
             <objects>
-                <viewController id="UK2-Ep-BIJ" customClass="DosageVC" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UK2-Ep-BIJ" customClass="DosageViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48k-En-p8z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -664,7 +688,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sad-MK-e9f"/>
+        <segue reference="bIq-Bs-hgJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.up.doc" catalog="system" width="115" height="128"/>

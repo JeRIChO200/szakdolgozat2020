@@ -9,7 +9,7 @@
 import UIKit
 
 // Medicines details page - UIViewController
-class MedicineDetailVC: UIViewController {
+class MedicineDetailViewController: UIViewController {
     
     @IBOutlet weak var dosageButton: CustomSettingsButton!
     

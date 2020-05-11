@@ -33,10 +33,6 @@ class CustomSettingsButton: UIButton {
         layer.cornerRadius  = 15
         layer.borderWidth   = 1.5
         layer.borderColor   = Colors.appBlue.cgColor
-        translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 90).isActive = true
-        widthAnchor.constraint(equalToConstant: 374).isActive = true
-        centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
     // Button's shadow
@@ -47,6 +43,10 @@ class CustomSettingsButton: UIButton {
         layer.shadowOpacity = 0.5
         clipsToBounds       = true
         layer.masksToBounds = false
+    }
+    
+    func setButtonTitle(_ title: String?) {
+        setTitle(title, for: .normal)
     }
     
     // Function if button get tapped

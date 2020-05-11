@@ -9,7 +9,7 @@
 import UIKit
 
 // Protocol page - UIViewController
-class ProtocolVC: UIViewController {
+class ProtocolViewController: UIViewController {
     
     @IBOutlet weak var protocolSearchBar: UISearchBar!
     @IBOutlet weak var protocolTableView: UITableView!
@@ -17,7 +17,10 @@ class ProtocolVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title                                               = NSLocalizedString("protocolsTab.title", comment: "")
+        
         protocolTableView.backgroundColor                   = .white
+        protocolSearchBar.placeholder                       = NSLocalizedString("protocolsTab.searchBar.placeholder.text", comment: "")
         protocolSearchBar.searchTextField.backgroundColor   = Colors.appBlue
         protocolSearchBar.searchTextField.textColor         = .white
         protocolSearchBar.searchTextField.tintColor         = .white

@@ -9,6 +9,6 @@
 import UIKit
 
 // Dosage page - UIViewController
-class DosageVC: UIViewController {
-    
+class DosageViewController: UIViewController {
+    // kg / g
 }

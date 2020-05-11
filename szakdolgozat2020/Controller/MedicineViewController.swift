@@ -9,24 +9,23 @@
 import UIKit
 
 // Medicines page - UIViewController
-class MedicineVC: UIViewController {
+class MedicineViewController: UIViewController {
     
     @IBOutlet weak var medicineSearchBar: UISearchBar!
     @IBOutlet weak var medicineQrCodeReaderButton: UIButton!
-    @IBOutlet weak var medicineTableView: MedicineTV!
+    @IBOutlet weak var medicineTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title                                               = NSLocalizedString("medicinesTab.title", comment: "")
+        
         medicineTableView.backgroundColor                   = .white
+        medicineSearchBar.placeholder                       = NSLocalizedString("medicinesTab.searchBar.placeholder.text", comment: "")
         medicineSearchBar.searchTextField.backgroundColor   = Colors.appBlue
         medicineSearchBar.searchTextField.textColor         = .white
         medicineSearchBar.searchTextField.tintColor         = .white
         medicineSearchBar.image(for: .search, state: .normal)
     }
-    
-}
-
-class MedicineTV: UITableView {
     
 }

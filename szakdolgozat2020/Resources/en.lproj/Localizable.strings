@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  szakdolgozat2020
+
+  Created by Tóth Zoltán on 2020. 04. 27..
+  Copyright © 2020. Tóth Zoltán. All rights reserved.
+*/
+
+// Strings
+"warningMessage" = "Warning!";
+"launchMessage" = "Values ​​shown for dosing are ONLY recommended, based on factory data and international and domestic practice. AUTHORS ARE NOT RESPONSIBLE. This warning must be acknowledged and accepted before using the program!";
+"cancelMessage" = "Cancel";
+"accpetedMessage" = "Accept";
+
+// Page titles
+
+// Page strings
+// Medicines
+"medicinesTab.title" = "Medicines";
+"medicinesTab.searchBar.placeholder.text" = "Search: medicine name";
+
+// Favourites
+"favouritesTab.title" = "Favourites";
+"favouritesTab.searchBar.placeholder.text" = "Search: favourite medicine name";
+
+// Protocols
+"protocolsTab.title" = "Protocols";
+"protocolsTab.searchBar.placeholder.text" = "Search: protocol name";
+
+// Hospitals
+"hospitalsTab.title" = "Hospitals";
+"hospitalsTab.informationLabel.title" = "Here you will find a list of the hospitals closest to you.";
+
+// Settings
+"settingsTab.title" = "Settings";
+"settingsTab.updateMedicinesButton.title" = "Update medicines";
+"settingsTab.otherOptionsButton.title" = "Other options";
+"settingsTab.contactsLabel.title" = "Contacts:";
+"settingsTab.contactsEMailLabel.title" = "e-mail address: tothzoltan01181996@gmail.com";
+"settingsTab.contactsPhoneNumberLabel.title" = "phone number: +36 30 332 1906";
+"settingsTab.versionNumberLabel.title" = "Version: 0.1.";
+"settingsTab.copyRightLabel.title" = "Copyright © 2020 Tóth Zoltán. All rights reserved.";
