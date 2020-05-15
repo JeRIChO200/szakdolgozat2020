@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Favourite : Medicine {
+class FavouriteModel : MedicineModel {
     
 }

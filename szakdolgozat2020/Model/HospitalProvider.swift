@@ -10,43 +10,44 @@ import Foundation
 
 // Hospital providing protocol
 protocol HospitalProviding {
-    func getHospitals(onCompletion: @escaping ([Hospital]) -> Void)
+    func getHospitals(onCompletion: @escaping ([HospitalModel]) -> Void)
 }
 
-// Hospital provider
+// Hospital provider class
 class HospitalProviderFactory {
     static var mockedIstance: HospitalProviding?
-    class func getInstance() -> HospitalProviding {
+    class func getInstance(source: PageSource) -> HospitalProviding {
         guard mockedIstance == nil else { return mockedIstance! }
         return HospitalProvider()
     }
 }
 
+// Hospital provider class
 private class HospitalProvider : HospitalProviding {
-    func getHospitals(onCompletion: @escaping ([Hospital]) -> Void) {
+    func getHospitals(onCompletion: @escaping ([HospitalModel]) -> Void) {
         DispatchQueue.global(qos: .default).async {
-            sleep(2)
             onCompletion([
-                // #01
-                Hospital(name: "DR. Kenessey Albert Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #02
-                Hospital(name: "Szent Lázár Megyei Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #03
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #04
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #05
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #06
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #07
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #08
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #09
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10),
-                // #10
-                Hospital(name: "Szent Margit Kórház", latitude: 0.0, longitude: 1.0, distanceFromTheUser: 10)
+                // Here is the hospital list that you want to display in hospital page
+                // #01 - DONE
+                HospitalModel(name: "Dr. Kenessey Albert Kórház-Rendelőintézet", hospitalSCountry: "Nógrád", latitude: 48.080474, longitude: 19.311020),
+                // #02 - DONE
+                HospitalModel(name: "Szent Lázár Megyei Kórház", hospitalSCountry: "Nógrád", latitude: 48.117368, longitude: 19.814767),
+                // #03 - DONE
+                HospitalModel(name: "Szent Margit Kórház", hospitalSCountry: "Budapest - III. Kerület", latitude: 47.540093, longitude: 19.030192),
+                // #04 - DONE
+                HospitalModel(name: "Szent János Kórház", hospitalSCountry: "Budapest - XII. Kerület", latitude: 47.508667, longitude: 19.005729),
+                // #05 - DONE
+                HospitalModel(name: "Magyar Honvédség Egészségügyi Központ Honvédkórház", hospitalSCountry: "Budapest - XIII. Kerület", latitude: 47.531372, longitude: 19.074702),
+                // #06 - DONE
+                HospitalModel(name: "Dél-pesti Centrumkórház - Országos Hematológiai és Infektológiai Intézet - Szent István telephely", hospitalSCountry: "Budapest - IX. Kerület", latitude: 47.477722, longitude: 19.089355),
+                // #07 - DONE
+                HospitalModel(name: "SZTE Szent-Györgyi Albert Klinikai Központ Gyermekgyógyászati Klinika és Gyermek-Egészségügyi Központ", hospitalSCountry: "Csongrád", latitude: 46.245357, longitude: 20.150484),
+                // #08 - DONE
+                HospitalModel(name: "Pécsi Honvéd Kórház", hospitalSCountry: "Baranya", latitude: 46.052106, longitude: 18.229541),
+                // #09 - DONE
+                HospitalModel(name: "Petz Aladár Megyei Oktató Kórház", hospitalSCountry: "Győr-Moson-Sopron", latitude: 47.677856, longitude: 17.678832),
+                // #10 - DONE
+                HospitalModel(name: "Borsod-Abaúj-Zemplén Megyei Központi Kórház és Egyetemi Oktatókórház Semmelweis Tagkórház", hospitalSCountry: "Szabolcs-Szatmár-Bereg", latitude: 48.097646, longitude: 20.815311)
             ])
         }
     }

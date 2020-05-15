@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ProtocolsControlling {
-    func start(with protocolSource: ProtocolSource)
+    func start(with pageSource: PageSource)
     func gatherProtocols()
 }
 
@@ -22,13 +22,13 @@ extension ProtocolsViewController: ProtocolsControlling {
         self
     }
     
-    func start(with protocolSource: ProtocolSource) {
-        presenter.displayTitle(by: args.protocolSource)
+    func start(with pageSource: PageSource) {
+        presenter.displayTitle(by: protocolArgs.pageSource)
         gatherProtocols()
     }
     
     func gatherProtocols() {
-        provider.getProtocols { [weak self] protocols in
+        protocolProvider.getProtocols { [weak self] protocols in
             DispatchQueue.main.sync {
                 self?.presenter.display(protocols)
             }

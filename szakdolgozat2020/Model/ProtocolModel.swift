@@ -6,9 +6,9 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
-
 struct ProtocolModel {
     var name: String
     var url: String
+    
+    static let empty = ProtocolModel(name: "", url: "")
 }

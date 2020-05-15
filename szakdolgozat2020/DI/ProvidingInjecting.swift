@@ -8,12 +8,16 @@
 
 import Foundation
 
-protocol ProtocolProvidingInjecting {}
+protocol ProvidingInjecting {}
 
 //MARK: - ProtocolProvidingInjecting
 
-extension ProtocolProvidingInjecting {
-    func inject(_ source: ProtocolSource) -> ProtocolProviding {
+extension ProvidingInjecting {
+    func protocolInject(_ source: PageSource) -> ProtocolProviding {
         ProtocolProviderFactory.getInstance(source: source)
+    }
+    
+    func hospitalInject(_ source: PageSource) -> HospitalProviding {
+        HospitalProviderFactory.getInstance(source: source)
     }
 }

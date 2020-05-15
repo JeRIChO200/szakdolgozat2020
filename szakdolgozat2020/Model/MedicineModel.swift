@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Medicine {
+class MedicineModel {
     let medicineName: String
     let factoryMedicineName: String
     let activeSubstanceName: String

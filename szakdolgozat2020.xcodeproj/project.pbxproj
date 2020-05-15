@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3757E4246DA256007364EF /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E3246DA256007364EF /* PageSource.swift */; };
+		6B3757E6246DA6D0007364EF /* FavouriteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E5246DA6D0007364EF /* FavouriteProvider.swift */; };
+		6B3757E8246DA6DB007364EF /* MedicineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E7246DA6DB007364EF /* MedicineProvider.swift */; };
+		6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */; };
+		6B3757EC246DF7E6007364EF /* FavouritesViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */; };
+		6B3757EE246DF7FE007364EF /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757ED246DF7FE007364EF /* FavouriteTableViewCell.swift */; };
+		6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */; };
+		6B3757F2246E09B8007364EF /* HospitalsViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */; };
+		6B3757F4246E09CF007364EF /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */; };
 		6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */; };
 		6B3F1D0D2464FBCE0024D7A8 /* DosageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */; };
 		6B45E1172468B7CE00D6A8CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B45E1192468B7CE00D6A8CA /* Localizable.strings */; };
@@ -25,7 +34,8 @@
 		6B807DE724698F0B00243F37 /* ProtocolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DE624698F0B00243F37 /* ProtocolTableViewCell.swift */; };
 		6B807DEA246990BA00243F37 /* ProtocolsViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DE9246990BA00243F37 /* ProtocolsViewController+presenting.swift */; };
 		6B807DF02469991600243F37 /* ProtocolsViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DEF2469991600243F37 /* ProtocolsViewController+controlling.swift */; };
-		6B807DF324699CC700243F37 /* ProtocolProvideingInjecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DF224699CC700243F37 /* ProtocolProvideingInjecting.swift */; };
+		6B807DF324699CC700243F37 /* ProvidingInjecting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DF224699CC700243F37 /* ProvidingInjecting.swift */; };
+		6B807E1B246A35B600243F37 /* QrCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807E1A246A35B600243F37 /* QrCodeReaderViewController.swift */; };
 		6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */; };
 		6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */; };
 		6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD2B24646F3E00DED1A6 /* Constants.swift */; };
@@ -53,6 +63,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B3757E3246DA256007364EF /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
+		6B3757E5246DA6D0007364EF /* FavouriteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteProvider.swift; sourceTree = "<group>"; };
+		6B3757E7246DA6DB007364EF /* MedicineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineProvider.swift; sourceTree = "<group>"; };
+		6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+presenting.swift"; sourceTree = "<group>"; };
+		6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+controlling.swift"; sourceTree = "<group>"; };
+		6B3757ED246DF7FE007364EF /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
+		6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+presenting.swift"; sourceTree = "<group>"; };
+		6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+controlling.swift"; sourceTree = "<group>"; };
+		6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
 		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailsViewController.swift; sourceTree = "<group>"; };
 		6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
 		6B45E1182468B7CE00D6A8CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -74,7 +93,8 @@
 		6B807DE624698F0B00243F37 /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
 		6B807DE9246990BA00243F37 /* ProtocolsViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProtocolsViewController+presenting.swift"; sourceTree = "<group>"; };
 		6B807DEF2469991600243F37 /* ProtocolsViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProtocolsViewController+controlling.swift"; sourceTree = "<group>"; };
-		6B807DF224699CC700243F37 /* ProtocolProvideingInjecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolProvideingInjecting.swift; sourceTree = "<group>"; };
+		6B807DF224699CC700243F37 /* ProvidingInjecting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidingInjecting.swift; sourceTree = "<group>"; };
+		6B807E1A246A35B600243F37 /* QrCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeReaderViewController.swift; sourceTree = "<group>"; };
 		6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsButton.swift; sourceTree = "<group>"; };
 		6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ER - Szakdolgozat specifikáció.pdf"; sourceTree = "<group>"; };
 		6BACFD2B24646F3E00DED1A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -179,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */,
+				6B807E1A246A35B600243F37 /* QrCodeReaderViewController.swift */,
 				6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */,
 				6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */,
 			);
@@ -189,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */,
+				6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */,
+				6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */,
+				6B3757ED246DF7FE007364EF /* FavouriteTableViewCell.swift */,
 			);
 			path = FavouritesPage;
 			sourceTree = "<group>";
@@ -197,6 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */,
+				6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */,
+				6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */,
+				6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */,
 			);
 			path = HospitalsPage;
 			sourceTree = "<group>";
@@ -205,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */,
+				6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */,
 			);
 			path = SettingsPage;
 			sourceTree = "<group>";
@@ -245,8 +273,11 @@
 		6BDFF7DE245785D8002A75F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6B3757E3246DA256007364EF /* PageSource.swift */,
 				6B45E1272468DED700D6A8CA /* MedicineModel.swift */,
+				6B3757E7246DA6DB007364EF /* MedicineProvider.swift */,
 				6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */,
+				6B3757E5246DA6D0007364EF /* FavouriteProvider.swift */,
 				6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */,
 				6B807DE424697F4800243F37 /* ProtocolProvider.swift */,
 				6B45E1242468DA0500D6A8CA /* HospitalModel.swift */,
@@ -268,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7CC245774DD002A75F2 /* MainController.swift */,
-				6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */,
 				6B807DD924696ECB00243F37 /* NavigationControllers */,
 				6B807DD824696EC100243F37 /* ViewControllers */,
 			);
@@ -278,7 +308,7 @@
 		6BDFF7E124578617002A75F2 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				6B807DF224699CC700243F37 /* ProtocolProvideingInjecting.swift */,
+				6B807DF224699CC700243F37 /* ProvidingInjecting.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -403,29 +433,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */,
+				6B3757EE246DF7FE007364EF /* FavouriteTableViewCell.swift in Sources */,
 				6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */,
+				6B3757E6246DA6D0007364EF /* FavouriteProvider.swift in Sources */,
 				6B807DE32469791200243F37 /* HospitalProvider.swift in Sources */,
 				6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */,
 				6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */,
 				6BDFF7CD245774DD002A75F2 /* MainController.swift in Sources */,
+				6B807E1B246A35B600243F37 /* QrCodeReaderViewController.swift in Sources */,
 				6B807DDF2469700400243F37 /* HospitalsNavigationController.swift in Sources */,
 				6B45E12A2468DEE500D6A8CA /* FavouriteModel.swift in Sources */,
 				6BDFF7C9245774DD002A75F2 /* AppDelegate.swift in Sources */,
 				6B807DD724696E3800243F37 /* ProtocolsNavigationController.swift in Sources */,
+				6B3757F4246E09CF007364EF /* HospitalTableViewCell.swift in Sources */,
 				6B3F1D0D2464FBCE0024D7A8 /* DosageViewController.swift in Sources */,
 				6B807DE724698F0B00243F37 /* ProtocolTableViewCell.swift in Sources */,
+				6B3757E4246DA256007364EF /* PageSource.swift in Sources */,
 				6B807DDD24696FEC00243F37 /* FavouritesNavigationController.swift in Sources */,
-				6B807DF324699CC700243F37 /* ProtocolProvideingInjecting.swift in Sources */,
+				6B3757EC246DF7E6007364EF /* FavouritesViewController+controlling.swift in Sources */,
+				6B807DF324699CC700243F37 /* ProvidingInjecting.swift in Sources */,
 				6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */,
+				6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */,
 				6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */,
 				6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */,
 				6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */,
+				6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */,
 				6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */,
 				6B807DE524697F4800243F37 /* ProtocolProvider.swift in Sources */,
+				6B3757E8246DA6DB007364EF /* MedicineProvider.swift in Sources */,
 				6BDFF7CB245774DD002A75F2 /* SceneDelegate.swift in Sources */,
 				6B807DF02469991600243F37 /* ProtocolsViewController+controlling.swift in Sources */,
 				6B807DEA246990BA00243F37 /* ProtocolsViewController+presenting.swift in Sources */,
 				6B807DE12469701400243F37 /* SettingsNavigationController.swift in Sources */,
+				6B3757F2246E09B8007364EF /* HospitalsViewController+controlling.swift in Sources */,
 				6B45E1232468D9F500D6A8CA /* ProtocolModel.swift in Sources */,
 				6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */,
 				6B807DDB24696FDD00243F37 /* MedicinesNavigationController.swift in Sources */,
