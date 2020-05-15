@@ -10,6 +10,8 @@ import UIKit
 
 class HospitalTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var distanceLabel: UILabel!
+    
     func display(hospitalModel: HospitalModel) {
         textLabel?.text                         = hospitalModel.name
         textLabel?.numberOfLines                = 0
@@ -19,5 +21,12 @@ class HospitalTableViewCell: UITableViewCell {
         selectionStyle                          = UITableViewCell.SelectionStyle.none
         detailTextLabel?.text                   = hospitalModel.hospitalSCountry
         detailTextLabel?.textColor              = .red
+        
+        if hospitalModel.distanceFromUser < 10000 {
+            distanceLabel?.text                 = String(Int(hospitalModel.distanceFromUser)) + " m"
+        } else {
+            distanceLabel?.text                 = String(hospitalModel.distanceFromUser/1000) + " km"
+        }
+        
     }
 }

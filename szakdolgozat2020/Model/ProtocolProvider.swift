@@ -35,11 +35,11 @@ private class ProtocolProvider : ProtocolProviding {
                 // #03
                 ProtocolModel(name: "Gyógyszerelési protokoll", url: "http://www.downalapitvany.hu/sites/default/files/Gyógyszerelési%20protokoll.pdf?fbclid=IwAR03Oloc9WmZq3CkaGJ9weKwbL4RPY6E-btvsNt2baqlSmbPsefdw69yrAQ"),
                 // #04
-                ProtocolModel(name: "4th", url: ""),
+                ProtocolModel(name: "4th", url: "https://www.index.hu/"),
                 // #05
-                ProtocolModel(name: "5th", url: ""),
+                ProtocolModel(name: "5th", url: "https://www.444.hu/"),
                 // #06
-                ProtocolModel(name: "6th", url: ""),
+                ProtocolModel(name: "6th", url: "http://www.africau.edu/images/default/sample.pdf"),
                 // #07
                 ProtocolModel(name: "7th", url: ""),
                 // #08

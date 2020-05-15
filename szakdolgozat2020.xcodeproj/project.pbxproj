@@ -16,8 +16,11 @@
 		6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */; };
 		6B3757F2246E09B8007364EF /* HospitalsViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */; };
 		6B3757F4246E09CF007364EF /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */; };
+		6B3757F6246E22D5007364EF /* HospitalDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F5246E22D5007364EF /* HospitalDistanceCalculator.swift */; };
 		6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */; };
 		6B3F1D0D2464FBCE0024D7A8 /* DosageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */; };
+		6B42C140246F21D0000424F9 /* ProtocolShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B42C13F246F21D0000424F9 /* ProtocolShowViewController.swift */; };
+		6B42C143246F2C33000424F9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B42C142246F2C33000424F9 /* WebKit.framework */; };
 		6B45E1172468B7CE00D6A8CA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B45E1192468B7CE00D6A8CA /* Localizable.strings */; };
 		6B45E1232468D9F500D6A8CA /* ProtocolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */; };
 		6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1242468DA0500D6A8CA /* HospitalModel.swift */; };
@@ -72,8 +75,11 @@
 		6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+presenting.swift"; sourceTree = "<group>"; };
 		6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+controlling.swift"; sourceTree = "<group>"; };
 		6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		6B3757F5246E22D5007364EF /* HospitalDistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDistanceCalculator.swift; sourceTree = "<group>"; };
 		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailsViewController.swift; sourceTree = "<group>"; };
 		6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
+		6B42C13F246F21D0000424F9 /* ProtocolShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolShowViewController.swift; sourceTree = "<group>"; };
+		6B42C142246F2C33000424F9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		6B45E1182468B7CE00D6A8CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B45E1212468D8B000D6A8CA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolModel.swift; sourceTree = "<group>"; };
@@ -125,12 +131,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B42C143246F2C33000424F9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B42C141246F2C33000424F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B42C142246F2C33000424F9 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6B45E1142468939900D6A8CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +206,7 @@
 				6B807DE9246990BA00243F37 /* ProtocolsViewController+presenting.swift */,
 				6B807DEF2469991600243F37 /* ProtocolsViewController+controlling.swift */,
 				6B807DE624698F0B00243F37 /* ProtocolTableViewCell.swift */,
+				6B42C13F246F21D0000424F9 /* ProtocolShowViewController.swift */,
 			);
 			path = ProtocolsPage;
 			sourceTree = "<group>";
@@ -243,6 +259,7 @@
 				6BDFF7C7245774DD002A75F2 /* szakdolgozat2020 */,
 				6B50B6322458B389002F1C6F /* szakdolgozat2020Tests */,
 				6BDFF7C6245774DD002A75F2 /* Products */,
+				6B42C141246F2C33000424F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -282,6 +299,7 @@
 				6B807DE424697F4800243F37 /* ProtocolProvider.swift */,
 				6B45E1242468DA0500D6A8CA /* HospitalModel.swift */,
 				6B807DE22469791200243F37 /* HospitalProvider.swift */,
+				6B3757F5246E22D5007364EF /* HospitalDistanceCalculator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -453,7 +471,9 @@
 				6B3757EC246DF7E6007364EF /* FavouritesViewController+controlling.swift in Sources */,
 				6B807DF324699CC700243F37 /* ProvidingInjecting.swift in Sources */,
 				6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */,
+				6B42C140246F21D0000424F9 /* ProtocolShowViewController.swift in Sources */,
 				6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */,
+				6B3757F6246E22D5007364EF /* HospitalDistanceCalculator.swift in Sources */,
 				6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */,
 				6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */,
 				6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */,

@@ -30,6 +30,7 @@ extension ProtocolsViewController: ProtocolsPresenting {
     
     func display(_ protocols: [ProtocolModel]) {
         self.protocols = protocols
+        selectionCalculator()
         protocolTableView.reloadData()
     }
 }
@@ -40,7 +41,8 @@ extension ProtocolsViewController: UITableViewDataSource {
     
     // Number of raw in a section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        protocols.count
+        let key = sectionLetters[section]
+        return protocolsDictionary[key]?.count ?? 0
     }
     
     // Displaying a cell
@@ -48,12 +50,14 @@ extension ProtocolsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "protocolCell") as? ProtocolTableViewCell else {
             return UITableViewCell()
         }
-        let protocolModel = protocols[indexPath.row]
+        let key = sectionLetters[indexPath.section]
+        
+        let protocolModel = protocolsDictionary[key]?[indexPath.row] ?? ProtocolModel.empty
         cell.display(protocolModel: protocolModel)
         return cell
     }
     
-    // Header -
+    // Header - Letters
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionLetters[section]
     }
@@ -64,6 +68,20 @@ extension ProtocolsViewController: UITableViewDataSource {
         header.textLabel?.font      = UIFont.systemFont(ofSize: 25, weight: UIFont.Weight.medium)
         header.textLabel?.textColor = .red
         header.backgroundColor      = .green
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let key = sectionLetters[indexPath.section]
+        
+        performSegue(withIdentifier: "showProtocol", sender: protocolsDictionary[key]?[indexPath.row].url)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let pdfViewer = segue.destination as? ProtocolShowViewController, let urlString = sender as? String else {
+            return
+        }
+        pdfViewer.args.url = urlString
     }
     
     // Right side - Section's number - DONE

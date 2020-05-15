@@ -32,26 +32,36 @@
             </objects>
             <point key="canvasLocation" x="-1804" y="-678"/>
         </scene>
-        <!--View Controller-->
+        <!--Protocol Show View Controller-->
         <scene sceneID="z2D-u1-n04">
             <objects>
-                <viewController id="GB6-QR-8NV" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="GB6-QR-8NV" customClass="ProtocolShowViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ayQ-4G-gYt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PDF Tartalma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg0-9X-JdE">
-                                <rect key="frame" x="156" y="411" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoE-oG-idJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rt4-b9-i2P" firstAttribute="trailing" secondItem="UoE-oG-idJ" secondAttribute="trailing" id="1QG-fa-vls"/>
+                            <constraint firstItem="rt4-b9-i2P" firstAttribute="bottom" secondItem="UoE-oG-idJ" secondAttribute="bottom" id="bx7-vh-WX3"/>
+                            <constraint firstItem="UoE-oG-idJ" firstAttribute="top" secondItem="rt4-b9-i2P" secondAttribute="top" id="oUZ-3c-FHE"/>
+                            <constraint firstItem="UoE-oG-idJ" firstAttribute="leading" secondItem="rt4-b9-i2P" secondAttribute="leading" id="vYV-Oy-CAA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rt4-b9-i2P"/>
                     </view>
                     <navigationItem key="navigationItem" id="XDs-mD-dG9"/>
+                    <connections>
+                        <outlet property="pdfWebKit" destination="UoE-oG-idJ" id="zt4-Ps-IZK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xv7-CB-RiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,9 +122,6 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <segue destination="GB6-QR-8NV" kind="showDetail" id="8bx-fr-O39"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -139,6 +146,7 @@
                     <connections>
                         <outlet property="protocolSearchBar" destination="WKS-sZ-cYs" id="xFX-XQ-I53"/>
                         <outlet property="protocolTableView" destination="h5Q-GJ-TVp" id="WQC-bY-o2g"/>
+                        <segue destination="GB6-QR-8NV" kind="show" identifier="showProtocol" id="qEI-eu-wVj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujN-4m-pJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -540,31 +548,37 @@
                                     <constraint firstAttribute="height" constant="1" id="mvl-jZ-yhQ"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23I-El-vDR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23I-El-vDR">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hospitalCell" textLabel="YxF-Nb-2N6" detailTextLabel="qnU-Ga-bqx" style="IBUITableViewCellStyleSubtitle" id="8NR-55-cot" customClass="HospitalTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hospitalCell" textLabel="YxF-Nb-2N6" detailTextLabel="gmv-n8-Kd4" style="IBUITableViewCellStyleSubtitle" id="8NR-55-cot" customClass="HospitalTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8NR-55-cot" id="JJB-Cp-c49">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YxF-Nb-2N6">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YxF-Nb-2N6">
                                                     <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qnU-Ga-bqx">
-                                                    <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmv-n8-Kd4">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onr-Tm-qxi">
+                                                    <rect key="frame" x="310" y="17" width="94" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -573,6 +587,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="onr-Tm-qxi" id="Zq5-DF-tVW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

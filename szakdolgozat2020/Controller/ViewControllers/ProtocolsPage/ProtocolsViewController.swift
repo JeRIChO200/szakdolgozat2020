@@ -26,16 +26,15 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
     @IBOutlet weak var protocolTableView: UITableView!
     
     // For grouped list
-    //var protocolsDictionary = [String: [ProtocolModel]]()
-    let sectionLetters: [String] = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
-    //var sectionLetters = [String]()
+    var protocolsDictionary = [String: [ProtocolModel]]()
+    //let sectionLetters: [String] = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
+    var sectionLetters = [String]()
     var protocols = [ProtocolModel]()
     
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //selection()
         controller.start(with: protocolArgs.pageSource)
         
         self.dismissKey()
@@ -51,8 +50,8 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
         protocolTableView.delegate                          = self
         protocolTableView.backgroundColor                   = .white
     }
-    /*
-    func selection() {
+    
+    func selectionCalculator() {
         for protocolItem in protocols {
             let protocolKey = String(protocolItem.name.prefix(1))
             if var protocolValues = protocolsDictionary[protocolKey] {
@@ -63,9 +62,9 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
             }
         }
         
-        sectionLetters = [String](protocolsDictionary.keys)
-        sectionLetters = sectionLetters.sorted(by: { $0 < $1 })
-    }*/
+        sectionLetters = protocolsDictionary.keys.sorted()
+        //sectionLetters = sectionLetters.sorted(by: { $0 < $1 })
+    }
 }
 
 //MARK: - ProtocolsViewController - #1 Extension: Hide keyboard
@@ -91,6 +90,5 @@ extension ProtocolsViewController: UISearchBarDelegate {
         protocolSearchBar.text = ""
         protocolSearchBar.resignFirstResponder()
     }
-    
     
 }
