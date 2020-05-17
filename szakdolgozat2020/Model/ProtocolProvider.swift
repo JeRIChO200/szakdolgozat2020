@@ -29,7 +29,7 @@ private class ProtocolProvider : ProtocolProviding {
             onCompletion([
                 // Here is the protocol list that you want to display in protocol page
                 // #01
-                ProtocolModel(name: "A beteg feltalálási heylére juttandó minimum felszerelés", url: "https://oktatas.mentok.hu/pluginfile.php/95203/mod_resource/content/4/A%20beteg%20feltalálási%20helyére%20juttatandó%20minimum%20felszerelés.pdf?fbclid=IwAR3vfEVFMIsf1tp7TAgIXCKNVLzcm6DdcPmlKdVrfoC18HKPZpvcm2xSd18"),
+                ProtocolModel(name: "A beteg feltalálási helyére juttandó minimum felszerelés", url: "https://elearning.uni-obuda.hu/main/pluginfile.php/415651/mod_resource/content/1/03-Virtualization%20Technologies.pdf"),
                 // #02
                 ProtocolModel(name: "Beteg/sérült előrejelzése, átadása, segélykocsi hívása a prehospitális gyakorlatban", url: "https://oktatas.mentok.hu/pluginfile.php/96643/mod_resource/content/1/Betegsérült%20előrejelzése%2C%20átadása%2C%20segélykocsi%20h%C3%ADvása%20a%20prehospitális%20gyakorlatban.pdf?fbclid=IwAR0BEe2kFqY4ZvVxrH1L1UA9_QWrhI8Qz2l3N5lUaAdj6tIv2h89-1BdLws"),
                 // #03
@@ -49,11 +49,11 @@ private class ProtocolProvider : ProtocolProviding {
                 // #10
                 ProtocolModel(name: "10th", url: ""),
                 // #11
-                ProtocolModel(name: "A beteg feltalálási heylére juttandó minimum felszerelés", url: "https://oktatas.mentok.hu/pluginfile.php/95203/mod_resource/content/4/A%20beteg%20feltalálási%20helyére%20juttatandó%20minimum%20felszerelés.pdf?fbclid=IwAR3vfEVFMIsf1tp7TAgIXCKNVLzcm6DdcPmlKdVrfoC18HKPZpvcm2xSd18"),
+                ProtocolModel(name: "Anerereteg feltalálási helyére juttandó minimum felszerelés", url: "https://elearning.uni-obuda.hu/main/pluginfile.php/415651/mod_resource/content/1/03-Virtualization%20Technologies.pdf"),
                 // #12
-                ProtocolModel(name: "Beteg/sérült előrejelzése, átadása, segélykocsi hívása a prehospitális gyakorlatban", url: "https://oktatas.mentok.hu/pluginfile.php/96643/mod_resource/content/1/Betegsérült%20előrejelzése%2C%20átadása%2C%20segélykocsi%20h%C3%ADvása%20a%20prehospitális%20gyakorlatban.pdf?fbclid=IwAR0BEe2kFqY4ZvVxrH1L1UA9_QWrhI8Qz2l3N5lUaAdj6tIv2h89-1BdLws"),
+                ProtocolModel(name: "ABeteg/sérült előrejelzése, átadása, segélykocsi hívása a prehospitális gyakorlatban", url: "https://oktatas.mentok.hu/pluginfile.php/96643/mod_resource/content/1/Betegsérült%20előrejelzése%2C%20átadása%2C%20segélykocsi%20h%C3%ADvása%20a%20prehospitális%20gyakorlatban.pdf?fbclid=IwAR0BEe2kFqY4ZvVxrH1L1UA9_QWrhI8Qz2l3N5lUaAdj6tIv2h89-1BdLws"),
                 // #13
-                ProtocolModel(name: "Gyógyszerelési protokoll", url: "http://www.downalapitvany.hu/sites/default/files/Gyógyszerelési%20protokoll.pdf?fbclid=IwAR03Oloc9WmZq3CkaGJ9weKwbL4RPY6E-btvsNt2baqlSmbPsefdw69yrAQ"),
+                ProtocolModel(name: "Az Egészségügyi protokoll", url: "http://www.downalapitvany.hu/sites/default/files/Gyógyszerelési%20protokoll.pdf?fbclid=IwAR03Oloc9WmZq3CkaGJ9weKwbL4RPY6E-btvsNt2baqlSmbPsefdw69yrAQ"),
                 // #14
                 ProtocolModel(name: "4th", url: ""),
                 // #15

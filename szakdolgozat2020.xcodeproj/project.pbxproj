@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B3757E4246DA256007364EF /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E3246DA256007364EF /* PageSource.swift */; };
-		6B3757E6246DA6D0007364EF /* FavouriteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E5246DA6D0007364EF /* FavouriteProvider.swift */; };
 		6B3757E8246DA6DB007364EF /* MedicineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E7246DA6DB007364EF /* MedicineProvider.swift */; };
 		6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */; };
 		6B3757EC246DF7E6007364EF /* FavouritesViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */; };
@@ -25,7 +24,9 @@
 		6B45E1232468D9F500D6A8CA /* ProtocolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */; };
 		6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1242468DA0500D6A8CA /* HospitalModel.swift */; };
 		6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1272468DED700D6A8CA /* MedicineModel.swift */; };
-		6B45E12A2468DEE500D6A8CA /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */; };
+		6B478C4C2470160C00BB742D /* MedicinesViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B478C4B2470160C00BB742D /* MedicinesViewController+presenting.swift */; };
+		6B478C4E2470162E00BB742D /* MedicinesViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B478C4D2470162E00BB742D /* MedicinesViewController+controlling.swift */; };
+		6B478C502470164300BB742D /* MedicineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B478C4F2470164300BB742D /* MedicineTableViewCell.swift */; };
 		6B50B6342458B389002F1C6F /* szakdolgozat2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */; };
 		6B807DD724696E3800243F37 /* ProtocolsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DD624696E3800243F37 /* ProtocolsNavigationController.swift */; };
 		6B807DDB24696FDD00243F37 /* MedicinesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B807DDA24696FDD00243F37 /* MedicinesNavigationController.swift */; };
@@ -67,7 +68,6 @@
 
 /* Begin PBXFileReference section */
 		6B3757E3246DA256007364EF /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
-		6B3757E5246DA6D0007364EF /* FavouriteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteProvider.swift; sourceTree = "<group>"; };
 		6B3757E7246DA6DB007364EF /* MedicineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineProvider.swift; sourceTree = "<group>"; };
 		6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+presenting.swift"; sourceTree = "<group>"; };
 		6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+controlling.swift"; sourceTree = "<group>"; };
@@ -85,7 +85,9 @@
 		6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolModel.swift; sourceTree = "<group>"; };
 		6B45E1242468DA0500D6A8CA /* HospitalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalModel.swift; sourceTree = "<group>"; };
 		6B45E1272468DED700D6A8CA /* MedicineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineModel.swift; sourceTree = "<group>"; };
-		6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
+		6B478C4B2470160C00BB742D /* MedicinesViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicinesViewController+presenting.swift"; sourceTree = "<group>"; };
+		6B478C4D2470162E00BB742D /* MedicinesViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicinesViewController+controlling.swift"; sourceTree = "<group>"; };
+		6B478C4F2470164300BB742D /* MedicineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewCell.swift; sourceTree = "<group>"; };
 		6B50B6312458B389002F1C6F /* szakdolgozat2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = szakdolgozat2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B50B6332458B389002F1C6F /* szakdolgozat2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = szakdolgozat2020Tests.swift; sourceTree = "<group>"; };
 		6B50B6352458B389002F1C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,6 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */,
+				6B478C4B2470160C00BB742D /* MedicinesViewController+presenting.swift */,
+				6B478C4D2470162E00BB742D /* MedicinesViewController+controlling.swift */,
+				6B478C4F2470164300BB742D /* MedicineTableViewCell.swift */,
 				6B807E1A246A35B600243F37 /* QrCodeReaderViewController.swift */,
 				6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */,
 				6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */,
@@ -293,8 +298,6 @@
 				6B3757E3246DA256007364EF /* PageSource.swift */,
 				6B45E1272468DED700D6A8CA /* MedicineModel.swift */,
 				6B3757E7246DA6DB007364EF /* MedicineProvider.swift */,
-				6B45E1292468DEE500D6A8CA /* FavouriteModel.swift */,
-				6B3757E5246DA6D0007364EF /* FavouriteProvider.swift */,
 				6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */,
 				6B807DE424697F4800243F37 /* ProtocolProvider.swift */,
 				6B45E1242468DA0500D6A8CA /* HospitalModel.swift */,
@@ -453,14 +456,12 @@
 				6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */,
 				6B3757EE246DF7FE007364EF /* FavouriteTableViewCell.swift in Sources */,
 				6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */,
-				6B3757E6246DA6D0007364EF /* FavouriteProvider.swift in Sources */,
 				6B807DE32469791200243F37 /* HospitalProvider.swift in Sources */,
 				6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */,
 				6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */,
 				6BDFF7CD245774DD002A75F2 /* MainController.swift in Sources */,
 				6B807E1B246A35B600243F37 /* QrCodeReaderViewController.swift in Sources */,
 				6B807DDF2469700400243F37 /* HospitalsNavigationController.swift in Sources */,
-				6B45E12A2468DEE500D6A8CA /* FavouriteModel.swift in Sources */,
 				6BDFF7C9245774DD002A75F2 /* AppDelegate.swift in Sources */,
 				6B807DD724696E3800243F37 /* ProtocolsNavigationController.swift in Sources */,
 				6B3757F4246E09CF007364EF /* HospitalTableViewCell.swift in Sources */,
@@ -479,6 +480,7 @@
 				6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */,
 				6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */,
 				6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */,
+				6B478C4E2470162E00BB742D /* MedicinesViewController+controlling.swift in Sources */,
 				6B807DE524697F4800243F37 /* ProtocolProvider.swift in Sources */,
 				6B3757E8246DA6DB007364EF /* MedicineProvider.swift in Sources */,
 				6BDFF7CB245774DD002A75F2 /* SceneDelegate.swift in Sources */,
@@ -486,7 +488,9 @@
 				6B807DEA246990BA00243F37 /* ProtocolsViewController+presenting.swift in Sources */,
 				6B807DE12469701400243F37 /* SettingsNavigationController.swift in Sources */,
 				6B3757F2246E09B8007364EF /* HospitalsViewController+controlling.swift in Sources */,
+				6B478C502470164300BB742D /* MedicineTableViewCell.swift in Sources */,
 				6B45E1232468D9F500D6A8CA /* ProtocolModel.swift in Sources */,
+				6B478C4C2470160C00BB742D /* MedicinesViewController+presenting.swift in Sources */,
 				6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */,
 				6B807DDB24696FDD00243F37 /* MedicinesNavigationController.swift in Sources */,
 			);

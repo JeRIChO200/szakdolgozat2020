@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 protocol HospitalsPresenting {
     func displayTitle(by pageSource: PageSource)

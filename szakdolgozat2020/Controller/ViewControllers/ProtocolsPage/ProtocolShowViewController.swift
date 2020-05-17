@@ -18,15 +18,13 @@ class ProtocolShowViewController : UIViewController {
         var url: String
     }
     
-    var args = Args(url: "")
+    var pdfArgs = Args(url: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let webView = WKWebView(frame: view.frame)
-        guard let url = URL(string: args.url) else {
+        guard let url = URL(string: pdfArgs.url) else {
             return
         }
         pdfWebKit.load(URLRequest(url: url))
-        //view.addSubview(webView)
     }
 }

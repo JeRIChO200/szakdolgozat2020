@@ -9,18 +9,34 @@
 import UIKit
 
 // Medicines page - UIViewController
-class MedicinesViewController: UIViewController {
+class MedicinesViewController: UIViewController, ProvidingInjecting, UITableViewDelegate {
+    
+    // Args struct
+    struct Args {
+        var pageSource: PageSource
+    }
+    
+    // Variables
+    var medicineArgs = Args(pageSource: .medicines)
+    private(set) lazy var medicineProvier: MedicineProviding = {
+        medicineInject(medicineArgs.pageSource)
+    }()
     
     // IB Outlets
     @IBOutlet weak var medicineSearchBar: UISearchBar!
     @IBOutlet weak var medicineQrCodeReaderButton: UIButton!
     @IBOutlet weak var medicineTableView: UITableView!
     
+    // For grouped list variables
+    var medicinesDictionary                                 = [String: [MedicineModel]]()
+    var sectionLetters                                      = [String]()
+    var medicines                                           = [MedicineModel]()
+    
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title                                               = NSLocalizedString("medicinesTab.title", comment: "")
+        controller.start(with: medicineArgs.pageSource)
         
         self.dismissKey()
         medicineSearchBar.delegate                          = self
@@ -31,7 +47,25 @@ class MedicinesViewController: UIViewController {
         medicineSearchBar.searchTextField.tintColor         = .white
         medicineSearchBar.image(for: .search, state: .normal)
         
+        medicineTableView.sectionIndexBackgroundColor       = .white
         medicineTableView.backgroundColor                   = .white
+        medicineTableView.tintColor                         = .red
+        medicineTableView.dataSource                        = self
+        medicineTableView.delegate                          = self
+    }
+    
+    func selectionCalculator() {
+        for medicineItem in medicines {
+            let medicineKey = String(medicineItem.medicineName.prefix(1))
+            if var medicineValues = medicinesDictionary[medicineKey] {
+                medicineValues.append(medicineItem)
+                medicinesDictionary[medicineKey] = medicineValues
+            } else {
+                medicinesDictionary[medicineKey] = [medicineItem]
+            }
+        }
+        
+        sectionLetters = medicinesDictionary.keys.sorted()
     }
 }
 

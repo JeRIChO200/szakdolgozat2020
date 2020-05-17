@@ -49,7 +49,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rt4-b9-i2P" firstAttribute="trailing" secondItem="UoE-oG-idJ" secondAttribute="trailing" id="1QG-fa-vls"/>
                             <constraint firstItem="rt4-b9-i2P" firstAttribute="bottom" secondItem="UoE-oG-idJ" secondAttribute="bottom" id="bx7-vh-WX3"/>
@@ -96,12 +96,8 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="h5Q-GJ-TVp">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980392156865" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="protocolCell" textLabel="2oO-r1-zdD" style="IBUITableViewCellStyleDefault" id="HnJ-Eu-MXU" customClass="ProtocolTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
@@ -151,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujN-4m-pJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2584" y="761"/>
+            <point key="canvasLocation" x="-2584.057971014493" y="760.71428571428567"/>
         </scene>
         <!--Kórházak-->
         <scene sceneID="tjT-F7-RYC">
@@ -293,9 +289,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="nMd-tp-AKK" kind="show" trigger="accessoryAction" id="bIq-Bs-hgJ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -323,6 +316,7 @@
                         <outlet property="favouriteQrCodeReaderButton" destination="alE-ks-Le1" id="gYP-k7-dl6"/>
                         <outlet property="favouriteSearchBar" destination="jbv-80-rQB" id="sN8-hz-qgK"/>
                         <outlet property="favouriteTableView" destination="WZp-lz-LRD" id="0rY-ks-KIV"/>
+                        <segue destination="nMd-tp-AKK" kind="show" identifier="showMedicineDetailFromFavourites" id="fNY-q2-jFE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ga-kN-rka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -422,31 +416,34 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-A9-zha">
                                 <rect key="frame" x="0.0" y="71" width="414" height="654"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1V6-ys-hng" detailTextLabel="8kS-Dg-Ph1" imageView="Vb3-8e-IQr" style="IBUITableViewCellStyleSubtitle" id="tkc-Js-ame">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="medicineCell" textLabel="1V6-ys-hng" detailTextLabel="8kS-Dg-Ph1" imageView="Vb3-8e-IQr" style="IBUITableViewCellStyleSubtitle" id="tkc-Js-ame" customClass="MedicineTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tkc-Js-ame" id="hey-7I-uiZ">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1V6-ys-hng">
-                                                    <rect key="frame" x="60" y="10" width="33.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1V6-ys-hng">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8kS-Dg-Ph1">
-                                                    <rect key="frame" x="60" y="31.5" width="44" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8kS-Dg-Ph1">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="syringe.fill" id="Vb3-8e-IQr">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vb3-8e-IQr">
                                                     <rect key="frame" x="20" y="15" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -454,9 +451,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="nMd-tp-AKK" kind="show" trigger="accessoryAction" id="sad-MK-e9f"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -487,6 +481,7 @@
                         <outlet property="medicineQrCodeReaderButton" destination="se8-Ti-WLh" id="oC6-lL-yQx"/>
                         <outlet property="medicineSearchBar" destination="bVJ-bV-wCv" id="bDM-x3-TYZ"/>
                         <outlet property="medicineTableView" destination="Syg-A9-zha" id="TTR-BI-tqt"/>
+                        <segue destination="nMd-tp-AKK" kind="show" identifier="showMedicineDetailFromMedicines" id="46i-iZ-PHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2G-J5-HR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -518,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Itt találja, az Önhöz legközelebb található kórházak listáját." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0s-X8-zi3">
-                                <rect key="frame" x="10" y="0.0" width="324" height="70"/>
+                                <rect key="frame" x="30" y="0.0" width="374" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="LvP-XC-kYb"/>
@@ -527,19 +522,6 @@
                                 <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4E-3c-Vbs">
-                                <rect key="frame" x="349" y="4.5" width="60" height="60.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="GJo-fP-pV7"/>
-                                    <constraint firstAttribute="height" constant="60" id="UtX-CV-KHC"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" backgroundImage="mappin.and.ellipse" catalog="system"/>
-                                <connections>
-                                    <action selector="updateLocationButtonTapped:" destination="cRz-gx-YOt" eventType="touchUpInside" id="pNd-7P-ctp"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-D5-DCr">
                                 <rect key="frame" x="0.0" y="70" width="414" height="1"/>
                                 <color key="backgroundColor" red="0.0" green="0.27450980392156865" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -554,41 +536,58 @@
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hospitalCell" textLabel="YxF-Nb-2N6" detailTextLabel="gmv-n8-Kd4" style="IBUITableViewCellStyleSubtitle" id="8NR-55-cot" customClass="HospitalTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hospitalCell" id="8NR-55-cot" customClass="HospitalTableViewCell" customModule="Ambulance_Aid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8NR-55-cot" id="JJB-Cp-c49">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YxF-Nb-2N6">
-                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRe-W4-4zG">
+                                                    <rect key="frame" x="12" y="11" width="20" height="20"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1a-5c-IHs">
+                                                    <rect key="frame" x="285" y="4" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="270" id="RmA-RF-Ih0"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmv-n8-Kd4">
-                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC3-c6-gvw">
+                                                    <rect key="frame" x="213" y="19" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onr-Tm-qxi">
-                                                    <rect key="frame" x="310" y="17" width="94" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Distance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onr-Tm-qxi">
+                                                    <rect key="frame" x="337" y="12.5" width="67" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="onr-Tm-qxi" firstAttribute="centerY" secondItem="JJB-Cp-c49" secondAttribute="centerY" id="9Q5-WQ-ElO"/>
+                                                <constraint firstItem="FRe-W4-4zG" firstAttribute="centerY" secondItem="JJB-Cp-c49" secondAttribute="centerY" id="J10-qj-Okr"/>
+                                                <constraint firstItem="I1a-5c-IHs" firstAttribute="leading" secondItem="FRe-W4-4zG" secondAttribute="trailing" constant="10" id="NhU-b7-F4D"/>
+                                                <constraint firstItem="CC3-c6-gvw" firstAttribute="leading" secondItem="FRe-W4-4zG" secondAttribute="trailing" constant="10" id="Nw6-qn-Vx9"/>
+                                                <constraint firstItem="FRe-W4-4zG" firstAttribute="leading" secondItem="JJB-Cp-c49" secondAttribute="leading" constant="10" id="Olf-z3-KFb"/>
+                                                <constraint firstItem="I1a-5c-IHs" firstAttribute="top" secondItem="JJB-Cp-c49" secondAttribute="top" constant="4" id="V5X-qc-gw5"/>
+                                                <constraint firstAttribute="bottom" secondItem="I1a-5c-IHs" secondAttribute="bottom" constant="20" id="X4W-L2-BBa"/>
+                                                <constraint firstAttribute="bottom" secondItem="CC3-c6-gvw" secondAttribute="bottom" constant="5" id="YG1-rs-Obd"/>
+                                                <constraint firstAttribute="trailing" secondItem="onr-Tm-qxi" secondAttribute="trailing" constant="10" id="h1z-jF-G2V"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="distanceLabel" destination="onr-Tm-qxi" id="Zq5-DF-tVW"/>
+                                            <outlet property="hospitalIcon" destination="FRe-W4-4zG" id="yV4-89-oqe"/>
+                                            <outlet property="secondTitleLabel" destination="CC3-c6-gvw" id="PLW-0N-MOq"/>
+                                            <outlet property="titleLabel" destination="I1a-5c-IHs" id="cJj-yn-mzd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -597,13 +596,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jWO-D5-DCr" secondAttribute="trailing" id="0xe-iA-1Uh"/>
-                            <constraint firstItem="g4E-3c-Vbs" firstAttribute="leading" secondItem="a0s-X8-zi3" secondAttribute="trailing" constant="15" id="9C4-Sh-Jkj"/>
-                            <constraint firstItem="g4E-3c-Vbs" firstAttribute="top" secondItem="Tjl-Og-W4X" secondAttribute="top" constant="5" id="EId-A3-UUp"/>
-                            <constraint firstItem="a0s-X8-zi3" firstAttribute="leading" secondItem="Tjl-Og-W4X" secondAttribute="leading" constant="10" id="Fna-aW-6vu"/>
-                            <constraint firstItem="Tjl-Og-W4X" firstAttribute="trailing" secondItem="g4E-3c-Vbs" secondAttribute="trailing" constant="5" id="Ly7-vl-HOJ"/>
+                            <constraint firstItem="a0s-X8-zi3" firstAttribute="leading" secondItem="Tjl-Og-W4X" secondAttribute="leading" constant="30" id="Fna-aW-6vu"/>
                             <constraint firstItem="23I-El-vDR" firstAttribute="bottom" secondItem="Tjl-Og-W4X" secondAttribute="bottom" id="MmF-xx-CFu"/>
                             <constraint firstItem="23I-El-vDR" firstAttribute="trailing" secondItem="Tjl-Og-W4X" secondAttribute="trailing" id="Q5e-IZ-4HZ"/>
                             <constraint firstItem="jWO-D5-DCr" firstAttribute="leading" secondItem="Zh2-u5-v2L" secondAttribute="leading" id="Qzi-ZK-cB2"/>
+                            <constraint firstAttribute="trailing" secondItem="a0s-X8-zi3" secondAttribute="trailing" constant="10" id="Xi6-Ji-lYa"/>
                             <constraint firstItem="23I-El-vDR" firstAttribute="top" secondItem="jWO-D5-DCr" secondAttribute="bottom" id="fAq-w3-1nW"/>
                             <constraint firstItem="a0s-X8-zi3" firstAttribute="top" secondItem="Tjl-Og-W4X" secondAttribute="top" id="nFO-6A-CWG"/>
                             <constraint firstItem="23I-El-vDR" firstAttribute="leading" secondItem="Tjl-Og-W4X" secondAttribute="leading" id="pmR-3b-8ug"/>
@@ -615,7 +612,6 @@
                     <connections>
                         <outlet property="hospitalTableView" destination="23I-El-vDR" id="gKm-Fk-Bj6"/>
                         <outlet property="informationLabel" destination="a0s-X8-zi3" id="zsn-Kc-oY4"/>
-                        <outlet property="updateLocationButton" destination="g4E-3c-Vbs" id="N4I-Wb-4qB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SJ-sI-Yc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -726,7 +722,7 @@
             </objects>
             <point key="canvasLocation" x="-1013.0434782608696" y="760.71428571428567"/>
         </scene>
-        <!--Adatok-->
+        <!--Medicine Details View Controller-->
         <scene sceneID="Tyo-3C-X2G">
             <objects>
                 <viewController id="nMd-tp-AKK" customClass="MedicineDetailsViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
@@ -734,6 +730,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-Cf-g1R">
+                                <rect key="frame" x="184" y="486" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="mj6-OB-jCc" kind="showDetail" id="XBP-Iy-0nZ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Az2-cK-sP6" customClass="CustomSettingsButton" customModule="Ambulance_Aid" customModuleProvider="target">
                                 <rect key="frame" x="184" y="675" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -743,21 +747,14 @@
                                     <segue destination="UK2-Ep-BIJ" kind="show" id="HmB-ds-8WY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-Cf-g1R">
-                                <rect key="frame" x="184" y="486" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="mj6-OB-jCc" kind="showDetail" id="XBP-Iy-0nZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EoU-td-V8x"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Adatok" id="iwr-Rq-9Nk"/>
+                    <navigationItem key="navigationItem" id="iwr-Rq-9Nk"/>
                     <connections>
                         <outlet property="dosageButton" destination="Az2-cK-sP6" id="t4R-Ti-yiv"/>
+                        <outlet property="medicineDetailView" destination="HKv-jB-Lxz" id="ELr-bc-0wR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vh-1F-k7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -810,7 +807,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sad-MK-e9f"/>
+        <segue reference="46i-iZ-PHs"/>
         <segue reference="5Rs-TH-CJv"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -818,7 +815,6 @@
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="hospital" width="25" height="25"/>
         <image name="hospital.fill" width="25" height="25"/>
-        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="qrcode.viewfinder" catalog="system" width="128" height="114"/>
         <image name="rectangle.3.offgrid" catalog="system" width="128" height="80"/>
         <image name="rectangle.3.offgrid.fill" catalog="system" width="128" height="81"/>

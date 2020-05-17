@@ -21,15 +21,16 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
     private(set) lazy var protocolProvider: ProtocolProviding = {
         protocolInject(protocolArgs.pageSource)
     }()
+    private var filterString: String?
+    
     // IB Outlets
     @IBOutlet weak var protocolSearchBar: UISearchBar!
     @IBOutlet weak var protocolTableView: UITableView!
     
-    // For grouped list
-    var protocolsDictionary = [String: [ProtocolModel]]()
-    //let sectionLetters: [String] = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
-    var sectionLetters = [String]()
-    var protocols = [ProtocolModel]()
+    // For grouped list variables
+    var protocolsDictionary                                 = [String: [ProtocolModel]]()
+    var sectionLetters                                      = [String]()
+    var protocols                                           = [ProtocolModel]()
     
     // viewDidLoad func
     override func viewDidLoad() {
@@ -45,10 +46,12 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
         protocolSearchBar.searchTextField.textColor         = .white
         protocolSearchBar.searchTextField.tintColor         = .white
         protocolSearchBar.image(for: .search, state: .normal)
-         
+        
+        protocolTableView.sectionIndexBackgroundColor       = .white
+        protocolTableView.backgroundColor                   = .white
+        protocolTableView.tintColor                         = .red
         protocolTableView.dataSource                        = self
         protocolTableView.delegate                          = self
-        protocolTableView.backgroundColor                   = .white
     }
     
     func selectionCalculator() {
@@ -62,9 +65,13 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
             }
         }
         
-        sectionLetters = protocolsDictionary.keys.sorted()
-        //sectionLetters = sectionLetters.sorted(by: { $0 < $1 })
+        sectionLetters  = protocolsDictionary.keys.sorted()
     }
+    /*
+    func calculateDisplayingModel() {
+        protocols = protocolsDictionary
+    }
+    */
 }
 
 //MARK: - ProtocolsViewController - #1 Extension: Hide keyboard
@@ -86,8 +93,19 @@ extension ProtocolsViewController {
 
 extension ProtocolsViewController: UISearchBarDelegate {
     
+    // run when user choose a letter from keyboard -> searchText changed
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            self.filterString = nil
+            return
+        }
+        
+        self.filterString = searchText
+        //calculateDisplayingModel()
+        protocolTableView.reloadData()
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        protocolSearchBar.text = ""
         protocolSearchBar.resignFirstResponder()
     }
     

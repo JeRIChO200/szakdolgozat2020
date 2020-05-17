@@ -11,4 +11,8 @@ import UIKit
 // Dosage page - UIViewController
 class DosageViewController: UIViewController {
     // kg / g
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
