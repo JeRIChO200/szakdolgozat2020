@@ -24,7 +24,7 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
     }()
 
     var hospitals = [HospitalModel]()
-    var sortedHospitals: [HospitalModel] = .init()
+    
     private var locationManager: CLLocationManager!
     private var lastKnownLocation: CLLocation?
     private var filterString: String?
@@ -59,12 +59,12 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
             locationManager.startUpdatingLocation()
         }
     }
-    /*
-    private func calculateDisplayingModel() {
-        var inter = 0
-        sortedHospitals = hospitals
-            //.filter { self.}
-    }*/
+   
+    func sortHospitalList() {
+        self.hospitals.sort { (hospital1, hospital2) -> Bool in
+            hospital1.distanceFromUser < hospital2.distanceFromUser
+        }
+    }
 }
 
 //MARK: - CLLocationManagerDelegate

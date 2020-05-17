@@ -13,7 +13,7 @@ struct HospitalModel {
     var hospitalSCountry: String
     var latitude: Double
     var longitude: Double
-    var distanceFromUser: Double
+    var distanceFromUser: Int
     
-    static let empty = HospitalModel(name: "", hospitalSCountry: "", latitude: 0.0, longitude: 0.0, distanceFromUser: 0.0)
+    static let empty = HospitalModel(name: "", hospitalSCountry: "", latitude: 0.0, longitude: 0.0, distanceFromUser: 0)
 }

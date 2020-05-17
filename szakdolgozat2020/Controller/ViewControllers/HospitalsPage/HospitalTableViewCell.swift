@@ -30,11 +30,11 @@ class HospitalTableViewCell: UITableViewCell {
         if hospitalModel.distanceFromUser < 10000 {
             distanceLabel.font                 = UIFont.systemFont(ofSize: 20, weight: .medium)
             distanceLabel.textColor            = .red
-            distanceLabel.text                 = String(format: "%.1f", hospitalModel.distanceFromUser) + " m"
+            distanceLabel.text                 = String(format: "%.1f", Double(hospitalModel.distanceFromUser)) + " m"
         } else {
             distanceLabel.font                 = UIFont.systemFont(ofSize: 17, weight: .regular)
             distanceLabel.textColor            = Colors.appBlue
-            distanceLabel.text                 = String(format: "%.1f", hospitalModel.distanceFromUser/1000) + " km"
+            distanceLabel.text                 = String(format: "%.1f", Double(hospitalModel.distanceFromUser/1000)) + " km"
         }
         
     }

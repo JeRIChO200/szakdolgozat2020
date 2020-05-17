@@ -31,6 +31,7 @@ extension HospitalsViewController: HospitalsPresenting {
     
     func display(_ hospitals: [HospitalModel]) {
         self.hospitals = hospitals
+        sortHospitalList()
         hospitalTableView.reloadData()
     }
 }
