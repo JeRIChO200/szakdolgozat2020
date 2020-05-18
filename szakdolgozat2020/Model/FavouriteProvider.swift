@@ -8,14 +8,14 @@
 
 import Foundation
 
-//CRUD
-
+// Favourite providing protocol
 protocol FavouriteProviding: MedicineProviding {
     func getFavouriteMedicinesIDs() -> [MedicineID]
     func add(medicineID: MedicineID)
     func remove(medicineID: MedicineID)
 }
 
+// Favourite provider class
 class FavouriteProvider: FavouriteProviding {
     
     let medicineProvider: MedicineProviding
@@ -23,7 +23,6 @@ class FavouriteProvider: FavouriteProviding {
     init(medicineProvider: MedicineProviding) {
         self.medicineProvider = medicineProvider
     }
-    
     func getMedicines(onCompletion: @escaping ([MedicineModel]) -> Void) {
         let favouriteMedicineIDs = loadMedicineIDs()
         medicineProvider.getMedicines {
@@ -32,11 +31,9 @@ class FavouriteProvider: FavouriteProviding {
             }))
         }
     }
-    
     func getFavouriteMedicinesIDs() -> [MedicineID] {
         loadMedicineIDs()
     }
-    
     func add(medicineID: MedicineID) {
         var medicineIDs = loadMedicineIDs()
         
@@ -45,17 +42,14 @@ class FavouriteProvider: FavouriteProviding {
             saveMedicineIDs(medicineIDs: medicineIDs)
         }
     }
-    
     func remove(medicineID: MedicineID) {
         var medicineIDs = loadMedicineIDs()
         medicineIDs.removeAll(where: { $0 == medicineID})
         saveMedicineIDs(medicineIDs: medicineIDs)
     }
-    
     private func loadMedicineIDs() -> [MedicineID] {
         UserDefaults.standard.object(forKey: "favourites") as? [MedicineID] ?? []
     }
-    
     private func saveMedicineIDs(medicineIDs: [MedicineID]) {
         UserDefaults.standard.set(medicineIDs, forKey: "favourites")
     }

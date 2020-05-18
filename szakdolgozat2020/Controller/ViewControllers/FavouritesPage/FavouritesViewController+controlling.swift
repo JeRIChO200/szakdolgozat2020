@@ -7,3 +7,27 @@
 //
 
 import Foundation
+import UIKit
+
+protocol FavouritesControlling {
+    func start (with pageSource: PageSource)
+    func gatherFavourites()
+}
+
+//MARK: - FavouritesControlling
+
+extension FavouritesViewController: FavouritesControlling {
+    
+    var controller: FavouritesControlling {
+        self
+    }
+    
+    func start(with pageSource: PageSource) {/*
+        presenter.displayTitle(by:favouriteArgs.pageSource)
+        gatherMedicines()*/
+    }
+    
+    func gatherFavourites() {
+        
+    }
+}

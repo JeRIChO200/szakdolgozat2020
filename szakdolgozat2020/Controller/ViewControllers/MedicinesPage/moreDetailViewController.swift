@@ -18,10 +18,10 @@ class MoreDetailViewController: UIViewController {
     // Variables
     var medicineDetailArgs = Args(oneMedicineDetail: "")
     
-    @IBOutlet weak var medicineDetail: UITextField!
+    @IBOutlet weak var detailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        medicineDetail.text = medicineDetailArgs.oneMedicineDetail
+        detailLabel.text = medicineDetailArgs.oneMedicineDetail
     }
 }

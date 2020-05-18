@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Protocol Model Struct
 struct ProtocolModel {
     var name: String
     var url: String

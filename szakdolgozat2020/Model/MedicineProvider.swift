@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 // Medicine providing protocol
 protocol MedicineProviding {
     func getMedicines(onCompletion: @escaping ([MedicineModel]) -> Void)
@@ -36,11 +35,18 @@ private class MedicineProvider: MedicineProviding {
     
     private func medicinesFromFile() -> [MedicineModel] {
         
-        // Medicine list creat here
-        
-        
         var result = [MedicineModel]()
         
+        if let path = Bundle.main.path(forResource: "medicines", ofType: "json"),
+            let jsonFileDate = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+            result = try! JSONDecoder().decode([MedicineModel].self, from: jsonFileDate)
+        } else {
+            result = []
+        }
+        
+        return result
+        
+        /*
         //#1
         result.append(MedicineModel(
             medicineID: 0,
@@ -119,6 +125,6 @@ private class MedicineProvider: MedicineProviding {
             warningsContraindications: "Ac-Figyelmeztetések és ellenjavallatok",
             isFavourite: false))
         
-        return result
+        return result*/
     }
 }

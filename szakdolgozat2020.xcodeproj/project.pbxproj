@@ -42,6 +42,7 @@
 		6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */; };
 		6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */; };
 		6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD2B24646F3E00DED1A6 /* Constants.swift */; };
+		6BD00FCE24732A4B00BBDF69 /* medicines.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BD00FCD24732A4A00BBDF69 /* medicines.json */; };
 		6BDEC6342471B13100D84731 /* CustomDosageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6332471B13100D84731 /* CustomDosageButton.swift */; };
 		6BDEC6362471B5A800D84731 /* CustomMedicineDetailsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6352471B5A800D84731 /* CustomMedicineDetailsButton.swift */; };
 		6BDEC6382471CC2C00D84731 /* FavouriteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6372471CC2C00D84731 /* FavouriteProvider.swift */; };
@@ -108,6 +109,7 @@
 		6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsButton.swift; sourceTree = "<group>"; };
 		6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ER - Szakdolgozat specifikáció.pdf"; sourceTree = "<group>"; };
 		6BACFD2B24646F3E00DED1A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6BD00FCD24732A4A00BBDF69 /* medicines.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medicines.json; sourceTree = "<group>"; };
 		6BDEC6332471B13100D84731 /* CustomDosageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDosageButton.swift; sourceTree = "<group>"; };
 		6BDEC6352471B5A800D84731 /* CustomMedicineDetailsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMedicineDetailsButton.swift; sourceTree = "<group>"; };
 		6BDEC6372471CC2C00D84731 /* FavouriteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteProvider.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				6B807DE424697F4800243F37 /* ProtocolProvider.swift */,
 				6B45E1242468DA0500D6A8CA /* HospitalModel.swift */,
 				6B807DE22469791200243F37 /* HospitalProvider.swift */,
+				6BD00FCD24732A4A00BBDF69 /* medicines.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */,
+				6BD00FCE24732A4B00BBDF69 /* medicines.json in Resources */,
 				6BDFF7D5245774DE002A75F2 /* LaunchScreen.storyboard in Resources */,
 				6B45E1172468B7CE00D6A8CA /* Localizable.strings in Resources */,
 				6BDFF7D2245774DE002A75F2 /* Assets.xcassets in Resources */,

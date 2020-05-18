@@ -6,9 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import CoreLocation
-
-
+// Hospital Model Struct
 struct HospitalModel {
     var name: String
     var hospitalSCountry: String

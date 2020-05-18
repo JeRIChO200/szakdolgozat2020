@@ -10,7 +10,7 @@ import Foundation
 
 typealias MedicineID = Int
 
-struct MedicineModel {
+struct MedicineModel : Codable {
     let medicineID: MedicineID
     let medicineName: String
     let factoryMedicineName: String
@@ -20,7 +20,6 @@ struct MedicineModel {
     let administrationMethod: String
     let suggestionForUse: String
     let warningsContraindications: String
-    var isFavourite: Bool
     
     static var empty = MedicineModel(
         medicineID: 0,
@@ -31,6 +30,5 @@ struct MedicineModel {
         recommendedDosage: "",
         administrationMethod: "",
         suggestionForUse: "",
-        warningsContraindications: "",
-        isFavourite: false)
+        warningsContraindications: "")
 }

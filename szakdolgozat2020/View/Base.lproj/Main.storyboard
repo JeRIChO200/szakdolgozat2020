@@ -418,6 +418,9 @@
                                 <state key="normal" backgroundImage="qrcode.viewfinder" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4gV-U6-CIT" kind="show" id="2Xb-C1-i20"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VY3-b9-kxR">
                                 <rect key="frame" x="0.0" y="70" width="414" height="1"/>
@@ -881,47 +884,34 @@
         <scene sceneID="2WX-H0-4Et">
             <objects>
                 <viewController id="mj6-OB-jCc" customClass="MoreDetailViewController" customModule="Ambulance_Aid" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="djG-nX-3qS">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="djG-nX-3qS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oII-1t-EaN">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-1e-C4e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-tM-m5s">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="detailTextField:" destination="qFM-ze-yVk" eventType="editingDidEnd" id="qaW-f2-xXB"/>
-                                </connections>
-                            </textField>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OXc-1e-C4e" firstAttribute="top" secondItem="O6a-gW-Fwg" secondAttribute="top" id="98v-Wh-lAR"/>
-                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="bottom" secondItem="oII-1t-EaN" secondAttribute="bottom" id="ADZ-bI-iO5"/>
-                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="trailing" secondItem="OXc-1e-C4e" secondAttribute="trailing" id="Glz-sg-8I3"/>
-                            <constraint firstItem="OXc-1e-C4e" firstAttribute="leading" secondItem="O6a-gW-Fwg" secondAttribute="leading" id="Rma-1Y-jla"/>
-                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="bottom" secondItem="OXc-1e-C4e" secondAttribute="bottom" id="iqj-GR-pf8"/>
-                            <constraint firstItem="oII-1t-EaN" firstAttribute="leading" secondItem="O6a-gW-Fwg" secondAttribute="leading" id="jBz-V4-ZpZ"/>
-                            <constraint firstItem="oII-1t-EaN" firstAttribute="top" secondItem="O6a-gW-Fwg" secondAttribute="top" id="krt-eX-ddh"/>
-                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="trailing" secondItem="oII-1t-EaN" secondAttribute="trailing" id="rpg-kL-EiK"/>
+                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="trailing" secondItem="xAz-tM-m5s" secondAttribute="trailing" id="9Mf-6C-Zcm"/>
+                            <constraint firstItem="xAz-tM-m5s" firstAttribute="leading" secondItem="O6a-gW-Fwg" secondAttribute="leading" id="id7-Zy-j0F"/>
+                            <constraint firstItem="xAz-tM-m5s" firstAttribute="top" secondItem="O6a-gW-Fwg" secondAttribute="top" id="lET-Ks-u2Y"/>
+                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="bottom" secondItem="xAz-tM-m5s" secondAttribute="bottom" id="xhE-MC-Am2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O6a-gW-Fwg"/>
                     </view>
                     <navigationItem key="navigationItem" id="u5j-9h-wjE"/>
                     <connections>
-                        <outlet property="medicineDetail" destination="OXc-1e-C4e" id="wVw-qh-N7O"/>
+                        <outlet property="detailLabel" destination="xAz-tM-m5s" id="ng1-lp-3vF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="job-ET-06k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="qFM-ze-yVk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2715.9420289855075" y="-1035.2678571428571"/>
         </scene>
@@ -975,7 +965,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F18-rp-YO6">
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F18-rp-YO6">
                                 <rect key="frame" x="244" y="334.5" width="120" height="49.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1055,6 +1045,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="46i-iZ-PHs"/>
+        <segue reference="2Xb-C1-i20"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bandage.fill" catalog="system" width="128" height="116"/>
