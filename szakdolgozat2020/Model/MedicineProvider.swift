@@ -17,7 +17,7 @@ protocol MedicineProviding {
 // Medicines provider class
 class MedicineProviderFactory {
     static var mockedInstance: MedicineProviding?
-    class func getIstance(source: PageSource) -> MedicineProviding {
+    class func getIstance() -> MedicineProviding {
         guard mockedInstance == nil else { return mockedInstance! }
         return MedicineProvider()
     }
@@ -25,6 +25,9 @@ class MedicineProviderFactory {
 
 // Medicine providder class
 private class MedicineProvider: MedicineProviding {
+    
+    var medicines = [MedicineModel]()
+    
     func getMedicines(onCompletion: @escaping ([MedicineModel]) -> Void) {
         DispatchQueue.global(qos: .default).async {
             onCompletion(self.medicinesFromFile())
@@ -35,15 +38,17 @@ private class MedicineProvider: MedicineProviding {
         
         // Medicine list creat here
         
+        
         var result = [MedicineModel]()
         
         //#1
         result.append(MedicineModel(
+            medicineID: 0,
             medicineName: "A-Gyógyszer",
             factoryMedicineName: "A-Gyari",
             activeSubstanceName: "A-Hatóanyag",
             package: "A-Kiszerelés",
-            recommendedDosage: "A-Javasolt adagolás",
+            recommendedDosage: "A-JA",
             administrationMethod: "A-Beadás mód",
             suggestionForUse: "A-Felhasználási javaslatok",
             warningsContraindications: "A-Figyelmeztetések és ellenjavallatok",
@@ -51,11 +56,12 @@ private class MedicineProvider: MedicineProviding {
         
         //#2
         result.append(MedicineModel(
+            medicineID: 1,
             medicineName: "B-Gyógyszer",
             factoryMedicineName: "B-Gyari",
             activeSubstanceName: "B-Hatóanyag",
             package: "B-Kiszerelés",
-            recommendedDosage: "B-Javasolt adagolás",
+            recommendedDosage: "B-JA",
             administrationMethod: "B-Beadás mód",
             suggestionForUse: "B-Felhasználási javaslatok",
             warningsContraindications: "B-Figyelmeztetések és ellenjavallatok",
@@ -63,11 +69,12 @@ private class MedicineProvider: MedicineProviding {
         
         //#3
         result.append(MedicineModel(
+            medicineID: 2,
             medicineName: "G-Gyógyszer",
             factoryMedicineName: "G-Gyari",
             activeSubstanceName: "G-Hatóanyag",
             package: "G-Kiszerelés",
-            recommendedDosage: "G-Javasolt adagolás",
+            recommendedDosage: "G-JA",
             administrationMethod: "G-Beadás mód",
             suggestionForUse: "G-Felhasználási javaslatok",
             warningsContraindications: "G-Figyelmeztetések és ellenjavallatok",
@@ -75,11 +82,12 @@ private class MedicineProvider: MedicineProviding {
         
         //#4
         result.append(MedicineModel(
+            medicineID: 3,
             medicineName: "O-Gyógyszer",
             factoryMedicineName: "O-Gyari",
             activeSubstanceName: "O-Hatóanyag",
             package: "O-Kiszerelés",
-            recommendedDosage: "O-Javasolt adagolás",
+            recommendedDosage: "O-JA",
             administrationMethod: "O-Beadás mód",
             suggestionForUse: "O-Felhasználási javaslatok",
             warningsContraindications: "O-Figyelmeztetések és ellenjavallatok",
@@ -87,11 +95,12 @@ private class MedicineProvider: MedicineProviding {
         
         //#5
         result.append(MedicineModel(
+            medicineID: 4,
             medicineName: "Az-Gyógyszer",
             factoryMedicineName: "Az-Gyari",
             activeSubstanceName: "Az-Hatóanyag",
             package: "Az-Kiszerelés",
-            recommendedDosage: "Az-Javasolt adagolás",
+            recommendedDosage: "Az-JA",
             administrationMethod: "Az-Beadás mód",
             suggestionForUse: "Az-Felhasználási javaslatok",
             warningsContraindications: "Az-Figyelmeztetések és ellenjavallatok",
@@ -99,11 +108,12 @@ private class MedicineProvider: MedicineProviding {
         
         //#6
         result.append(MedicineModel(
+            medicineID: 5,
             medicineName: "Ac-Gyógyszer",
             factoryMedicineName: "Ac-Gyari",
             activeSubstanceName: "Ac-Hatóanyag",
             package: "Ac-Kiszerelés",
-            recommendedDosage: "Ac-Javasolt adagolás",
+            recommendedDosage: "Ac-JA",
             administrationMethod: "Ac-Beadás mód",
             suggestionForUse: "Ac-Felhasználási javaslatok",
             warningsContraindications: "Ac-Figyelmeztetések és ellenjavallatok",

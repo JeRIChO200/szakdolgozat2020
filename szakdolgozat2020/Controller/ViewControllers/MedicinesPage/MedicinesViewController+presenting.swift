@@ -33,7 +33,7 @@ extension MedicinesViewController: MedicinesPresenting {
         self.medicines.sort { (medicineModel1, medicineModel2) -> Bool in
             medicineModel1.medicineName < medicineModel2.medicineName
         }
-        selectionCalculator()
+        selectionCalculator(medicines: self.medicines)
         medicineTableView.reloadData()
     }
 }
@@ -58,6 +58,18 @@ extension MedicinesViewController: UITableViewDataSource {
         let medicineModel = medicinesDictionary[key]?[indexPath.row] ?? MedicineModel.empty
         cell.display(medicineModel: medicineModel)
         return cell
+    }
+    
+    // Swipe to right
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .normal, title: "Show") { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            // Mi történjen ha jobbra húzza az adott sort
+        }
+        action.image = UIImage(systemName: "plus")
+        action.backgroundColor = Colors.appBlue
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
     
     // Header - Letters

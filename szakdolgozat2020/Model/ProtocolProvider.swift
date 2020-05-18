@@ -16,7 +16,7 @@ protocol ProtocolProviding {
 // Protocol provider class
 class ProtocolProviderFactory {
     static var mockedIstance: ProtocolProviding?
-    class func getInstance(source: PageSource) -> ProtocolProviding {
+    class func getInstance() -> ProtocolProviding {
         guard mockedIstance == nil else { return mockedIstance! }
         return ProtocolProvider()
     }
@@ -59,7 +59,7 @@ private class ProtocolProvider : ProtocolProviding {
                 // #15
                 ProtocolModel(name: "5th", url: ""),
                 // #16
-                ProtocolModel(name: "6th", url: ""),
+                ProtocolModel(name: "7th", url: ""),
                 // #17
                 ProtocolModel(name: "7th", url: ""),
                 // #18

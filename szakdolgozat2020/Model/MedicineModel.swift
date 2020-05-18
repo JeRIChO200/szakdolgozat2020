@@ -8,7 +8,10 @@
 
 import Foundation
 
+typealias MedicineID = Int
+
 struct MedicineModel {
+    let medicineID: MedicineID
     let medicineName: String
     let factoryMedicineName: String
     let activeSubstanceName: String
@@ -20,6 +23,7 @@ struct MedicineModel {
     var isFavourite: Bool
     
     static var empty = MedicineModel(
+        medicineID: 0,
         medicineName: "",
         factoryMedicineName: "",
         activeSubstanceName: "",
@@ -29,17 +33,4 @@ struct MedicineModel {
         suggestionForUse: "",
         warningsContraindications: "",
         isFavourite: false)
-    
-    /*
-    init(medicineName: String, factoryMedicineName: String, activeSubstanceName: String, package: String, recommendedDosage: String, administrationMethod: String, suggestionForUse: String, warningsContraindications: String) {
-        self.medicineName               = medicineName
-        self.factoryMedicineName        = factoryMedicineName
-        self.activeSubstanceName        = activeSubstanceName
-        self.package                    = package
-        self.recommendedDosage          = recommendedDosage
-        self.administrationMethod       = administrationMethod
-        self.suggestionForUse           = suggestionForUse
-        self.warningsContraindications  = warningsContraindications
-        self.isFavourite                = false
-    }*/
 }

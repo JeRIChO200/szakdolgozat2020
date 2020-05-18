@@ -28,7 +28,6 @@ class CustomSettingsButton: UIButton {
         setShadow()
         setTitleColor(.red, for: .normal)
         backgroundColor     = Colors.appLightBlue
-        titleLabel?.font    = UIFont(name: "Helvetica Neue", size: 18)
         titleLabel?.font    = UIFont.boldSystemFont(ofSize: 16)
         layer.cornerRadius  = 15
         layer.borderWidth   = 1.5

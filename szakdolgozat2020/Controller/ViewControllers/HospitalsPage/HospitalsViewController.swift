@@ -20,7 +20,7 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
     // Variables
     var hospitalArgs = Args(pageSource: .hospitals)
     private(set) lazy var hospitalProvider: HospitalProviding = {
-        hospitalInject(hospitalArgs.pageSource)
+        hospitalInject()
     }()
 
     var hospitals = [HospitalModel]()
@@ -41,8 +41,6 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
         
         controller.start(with: hospitalArgs.pageSource)
         
-        //calculateDisplayingModel()
-        
         informationLabel.text               = NSLocalizedString("hospitalsTab.informationLabel.title", comment: "")
         hospitalTableView.dataSource        = self
         hospitalTableView.delegate          = self
@@ -59,8 +57,20 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
             locationManager.startUpdatingLocation()
         }
     }
+    
+    func calculate() {
+        hospitals = hospitals.map {
+            HospitalModel(
+                name: $0.name,
+                hospitalSCountry: $0.hospitalSCountry,
+                latitude: $0.latitude,
+                longitude: $0.longitude,
+                distanceFromUser: lastKnownLocation?.distance(from: CLLocation(latitude: $0.latitude, longitude: $0.longitude)) ?? 0)
+        }
+        sortHospitalList()
+    }
    
-    func sortHospitalList() {
+    private func sortHospitalList() {
         self.hospitals.sort { (hospital1, hospital2) -> Bool in
             hospital1.distanceFromUser < hospital2.distanceFromUser
         }
@@ -72,7 +82,7 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
 extension HospitalsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lastKnownLocation = locations.last
-        //calculateDisplayingModel()
+        calculate()
         hospitalTableView.reloadData()
     }
 }

@@ -33,7 +33,7 @@ extension ProtocolsViewController: ProtocolsPresenting {
         self.protocols.sort { (protocolModel1, protocolModel2) -> Bool in
             return protocolModel1.name < protocolModel2.name
         }
-        selectionCalculator()
+        selectionCalculator(protocols: self.protocols)
         protocolTableView.reloadData()
     }
 }

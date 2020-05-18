@@ -111,7 +111,7 @@ extension QRCodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
         } else {
             print("Not able to read the code! Please try again or be keep your device on Bar Code or Scanner Code!")
         }
-        
+         
         dismiss(animated: true)
     }
     

@@ -14,20 +14,19 @@ protocol ProvidingInjecting {}
 
 extension ProvidingInjecting {
     
-    func medicineInject(_ source: PageSource) -> MedicineProviding {
-        MedicineProviderFactory.getIstance(source: source)
-    }
-    /*
-    func favouriteInject(_ source: PageSource) -> FavouriteProviding {
-        FavouriteProviderFactor.getInstance(source: source)
-    }*/
-    
-    func protocolInject(_ source: PageSource) -> ProtocolProviding {
-        ProtocolProviderFactory.getInstance(source: source)
+    func medicineInject() -> MedicineProviding {
+        MedicineProviderFactory.getIstance()
     }
     
-    func hospitalInject(_ source: PageSource) -> HospitalProviding {
-        HospitalProviderFactory.getInstance(source: source)
+    func favouriteInject() -> MedicineProviding {
+        FavouriteProvider(medicineProvider: medicineInject())
     }
     
+    func protocolInject() -> ProtocolProviding {
+        ProtocolProviderFactory.getInstance()
+    }
+    
+    func hospitalInject() -> HospitalProviding {
+        HospitalProviderFactory.getInstance()
+    }
 }

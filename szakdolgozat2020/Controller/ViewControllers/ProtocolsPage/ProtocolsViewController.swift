@@ -19,7 +19,7 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
     // Variables
     var protocolArgs = Args(pageSource: .protocols)
     private(set) lazy var protocolProvider: ProtocolProviding = {
-        protocolInject(protocolArgs.pageSource)
+        protocolInject()
     }()
     private var filterString: String?
     
@@ -35,10 +35,9 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         controller.start(with: protocolArgs.pageSource)
-        
         self.dismissKey()
+        
         protocolSearchBar.delegate                          = self
         protocolSearchBar.enablesReturnKeyAutomatically     = true
         protocolSearchBar.placeholder                       = NSLocalizedString("protocolsTab.searchBar.placeholder.text", comment: "")
@@ -54,7 +53,8 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
         protocolTableView.delegate                          = self
     }
     
-    func selectionCalculator() {
+    func selectionCalculator(protocols: [ProtocolModel]) {
+        protocolsDictionary = [:]
         for protocolItem in protocols {
             let protocolKey = String(protocolItem.name.prefix(1))
             if var protocolValues = protocolsDictionary[protocolKey] {
@@ -64,14 +64,19 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
                 protocolsDictionary[protocolKey] = [protocolItem]
             }
         }
-        
         sectionLetters  = protocolsDictionary.keys.sorted()
     }
-    /*
+    
     func calculateDisplayingModel() {
-        protocols = protocolsDictionary
+        selectionCalculator(protocols: protocols.filter{ self.filterString == nil ? true : $0.name.uppercased().starts(with: self.filterString!.uppercased())})
+        if sectionLetters.count == 1 {
+            let key = sectionLetters[0]
+            if protocolsDictionary[key]?.count == 1 {
+                performSegue(withIdentifier: "showProtocol", sender: protocolsDictionary[key]?[0].url)
+            }
+        }
     }
-    */
+    
 }
 
 //MARK: - ProtocolsViewController - #1 Extension: Hide keyboard
@@ -84,7 +89,6 @@ extension ProtocolsViewController {
     }
     
     @objc func dismissKeyboard() {
-        protocolSearchBar.text          = ""
         view.endEditing(true)
     }
 }
@@ -95,18 +99,13 @@ extension ProtocolsViewController: UISearchBarDelegate {
     
     // run when user choose a letter from keyboard -> searchText changed
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
-            self.filterString = nil
-            return
-        }
-        
-        self.filterString = searchText
-        //calculateDisplayingModel()
+        filterString = searchText.isEmpty ? nil : searchText
+        calculateDisplayingModel()
         protocolTableView.reloadData()
     }
     
+    // When search button was tapped, this fuction run
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         protocolSearchBar.resignFirstResponder()
     }
-    
 }

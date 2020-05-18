@@ -19,8 +19,14 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     // Variables
     var medicineArgs = Args(pageSource: .medicines)
     private(set) lazy var medicineProvier: MedicineProviding = {
-        medicineInject(medicineArgs.pageSource)
+        medicineInject()
     }()
+    private var filterString: String?
+    
+    /* Swipe right
+    private(set) lazy var favouriteProvider: FavouriteProviding = {
+        favouriteInject()
+    }()*/
     
     // IB Outlets
     @IBOutlet weak var medicineSearchBar: UISearchBar!
@@ -35,10 +41,9 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         controller.start(with: medicineArgs.pageSource)
-        
         self.dismissKey()
+        
         medicineSearchBar.delegate                          = self
         medicineSearchBar.enablesReturnKeyAutomatically     = true
         medicineSearchBar.placeholder                       = NSLocalizedString("medicinesTab.searchBar.placeholder.text", comment: "")
@@ -54,7 +59,8 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
         medicineTableView.delegate                          = self
     }
     
-    func selectionCalculator() {
+    func selectionCalculator(medicines: [MedicineModel]) {
+        medicinesDictionary = [ : ]
         for medicineItem in medicines {
             let medicineKey = String(medicineItem.medicineName.prefix(1))
             if var medicineValues = medicinesDictionary[medicineKey] {
@@ -64,9 +70,19 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
                 medicinesDictionary[medicineKey] = [medicineItem]
             }
         }
-        
         sectionLetters = medicinesDictionary.keys.sorted()
     }
+    
+    func calculateDisplayingModel() {
+        selectionCalculator(medicines: medicines.filter{ self.filterString == nil ? true : $0.medicineName.uppercased().starts(with: self.filterString!.uppercased())})
+        if sectionLetters.count == 1 {
+            let key = sectionLetters[0]
+            if medicinesDictionary[key]?.count == 1 {
+                performSegue(withIdentifier: "showMedicineDetailFromMedicines", sender: medicinesDictionary[key]?[0])
+            }
+        }
+    }
+
 }
 
 //MARK: - MedicinesViewController - #1 Extension: Hide keyboard
@@ -79,7 +95,6 @@ extension MedicinesViewController {
     }
     
     @objc func dismissKeyboard() {
-        medicineSearchBar.text         = ""
         view.endEditing(true)
     }
 }
@@ -88,8 +103,14 @@ extension MedicinesViewController {
 
 extension MedicinesViewController: UISearchBarDelegate {
     
+    // run when user choose a letter from keyboard -> searchText changed
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterString = searchText.isEmpty ? nil : searchText
+        calculateDisplayingModel()
+        medicineTableView.reloadData()
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        medicineSearchBar.text = ""
         medicineSearchBar.resignFirstResponder()
     }
 }

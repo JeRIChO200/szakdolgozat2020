@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HospitalTableViewCell: UITableViewCell {
+class HospitalTableViewCell: UITableViewCell{
     
     @IBOutlet weak var hospitalIcon: UIImageView!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -16,26 +16,25 @@ class HospitalTableViewCell: UITableViewCell {
     @IBOutlet weak var secondTitleLabel: UILabel!
     
     func display(hospitalModel: HospitalModel) {
-        titleLabel.text                         = hospitalModel.name
-        titleLabel.textColor                    = Colors.appBlue
-        titleLabel.numberOfLines                = 2
-        hospitalIcon.image                        = UIImage(named: "hospital.fill")
-        hospitalIcon.tintColor                    = .red
-        tintColor                               = .red
-        selectionStyle                          = UITableViewCell.SelectionStyle.none
-        secondTitleLabel.text                   = hospitalModel.hospitalSCountry
-        secondTitleLabel.font                   = UIFont.systemFont(ofSize: 13, weight: .regular)
-        secondTitleLabel.textColor              = .red
+        titleLabel.text             = hospitalModel.name
+        titleLabel.textColor        = Colors.appBlue
+        titleLabel.numberOfLines    = 2
+        hospitalIcon.image          = UIImage(named: "hospital.fill")
+        hospitalIcon.tintColor      = .red
+        tintColor                   = .red
+        selectionStyle              = UITableViewCell.SelectionStyle.none
+        secondTitleLabel.text       = hospitalModel.hospitalSCountry
+        secondTitleLabel.font       = UIFont.systemFont(ofSize: 13, weight: .regular)
+        secondTitleLabel.textColor  = .red
         
         if hospitalModel.distanceFromUser < 10000 {
-            distanceLabel.font                 = UIFont.systemFont(ofSize: 20, weight: .medium)
-            distanceLabel.textColor            = .red
-            distanceLabel.text                 = String(format: "%.1f", Double(hospitalModel.distanceFromUser)) + " m"
+            distanceLabel.font      = UIFont.systemFont(ofSize: 20, weight: .medium)
+            distanceLabel.textColor = .red
+            distanceLabel.text      = String(format: "%.0f", Double(hospitalModel.distanceFromUser)) + " m"
         } else {
-            distanceLabel.font                 = UIFont.systemFont(ofSize: 17, weight: .regular)
-            distanceLabel.textColor            = Colors.appBlue
-            distanceLabel.text                 = String(format: "%.1f", Double(hospitalModel.distanceFromUser/1000)) + " km"
+            distanceLabel.font      = UIFont.systemFont(ofSize: 17, weight: .regular)
+            distanceLabel.textColor = Colors.appBlue
+            distanceLabel.text      = String(format: "%.1f", Double(hospitalModel.distanceFromUser/1000)) + " km"
         }
-        
     }
 }

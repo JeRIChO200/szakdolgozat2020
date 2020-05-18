@@ -15,7 +15,6 @@
 		6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */; };
 		6B3757F2246E09B8007364EF /* HospitalsViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */; };
 		6B3757F4246E09CF007364EF /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */; };
-		6B3757F6246E22D5007364EF /* HospitalDistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F5246E22D5007364EF /* HospitalDistanceCalculator.swift */; };
 		6B3F1D0B2464F6A50024D7A8 /* MedicineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */; };
 		6B3F1D0D2464FBCE0024D7A8 /* DosageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */; };
 		6B42C140246F21D0000424F9 /* ProtocolShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B42C13F246F21D0000424F9 /* ProtocolShowViewController.swift */; };
@@ -43,6 +42,10 @@
 		6BACFD28246459BC00DED1A6 /* CustomSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */; };
 		6BACFD2A2464667000DED1A6 /* ER - Szakdolgozat specifikáció.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */; };
 		6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BACFD2B24646F3E00DED1A6 /* Constants.swift */; };
+		6BDEC6342471B13100D84731 /* CustomDosageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6332471B13100D84731 /* CustomDosageButton.swift */; };
+		6BDEC6362471B5A800D84731 /* CustomMedicineDetailsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6352471B5A800D84731 /* CustomMedicineDetailsButton.swift */; };
+		6BDEC6382471CC2C00D84731 /* FavouriteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6372471CC2C00D84731 /* FavouriteProvider.swift */; };
+		6BDEC63A2472273F00D84731 /* MoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDEC6392472273F00D84731 /* MoreDetailViewController.swift */; };
 		6BDFF7C9245774DD002A75F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */; };
 		6BDFF7CB245774DD002A75F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */; };
 		6BDFF7CD245774DD002A75F2 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7CC245774DD002A75F2 /* MainController.swift */; };
@@ -75,7 +78,6 @@
 		6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+presenting.swift"; sourceTree = "<group>"; };
 		6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+controlling.swift"; sourceTree = "<group>"; };
 		6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
-		6B3757F5246E22D5007364EF /* HospitalDistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDistanceCalculator.swift; sourceTree = "<group>"; };
 		6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailsViewController.swift; sourceTree = "<group>"; };
 		6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
 		6B42C13F246F21D0000424F9 /* ProtocolShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolShowViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,10 @@
 		6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingsButton.swift; sourceTree = "<group>"; };
 		6BACFD292464666F00DED1A6 /* ER - Szakdolgozat specifikáció.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ER - Szakdolgozat specifikáció.pdf"; sourceTree = "<group>"; };
 		6BACFD2B24646F3E00DED1A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6BDEC6332471B13100D84731 /* CustomDosageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDosageButton.swift; sourceTree = "<group>"; };
+		6BDEC6352471B5A800D84731 /* CustomMedicineDetailsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMedicineDetailsButton.swift; sourceTree = "<group>"; };
+		6BDEC6372471CC2C00D84731 /* FavouriteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteProvider.swift; sourceTree = "<group>"; };
+		6BDEC6392472273F00D84731 /* MoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDetailViewController.swift; sourceTree = "<group>"; };
 		6BDFF7C5245774DD002A75F2 /* Ambulance Aid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambulance Aid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BDFF7C8245774DD002A75F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BDFF7CA245774DD002A75F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +228,9 @@
 				6B478C4F2470164300BB742D /* MedicineTableViewCell.swift */,
 				6B807E1A246A35B600243F37 /* QrCodeReaderViewController.swift */,
 				6B3F1D0A2464F6A50024D7A8 /* MedicineDetailsViewController.swift */,
+				6BDEC6352471B5A800D84731 /* CustomMedicineDetailsButton.swift */,
+				6BDEC6392472273F00D84731 /* MoreDetailViewController.swift */,
+				6BDEC6332471B13100D84731 /* CustomDosageButton.swift */,
 				6B3F1D0C2464FBCE0024D7A8 /* DosageViewController.swift */,
 			);
 			path = MedicinesPage;
@@ -298,11 +307,11 @@
 				6B3757E3246DA256007364EF /* PageSource.swift */,
 				6B45E1272468DED700D6A8CA /* MedicineModel.swift */,
 				6B3757E7246DA6DB007364EF /* MedicineProvider.swift */,
+				6BDEC6372471CC2C00D84731 /* FavouriteProvider.swift */,
 				6B45E1222468D9F500D6A8CA /* ProtocolModel.swift */,
 				6B807DE424697F4800243F37 /* ProtocolProvider.swift */,
 				6B45E1242468DA0500D6A8CA /* HospitalModel.swift */,
 				6B807DE22469791200243F37 /* HospitalProvider.swift */,
-				6B3757F5246E22D5007364EF /* HospitalDistanceCalculator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -454,6 +463,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */,
+				6BDEC6362471B5A800D84731 /* CustomMedicineDetailsButton.swift in Sources */,
+				6BDEC6382471CC2C00D84731 /* FavouriteProvider.swift in Sources */,
 				6B3757EE246DF7FE007364EF /* FavouriteTableViewCell.swift in Sources */,
 				6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */,
 				6B807DE32469791200243F37 /* HospitalProvider.swift in Sources */,
@@ -474,12 +485,13 @@
 				6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */,
 				6B42C140246F21D0000424F9 /* ProtocolShowViewController.swift in Sources */,
 				6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */,
-				6B3757F6246E22D5007364EF /* HospitalDistanceCalculator.swift in Sources */,
 				6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */,
 				6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */,
 				6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */,
 				6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */,
+				6BDEC6342471B13100D84731 /* CustomDosageButton.swift in Sources */,
 				6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */,
+				6BDEC63A2472273F00D84731 /* MoreDetailViewController.swift in Sources */,
 				6B478C4E2470162E00BB742D /* MedicinesViewController+controlling.swift in Sources */,
 				6B807DE524697F4800243F37 /* ProtocolProvider.swift in Sources */,
 				6B3757E8246DA6DB007364EF /* MedicineProvider.swift in Sources */,

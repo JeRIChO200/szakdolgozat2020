@@ -8,12 +8,13 @@
 
 import CoreLocation
 
+
 struct HospitalModel {
     var name: String
     var hospitalSCountry: String
     var latitude: Double
     var longitude: Double
-    var distanceFromUser: Int
+    var distanceFromUser: Double
     
-    static let empty = HospitalModel(name: "", hospitalSCountry: "", latitude: 0.0, longitude: 0.0, distanceFromUser: 0)
+    static let empty = HospitalModel(name: "", hospitalSCountry: "", latitude: 0.0, longitude: 0.0, distanceFromUser: 0.0)
 }

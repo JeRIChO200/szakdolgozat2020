@@ -33,45 +33,23 @@ class SettingsViewController: UIViewController {
         versionNumberLabel.text         = NSLocalizedString("settingsTab.versionNumberLabel.title", comment: "")
         copyrightLabel.text             = NSLocalizedString("settingsTab.copyRightLabel.title", comment: "")
     }
-
+    
     // IB Actions
     @IBAction func MedicinesUpdateButtonTapped(_ sender: CustomSettingsButton) {
-        if 1 == 1 {
-            let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: "A gyógyszerek listája hamarosan frissülni fog!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("cancelMessage", comment: ""), style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Értettem", style: .destructive, handler: { (action) -> Void in
-                self.medicinesUpdateButton.shake()
-            }))
-            self.present(alert, animated: true, completion: nil)
-            
-            // Valami történik
-        } else {
-            // Gomb rezgése
-            medicinesUpdateButton.shake()
-            
-            //
-            let alert = UIAlertController(title: "Értesítés!", message: "Gyógyszerek adatbázisa nem tartalmaz frissebb verziót!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Vissza", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: "Jelenleg nincs elérhető új adatbázis!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancelMessage", comment: ""), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("accpetedMessage", comment: ""), style: .destructive, handler: { (action) -> Void in
+            self.medicinesUpdateButton.shake()
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     @IBAction func OtherOptionsButtonTapped(_ sender: CustomSettingsButton) {
-        
-        if 1 == 1 {
-            let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: "Új oldalra fog kerülni!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("cancelMessage", comment: ""), style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Értettem", style: .destructive, handler: { (action) -> Void in
-                self.otherOptionsButton.shake()
-            }))
-            self.present(alert, animated: true, completion: nil)
-            
-            // Valami történik
-            
-        } else {
-            otherOptionsButton.shake()
-            let alert = UIAlertController(title: "Értesítés!", message: "Továbbfejlesztés alatt...", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Vissza", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        let alert = UIAlertController(title: NSLocalizedString("informationMassage", comment: ""), message: "Továbbfejlesztésre váró funkció!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("cancelMessage", comment: ""), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("accpetedMessage", comment: ""), style: .destructive, handler: { (action) -> Void in
+            self.otherOptionsButton.shake()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
