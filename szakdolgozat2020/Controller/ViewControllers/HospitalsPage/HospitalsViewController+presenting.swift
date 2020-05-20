@@ -6,38 +6,43 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import Foundation
 import UIKit
 import CoreLocation
 
+// HospitlasPresenting protocol
 protocol HospitalsPresenting {
-    func displayTitle(by pageSource: PageSource)
+    func displayTitle()
     func display(_ hospitals: [HospitalModel])
 }
 
 // MARK: - HospitalsPrenting
 
+// HospitalsPresenting protocol for extension implement here
 extension HospitalsViewController: HospitalsPresenting {
     
+    // Variables
     var presenter: HospitalsPresenting {
         self
     }
     
-    func displayTitle(by pageSource: PageSource) {
-        if pageSource == .hospitals {
-            title = NSLocalizedString("hospitalsTab.title", comment: "")
-        }
+    // Set the page title here
+    func displayTitle() {
+        title = NSLocalizedString("hospitalsTab.title", comment: "")
     }
     
+    // Displaying the hospitalModel array here
     func display(_ hospitals: [HospitalModel]) {
         self.hospitals = hospitals
-        calculate()
+        calculateDistance()
         hospitalTableView.reloadData()
     }
 }
 
 //MARK: - UITableViewDataSource
 
+// UITableViewDataSource delegate implement here
 extension HospitalsViewController: UITableViewDataSource {
     
     // Number of raw in a section

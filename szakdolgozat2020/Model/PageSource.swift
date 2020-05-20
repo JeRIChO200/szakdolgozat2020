@@ -6,8 +6,6 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
-
 // Enum of page sources
 enum PageSource {
     case medicines, favourites, protocols, hospitals

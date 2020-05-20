@@ -22,6 +22,9 @@
 "medicineDetailWarningButton.title"             = "Ellenjavallat, figyelmeztetések";
 "medicineDetailDosageButton.title"              = "Adagolás";
 "medicineDosage.title"                          = "Adagolás";
+"medicineDosageWeight.title"                    = "Testsúly";
+"medicineDosageDosage.title"                    = "Adagolás";
+"medicineDosageWeightDelete.title"              = "Testsúly törlése";
 
 // Favourites
 "favouritesTab.title"                           = "Kedvencek";
@@ -38,7 +41,9 @@
 // Settings
 "settingsTab.title"                             = "Beállítások";
 "settingsTab.updateMedicinesButton.title"       = "Gyógyszerek frissítése";
+"settingsTan.updateMedicinesAlertTitle.title"   = "Jelenleg nincs elérhető új adatbázis!";
 "settingsTab.otherOptionsButton.title"          = "További lehetőségek";
+"settingsTab.otherOptionsAlertTitle.title"      = "Továbbfejlesztésre váró funkció!";
 "settingsTab.contactsLabel.title"               = "Elérhetőségek:";
 "settingsTab.contactsEMailLabel.title"          = "e-mail cím: tothzoltan01181996@gmail.com";
 "settingsTab.contactsPhoneNumberLabel.title"    = "telefonszám: +36 30 332 1906";

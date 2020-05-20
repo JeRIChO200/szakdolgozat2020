@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ProtocolsControlling {
-    func start(with pageSource: PageSource)
+    func start()
     func gatherProtocols()
 }
 
@@ -22,8 +22,8 @@ extension ProtocolsViewController: ProtocolsControlling {
         self
     }
     
-    func start(with pageSource: PageSource) {
-        presenter.displayTitle(by: protocolArgs.pageSource)
+    func start() {
+        presenter.displayTitle()
         gatherProtocols()
     }
     

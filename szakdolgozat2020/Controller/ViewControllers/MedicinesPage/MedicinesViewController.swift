@@ -17,16 +17,15 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     }
     
     // Variables
-    var medicineArgs = Args(pageSource: .medicines)
+    var args = Args(pageSource: .medicines)
     private(set) lazy var medicineProvier: MedicineProviding = {
         medicineInject()
     }()
     private var filterString: String?
-    
-    /* Swipe right
+
     private(set) lazy var favouriteProvider: FavouriteProviding = {
         favouriteInject()
-    }()*/
+        }() as! FavouriteProviding
     
     // IB Outlets
     @IBOutlet weak var medicineSearchBar: UISearchBar!
@@ -41,7 +40,7 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
-        controller.start(with: medicineArgs.pageSource)
+        controller.start(with: args.pageSource)
         self.dismissKey()
         
         medicineSearchBar.delegate                          = self

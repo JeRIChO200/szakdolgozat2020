@@ -14,10 +14,12 @@ class MedicineTableViewCell: UITableViewCell {
     func display(medicineModel: MedicineModel) {
         
         textLabel?.text                 = medicineModel.medicineName + " - " + medicineModel.package
+        textLabel?.font                 = UIFont.boldSystemFont(ofSize: 20)
         textLabel?.numberOfLines        = 0
         textLabel?.textColor            = Colors.appBlue
         
         detailTextLabel?.text           = medicineModel.activeSubstanceName
+        detailTextLabel?.font           = UIFont(name: "system", size: 14)
         detailTextLabel?.numberOfLines  = 0
         detailTextLabel?.textColor      = .red
         

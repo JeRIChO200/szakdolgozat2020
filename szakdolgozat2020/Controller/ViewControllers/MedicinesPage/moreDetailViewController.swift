@@ -18,10 +18,13 @@ class MoreDetailViewController: UIViewController {
     // Variables
     var medicineDetailArgs = Args(oneMedicineDetail: "")
     
+    @IBOutlet weak var scrollViewDetail: UIScrollView!
     @IBOutlet weak var detailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         detailLabel.text = medicineDetailArgs.oneMedicineDetail
+        //scrollViewDetail.contentLayoutGuide.bottomAnchor.constraint(equalTo: detailLabel.bottomAnchor).isActive = true
     }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import Foundation
 
 // Hospital providing protocol
@@ -15,7 +16,11 @@ protocol HospitalProviding {
 
 // Hospital provider class
 class HospitalProviderFactory {
+    
+    // Variables
     static var mockedIstance: HospitalProviding?
+    
+    // Functions
     class func getInstance() -> HospitalProviding {
         guard mockedIstance == nil else { return mockedIstance! }
         return HospitalProvider()
@@ -24,6 +29,8 @@ class HospitalProviderFactory {
 
 // Hospital provider class
 private class HospitalProvider : HospitalProviding {
+    
+    // Get hospitals here
     func getHospitals(onCompletion: @escaping ([HospitalModel]) -> Void) {
         DispatchQueue.global(qos: .default).async {
             onCompletion([

@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 import CoreLocation
 
@@ -22,7 +23,6 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
     private(set) lazy var hospitalProvider: HospitalProviding = {
         hospitalInject()
     }()
-
     var hospitals = [HospitalModel]()
     
     private var locationManager: CLLocationManager!
@@ -39,7 +39,7 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
         
         setupLocationManager()
         
-        controller.start(with: hospitalArgs.pageSource)
+        controller.start()
         
         informationLabel.text               = NSLocalizedString("hospitalsTab.informationLabel.title", comment: "")
         hospitalTableView.dataSource        = self
@@ -48,6 +48,9 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
         hospitalTableView.rowHeight         = 70.0
     }
     
+    // MARK: - Hospital functions here
+    
+    // Set up our LocationManager
     private func setupLocationManager() {
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager = CLLocationManager()
@@ -58,7 +61,8 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
         }
     }
     
-    func calculate() {
+    // Distance calculate method + sort method called -> Located and sorted locations available after that
+    func calculateDistance() {
         hospitals = hospitals.map {
             HospitalModel(
                 name: $0.name,
@@ -70,6 +74,7 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
         sortHospitalList()
     }
    
+    // Sort the array by distanceFromUser property
     private func sortHospitalList() {
         self.hospitals.sort { (hospital1, hospital2) -> Bool in
             hospital1.distanceFromUser < hospital2.distanceFromUser
@@ -79,10 +84,11 @@ class HospitalsViewController: UIViewController, ProvidingInjecting, UITableView
 
 //MARK: - CLLocationManagerDelegate
 
+// LocationManagerDelegate implement here
 extension HospitalsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lastKnownLocation = locations.last
-        calculate()
+        calculateDistance()
         hospitalTableView.reloadData()
     }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Setting page - UIViewController
@@ -25,6 +26,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         title                           = NSLocalizedString("settingsTab.title", comment: "")
+        
         medicinesUpdateButton.setButtonTitle(NSLocalizedString("settingsTab.updateMedicinesButton.title", comment: ""))
         otherOptionsButton.setButtonTitle(NSLocalizedString("settingsTab.otherOptionsButton.title", comment: ""))
         contactsLabel.text              = NSLocalizedString("settingsTab.contactsLabel.title", comment: "")
@@ -35,17 +37,20 @@ class SettingsViewController: UIViewController {
     }
     
     // IB Actions
+    
+    // This method called, when medicineUpdateButton tapped
     @IBAction func MedicinesUpdateButtonTapped(_ sender: CustomSettingsButton) {
-        let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: "Jelenleg nincs elérhető új adatbázis!", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: NSLocalizedString("settingsTan.updateMedicinesAlertTitle.title", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("cancelMessage", comment: ""), style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: NSLocalizedString("accpetedMessage", comment: ""), style: .destructive, handler: { (action) -> Void in
             self.medicinesUpdateButton.shake()
         }))
         self.present(alert, animated: true, completion: nil)
-        
     }
+    
+    // This method called, when otherOptionsButton tapped
     @IBAction func OtherOptionsButtonTapped(_ sender: CustomSettingsButton) {
-        let alert = UIAlertController(title: NSLocalizedString("informationMassage", comment: ""), message: "Továbbfejlesztésre váró funkció!", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("informationMassage", comment: ""), message: NSLocalizedString("settingsTab.otherOptionsAlertTitle.title", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("cancelMessage", comment: ""), style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: NSLocalizedString("accpetedMessage", comment: ""), style: .destructive, handler: { (action) -> Void in
             self.otherOptionsButton.shake()

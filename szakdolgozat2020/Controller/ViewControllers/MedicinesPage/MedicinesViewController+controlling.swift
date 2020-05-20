@@ -23,7 +23,7 @@ extension MedicinesViewController: MedicinesControlling {
     }
     
     func start(with pageSource: PageSource) {
-        presenter.displayTitle(by: medicineArgs.pageSource)
+        presenter.displayTitle(by: args.pageSource)
         gatherMedicines()
     }
     

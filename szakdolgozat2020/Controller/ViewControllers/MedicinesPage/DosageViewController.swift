@@ -10,9 +10,6 @@ import UIKit
 
 // Dosage page - UIViewController
 class DosageViewController: UIViewController, UITextFieldDelegate {
-    // kg / g
-    
-    
     
     // Struct
     struct Args {
@@ -23,6 +20,8 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     var medicineNameArgs = Args(medicineName: "")
     
     @IBOutlet weak var medicineDosageSubTitle: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var dosageLabel: UILabel!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var dosageRecommendedNumber: UITextField!
     @IBOutlet weak var weightDeleteButton: CustomDosageButton!
@@ -30,7 +29,10 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("medicineDosage.title", comment: "")
-        medicineDosageSubTitle.text = medicineNameArgs.medicineName + " gyógyszer adagolása"
+        medicineDosageSubTitle.text = medicineNameArgs.medicineName
+        weightLabel.text = NSLocalizedString("medicineDosageWeight.title", comment: "")
+        dosageLabel.text = NSLocalizedString("medicineDosageDosage.title", comment: "")
+        weightDeleteButton.setButtonTitle(NSLocalizedString("medicineDosageWeightDelete.title" , comment: ""))
         weightTextField.delegate = self
     }
     

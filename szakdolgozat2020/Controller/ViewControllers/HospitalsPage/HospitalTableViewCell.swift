@@ -6,8 +6,10 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
+// Custom hospital table view cell class
 class HospitalTableViewCell: UITableViewCell{
     
     @IBOutlet weak var hospitalIcon: UIImageView!
@@ -15,14 +17,19 @@ class HospitalTableViewCell: UITableViewCell{
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var secondTitleLabel: UILabel!
     
+    // Display custom cell when hospital table view cell create
     func display(hospitalModel: HospitalModel) {
+        
+        tintColor                   = .red
+        selectionStyle              = UITableViewCell.SelectionStyle.none
+        
         titleLabel.text             = hospitalModel.name
         titleLabel.textColor        = Colors.appBlue
         titleLabel.numberOfLines    = 2
+        
         hospitalIcon.image          = UIImage(named: "hospital.fill")
         hospitalIcon.tintColor      = .red
-        tintColor                   = .red
-        selectionStyle              = UITableViewCell.SelectionStyle.none
+        
         secondTitleLabel.text       = hospitalModel.hospitalSCountry
         secondTitleLabel.font       = UIFont.systemFont(ofSize: 13, weight: .regular)
         secondTitleLabel.textColor  = .red

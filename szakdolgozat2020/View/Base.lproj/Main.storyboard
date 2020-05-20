@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hKI-B4-quW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hKI-B4-quW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -888,27 +888,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-tM-m5s">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cmw-f9-OGr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqN-IJ-ZJp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <constraints>
+                                    <constraint firstItem="jbL-5D-ppC" firstAttribute="bottom" secondItem="GqN-IJ-ZJp" secondAttribute="bottom" id="FRv-4M-3gf"/>
+                                    <constraint firstItem="jbL-5D-ppC" firstAttribute="trailing" secondItem="GqN-IJ-ZJp" secondAttribute="trailing" id="ijR-X1-8fH"/>
+                                    <constraint firstItem="GqN-IJ-ZJp" firstAttribute="top" secondItem="jbL-5D-ppC" secondAttribute="top" id="xBB-5F-VtK"/>
+                                    <constraint firstItem="GqN-IJ-ZJp" firstAttribute="leading" secondItem="jbL-5D-ppC" secondAttribute="leading" id="zcK-qZ-Ypw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="acp-Kq-j71"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="jbL-5D-ppC"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.27450980390000002" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="trailing" secondItem="xAz-tM-m5s" secondAttribute="trailing" id="9Mf-6C-Zcm"/>
-                            <constraint firstItem="xAz-tM-m5s" firstAttribute="leading" secondItem="O6a-gW-Fwg" secondAttribute="leading" id="id7-Zy-j0F"/>
-                            <constraint firstItem="xAz-tM-m5s" firstAttribute="top" secondItem="O6a-gW-Fwg" secondAttribute="top" id="lET-Ks-u2Y"/>
-                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="bottom" secondItem="xAz-tM-m5s" secondAttribute="bottom" id="xhE-MC-Am2"/>
+                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="bottom" secondItem="Cmw-f9-OGr" secondAttribute="bottom" id="5gw-RJ-gZR"/>
+                            <constraint firstItem="Cmw-f9-OGr" firstAttribute="top" secondItem="O6a-gW-Fwg" secondAttribute="top" id="PT2-Vf-ujn"/>
+                            <constraint firstItem="O6a-gW-Fwg" firstAttribute="trailing" secondItem="Cmw-f9-OGr" secondAttribute="trailing" id="Tv6-tY-Fl0"/>
+                            <constraint firstItem="Cmw-f9-OGr" firstAttribute="leading" secondItem="O6a-gW-Fwg" secondAttribute="leading" id="avt-0y-NLc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O6a-gW-Fwg"/>
                     </view>
                     <navigationItem key="navigationItem" id="u5j-9h-wjE"/>
                     <connections>
-                        <outlet property="detailLabel" destination="xAz-tM-m5s" id="ng1-lp-3vF"/>
+                        <outlet property="detailLabel" destination="GqN-IJ-ZJp" id="6TY-kr-U0m"/>
+                        <outlet property="scrollViewDetail" destination="Cmw-f9-OGr" id="xqC-nX-4T7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="job-ET-06k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1032,9 +1047,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="VhK-w5-G8c"/>
                     <connections>
+                        <outlet property="dosageLabel" destination="hj3-kO-UJo" id="QJY-x2-Etf"/>
                         <outlet property="dosageRecommendedNumber" destination="F18-rp-YO6" id="NCu-ql-FmB"/>
                         <outlet property="medicineDosageSubTitle" destination="AXS-M2-liN" id="4Iy-ni-KFE"/>
                         <outlet property="weightDeleteButton" destination="X5m-0a-8D6" id="aV3-pC-j2v"/>
+                        <outlet property="weightLabel" destination="yjD-Ib-NPT" id="SnU-ZZ-HLT"/>
                         <outlet property="weightTextField" destination="UGr-a7-NAN" id="NJN-BM-NTA"/>
                     </connections>
                 </viewController>
@@ -1044,8 +1061,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="46i-iZ-PHs"/>
-        <segue reference="2Xb-C1-i20"/>
+        <segue reference="fNY-q2-jFE"/>
+        <segue reference="ZML-K3-EVM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bandage.fill" catalog="system" width="128" height="116"/>

@@ -6,10 +6,11 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-// Protocol Model Struct
+// ProtocolModel struct
 struct ProtocolModel {
     var name: String
     var url: String
     
+    // Null Object Design Pattern
     static let empty = ProtocolModel(name: "", url: "")
 }

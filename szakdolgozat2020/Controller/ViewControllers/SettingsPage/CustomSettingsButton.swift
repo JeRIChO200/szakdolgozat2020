@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // My custom setting button class
@@ -35,7 +36,7 @@ class CustomSettingsButton: UIButton {
     }
     
     // Button's shadow
-    private func setShadow() {
+    func setShadow() {
         layer.shadowColor   = Colors.appBlue.cgColor
         layer.shadowOffset  = CGSize(width: 0.0, height: 6.0)
         layer.shadowRadius  = 8

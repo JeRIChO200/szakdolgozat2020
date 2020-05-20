@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Protocol page - UIViewController
@@ -35,7 +36,9 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
-        controller.start(with: protocolArgs.pageSource)
+        
+        controller.start()
+        
         self.dismissKey()
         
         protocolSearchBar.delegate                          = self
@@ -56,7 +59,7 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
     func selectionCalculator(protocols: [ProtocolModel]) {
         protocolsDictionary = [:]
         for protocolItem in protocols {
-            let protocolKey = String(protocolItem.name.prefix(1))
+            let protocolKey = String(protocolItem.name.prefix(1).uppercased())
             if var protocolValues = protocolsDictionary[protocolKey] {
                 protocolValues.append(protocolItem)
                 protocolsDictionary[protocolKey] = protocolValues

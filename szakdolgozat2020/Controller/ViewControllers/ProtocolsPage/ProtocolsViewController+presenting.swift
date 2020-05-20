@@ -6,28 +6,32 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import Foundation
 import UIKit
 
+// ProtocolsPresenting protocol
 protocol ProtocolsPresenting {
-    func displayTitle(by pageSource: PageSource)
+    func displayTitle()
     func display(_ protocols: [ProtocolModel])
 }
 
 //MARK: - ProtocolsPresenting
 
+// ProtocolsPresenting protocol for extension implement here
 extension ProtocolsViewController: ProtocolsPresenting {
     
+    // Variables
     var presenter: ProtocolsPresenting {
         self
     }
     
-    func displayTitle(by pageSource: PageSource) {
-        if pageSource == .protocols {
-            title = NSLocalizedString("protocolsTab.title", comment: "")
-        }
+    // Set the page title here
+    func displayTitle() {
+        title = NSLocalizedString("protocolsTab.title", comment: "")
     }
     
+    // Displaying the hospitalModel array here
     func display(_ protocols: [ProtocolModel]) {
         self.protocols = protocols
         self.protocols.sort { (protocolModel1, protocolModel2) -> Bool in

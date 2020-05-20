@@ -63,9 +63,16 @@ extension MedicinesViewController: UITableViewDataSource {
     // Swipe to right
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
+        guard !(medicineProvier is FavouriteProviding) else { return nil }
+        
         let action = UIContextualAction(style: .normal, title: "Show") { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            // Mi történjen ha jobbra húzza az adott sort
+            let key = self.sectionLetters[indexPath.section]
+            if let medicine = self.medicinesDictionary[key]?[indexPath.row] {
+                self.favouriteProvider.add(medicineID: medicine.medicineID)
+            }
+            success(true)
         }
+        
         action.image = UIImage(systemName: "plus")
         action.backgroundColor = Colors.appBlue
         

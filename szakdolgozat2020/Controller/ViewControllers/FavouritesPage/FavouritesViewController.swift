@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Favourite page - UIViewController
@@ -45,7 +46,6 @@ extension FavouritesViewController {
     }
     
     @objc func dismissKeyboard() {
-        favouriteSearchBar.text         = ""
         view.endEditing(true)
     }
 }
@@ -55,7 +55,6 @@ extension FavouritesViewController {
 extension FavouritesViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        favouriteSearchBar.text = ""
         favouriteSearchBar.resignFirstResponder()
     }
 }
