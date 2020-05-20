@@ -19,13 +19,13 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     // Variables
     var args = Args(pageSource: .medicines)
     private(set) lazy var medicineProvier: MedicineProviding = {
-        medicineInject()
+        medicineInject(pageSource: args.pageSource)
     }()
     private var filterString: String?
 
     private(set) lazy var favouriteProvider: FavouriteProviding = {
         favouriteInject()
-        }() as! FavouriteProviding
+    }()
     
     // IB Outlets
     @IBOutlet weak var medicineSearchBar: UISearchBar!
@@ -40,6 +40,11 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if navigationController is FavouritesNavigationController {
+            args.pageSource = .favourites
+        }
+        
         controller.start(with: args.pageSource)
         self.dismissKey()
         

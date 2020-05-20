@@ -15,13 +15,16 @@ protocol ProvidingInjecting {}
 extension ProvidingInjecting {
     
     // Inject medicines
-    func medicineInject() -> MedicineProviding {
-        MedicineProviderFactory.getIstance()
+    func medicineInject(pageSource: PageSource) -> MedicineProviding {
+        if pageSource == .medicines {
+            return MedicineProviderFactory.getIstance()
+        }
+        return favouriteInject()
     }
     
     // Inject favourites
-    func favouriteInject() -> MedicineProviding {
-        FavouriteProvider(medicineProvider: medicineInject())
+    func favouriteInject() -> FavouriteProvider {
+        FavouriteProvider(medicineProvider: medicineInject(pageSource: PageSource.medicines))
     }
     
     // Inject protocols

@@ -14,10 +14,11 @@ class MedicineDetailsViewController: UIViewController {
     // Struct
     struct Args {
         var medicineModel: MedicineModel
+        var pageSource: PageSource
     }
     
     // Variables
-    var medicineDetailArgs = Args(medicineModel: MedicineModel.empty)
+    var medicineDetailArgs = Args(medicineModel: MedicineModel.empty, pageSource: .medicines)
     
     // IB Outlets
     @IBOutlet weak var medicineDetailView: UIView!
@@ -44,6 +45,10 @@ class MedicineDetailsViewController: UIViewController {
         warningDetailButton.setButtonTitle(NSLocalizedString("medicineDetailWarningButton.title", comment: ""))
         dosageButton.setButtonTitle(NSLocalizedString("medicineDetailDosageButton.title", comment: ""))
         medicineDetailView.backgroundColor  = .white
+        
+        if medicineDetailArgs.pageSource == .favourites {
+            navigationItem.rightBarButtonItem = nil
+        }
         
     }
     

@@ -22,9 +22,18 @@ extension MedicinesViewController: MedicinesPresenting {
         self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if args.pageSource == .favourites {
+            gatherMedicines()
+        }
+    }
+    
     func displayTitle(by pageSource: PageSource) {
         if pageSource == .medicines {
             title = NSLocalizedString("medicinesTab.title", comment: "")
+        } else {
+            title = NSLocalizedString("favouritesTab.title", comment: "")
         }
     }
     
@@ -63,7 +72,7 @@ extension MedicinesViewController: UITableViewDataSource {
     // Swipe to right
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        guard !(medicineProvier is FavouriteProviding) else { return nil }
+        guard args.pageSource == .medicines else { return nil }
         
         let action = UIContextualAction(style: .normal, title: "Show") { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             let key = self.sectionLetters[indexPath.section]
@@ -77,6 +86,28 @@ extension MedicinesViewController: UITableViewDataSource {
         action.backgroundColor = Colors.appBlue
         
         return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    // Törlés
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        guard args.pageSource == .favourites else { return }
+        
+        if editingStyle == .delete {
+            let alert = UIAlertController(title: "Kedvenc törlése", message: "Biztosan törli a kedvencek közül? (Csak a kedvencek közül törlődik, a gyógyszerek közül nem.)", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Igen", style: .destructive, handler: { (action) -> Void in
+                let key = self.sectionLetters[indexPath.section]
+                if let medicineModel = self.medicinesDictionary[key]?[indexPath.row] {
+                    self.favouriteProvider.remove(medicineID: medicineModel.medicineID)
+                    self.gatherMedicines()
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "Nem", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else if editingStyle == .delete {
+            print("hello")
+        }
     }
     
     // Header - Letters
@@ -103,6 +134,7 @@ extension MedicinesViewController: UITableViewDataSource {
             return
         }
         medicineDetailViewer.medicineDetailArgs.medicineModel = medicineDetailModel
+        medicineDetailViewer.medicineDetailArgs.pageSource = args.pageSource
     }
     
     // Right side - Section's number
