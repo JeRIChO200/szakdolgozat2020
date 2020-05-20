@@ -6,7 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
+// Imports
 import UIKit
 
 class CustomMedicineDetailsButton: UIButton {
@@ -32,5 +32,4 @@ class CustomMedicineDetailsButton: UIButton {
     func setButtonTitle(_ title: String?) {
         setTitle(title, for: .normal)
     }
-    
 }

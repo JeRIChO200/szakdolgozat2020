@@ -23,8 +23,6 @@ class MoreDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         detailLabel.text = medicineDetailArgs.oneMedicineDetail
-        //scrollViewDetail.contentLayoutGuide.bottomAnchor.constraint(equalTo: detailLabel.bottomAnchor).isActive = true
     }
 }

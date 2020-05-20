@@ -753,6 +753,9 @@
                     <navigationItem key="navigationItem" id="iwr-Rq-9Nk">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus.app" catalog="system" landscapeImage="plus.app" largeContentSizeImage="plus.app" id="GXI-4x-ble">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addToFavourites:" destination="nMd-tp-AKK" id="omS-1v-aye"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

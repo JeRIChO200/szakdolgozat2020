@@ -6,16 +6,21 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Medicines details page - UIViewController
-class MedicineDetailsViewController: UIViewController {
+class MedicineDetailsViewController: UIViewController, ProvidingInjecting {
     
     // Struct
     struct Args {
         var medicineModel: MedicineModel
         var pageSource: PageSource
     }
+    
+    private(set) lazy var favouriteProvider: FavouriteProviding = {
+        favouriteInject()
+    }()
     
     // Variables
     var medicineDetailArgs = Args(medicineModel: MedicineModel.empty, pageSource: .medicines)
@@ -48,26 +53,18 @@ class MedicineDetailsViewController: UIViewController {
         
         if medicineDetailArgs.pageSource == .favourites {
             navigationItem.rightBarButtonItem = nil
+        } else {
+            
         }
-        
     }
     
-    // functions
+    // Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailViewer = segue.destination as? MoreDetailViewController, let detail = sender as? String {
             detailViewer.medicineDetailArgs.oneMedicineDetail = detail
         } else if let dosageViewer = segue.destination as? DosageViewController, let detail = sender as? String {
             dosageViewer.medicineNameArgs.medicineName = detail
         }
-        /*
-        guard let detailViewer = segue.destination as? MoreDetailViewController, let detail = sender as? String else {
-            return
-        }
-        detailViewer.medicineDetailArgs.oneMedicineDetail = detail
-        guard let dosageViewer = segue.destination as? DosageViewController, let dosageDetail = sender as? String else {
-            return
-        }
-        dosageViewer*/
     }
     
     // IB Actions
@@ -80,8 +77,10 @@ class MedicineDetailsViewController: UIViewController {
     @IBAction func warningDetailButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "showDetail", sender: medicineDetailArgs.medicineModel.warningsContraindications)
     }
-    
     @IBAction func dosageButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "showDosagePage", sender: medicineDetailArgs.medicineModel.medicineName)
+    }
+    @IBAction func addToFavourites(_ sender: Any) {
+        favouriteProvider.add(medicineID: medicineDetailArgs.medicineModel.medicineID)
     }
 }
