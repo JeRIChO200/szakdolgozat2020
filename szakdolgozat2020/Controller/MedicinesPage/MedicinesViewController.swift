@@ -37,7 +37,7 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     var sectionLetters                                      = [String]()
     var medicines                                           = [MedicineModel]()
     
-    // viewDidLoad func
+    // viewDidLoad method
     override func viewDidLoad() {
         super.viewDidLoad()
         

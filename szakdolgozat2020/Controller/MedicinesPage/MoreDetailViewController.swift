@@ -21,6 +21,7 @@ class MoreDetailViewController: UIViewController {
     @IBOutlet weak var scrollViewDetail: UIScrollView!
     @IBOutlet weak var detailLabel: UILabel!
     
+    // viewDidLoad Function
     override func viewDidLoad() {
         super.viewDidLoad()
         detailLabel.text = medicineDetailArgs.oneMedicineDetail

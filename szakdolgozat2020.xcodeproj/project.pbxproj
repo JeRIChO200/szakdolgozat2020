@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		6B3757E4246DA256007364EF /* PageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E3246DA256007364EF /* PageSource.swift */; };
 		6B3757E8246DA6DB007364EF /* MedicineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E7246DA6DB007364EF /* MedicineProvider.swift */; };
-		6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */; };
-		6B3757EC246DF7E6007364EF /* FavouritesViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */; };
-		6B3757EE246DF7FE007364EF /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757ED246DF7FE007364EF /* FavouriteTableViewCell.swift */; };
 		6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */; };
 		6B3757F2246E09B8007364EF /* HospitalsViewController+controlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */; };
 		6B3757F4246E09CF007364EF /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */; };
@@ -54,7 +51,6 @@
 		6BDFF7D2245774DE002A75F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7D1245774DE002A75F2 /* Assets.xcassets */; };
 		6BDFF7D5245774DE002A75F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDFF7D3245774DE002A75F2 /* LaunchScreen.storyboard */; };
 		6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */; };
-		6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */; };
 		6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E724578BAB002A75F2 /* ProtocolsViewController.swift */; };
 		6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */; };
 		6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */; };
@@ -73,9 +69,6 @@
 /* Begin PBXFileReference section */
 		6B3757E3246DA256007364EF /* PageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSource.swift; sourceTree = "<group>"; };
 		6B3757E7246DA6DB007364EF /* MedicineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineProvider.swift; sourceTree = "<group>"; };
-		6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+presenting.swift"; sourceTree = "<group>"; };
-		6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+controlling.swift"; sourceTree = "<group>"; };
-		6B3757ED246DF7FE007364EF /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
 		6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+presenting.swift"; sourceTree = "<group>"; };
 		6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HospitalsViewController+controlling.swift"; sourceTree = "<group>"; };
 		6B3757F3246E09CF007364EF /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,7 +116,6 @@
 		6BDFF7D4245774DE002A75F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BDFF7D6245774DE002A75F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicinesViewController.swift; sourceTree = "<group>"; };
-		6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		6BDFF7E724578BAB002A75F2 /* ProtocolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsViewController.swift; sourceTree = "<group>"; };
 		6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalsViewController.swift; sourceTree = "<group>"; };
 		6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -185,33 +177,10 @@
 			path = szakdolgozat2020Tests;
 			sourceTree = "<group>";
 		};
-		6B807DD824696EC100243F37 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				6B807DEB2469910900243F37 /* MedicinesPage */,
-				6B807DEC2469910F00243F37 /* FavouritesPage */,
-				6B807DE82469904E00243F37 /* ProtocolsPage */,
-				6B807DED2469911B00243F37 /* HospitalsPage */,
-				6B807DEE2469914100243F37 /* SettingsPage */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		6B807DD924696ECB00243F37 /* NavigationControllers */ = {
-			isa = PBXGroup;
-			children = (
-				6B807DDA24696FDD00243F37 /* MedicinesNavigationController.swift */,
-				6B807DDC24696FEC00243F37 /* FavouritesNavigationController.swift */,
-				6B807DD624696E3800243F37 /* ProtocolsNavigationController.swift */,
-				6B807DDE2469700400243F37 /* HospitalsNavigationController.swift */,
-				6B807DE02469701400243F37 /* SettingsNavigationController.swift */,
-			);
-			path = NavigationControllers;
-			sourceTree = "<group>";
-		};
 		6B807DE82469904E00243F37 /* ProtocolsPage */ = {
 			isa = PBXGroup;
 			children = (
+				6B807DD624696E3800243F37 /* ProtocolsNavigationController.swift */,
 				6BDFF7E724578BAB002A75F2 /* ProtocolsViewController.swift */,
 				6B807DE9246990BA00243F37 /* ProtocolsViewController+presenting.swift */,
 				6B807DEF2469991600243F37 /* ProtocolsViewController+controlling.swift */,
@@ -224,6 +193,7 @@
 		6B807DEB2469910900243F37 /* MedicinesPage */ = {
 			isa = PBXGroup;
 			children = (
+				6B807DDA24696FDD00243F37 /* MedicinesNavigationController.swift */,
 				6BDFF7E324578B64002A75F2 /* MedicinesViewController.swift */,
 				6B478C4B2470160C00BB742D /* MedicinesViewController+presenting.swift */,
 				6B478C4D2470162E00BB742D /* MedicinesViewController+controlling.swift */,
@@ -241,10 +211,7 @@
 		6B807DEC2469910F00243F37 /* FavouritesPage */ = {
 			isa = PBXGroup;
 			children = (
-				6BDFF7E524578B8A002A75F2 /* FavouritesViewController.swift */,
-				6B3757E9246DF7C3007364EF /* FavouritesViewController+presenting.swift */,
-				6B3757EB246DF7E6007364EF /* FavouritesViewController+controlling.swift */,
-				6B3757ED246DF7FE007364EF /* FavouriteTableViewCell.swift */,
+				6B807DDC24696FEC00243F37 /* FavouritesNavigationController.swift */,
 			);
 			path = FavouritesPage;
 			sourceTree = "<group>";
@@ -252,6 +219,7 @@
 		6B807DED2469911B00243F37 /* HospitalsPage */ = {
 			isa = PBXGroup;
 			children = (
+				6B807DDE2469700400243F37 /* HospitalsNavigationController.swift */,
 				6BDFF7E924578BC4002A75F2 /* HospitalsViewController.swift */,
 				6B3757EF246E099D007364EF /* HospitalsViewController+presenting.swift */,
 				6B3757F1246E09B8007364EF /* HospitalsViewController+controlling.swift */,
@@ -263,6 +231,7 @@
 		6B807DEE2469914100243F37 /* SettingsPage */ = {
 			isa = PBXGroup;
 			children = (
+				6B807DE02469701400243F37 /* SettingsNavigationController.swift */,
 				6BDFF7EB24578BD0002A75F2 /* SettingsViewController.swift */,
 				6BACFD27246459BC00DED1A6 /* CustomSettingsButton.swift */,
 			);
@@ -332,8 +301,11 @@
 			isa = PBXGroup;
 			children = (
 				6BDFF7CC245774DD002A75F2 /* MainController.swift */,
-				6B807DD924696ECB00243F37 /* NavigationControllers */,
-				6B807DD824696EC100243F37 /* ViewControllers */,
+				6B807DEB2469910900243F37 /* MedicinesPage */,
+				6B807DEC2469910F00243F37 /* FavouritesPage */,
+				6B807DE82469904E00243F37 /* ProtocolsPage */,
+				6B807DED2469911B00243F37 /* HospitalsPage */,
+				6B807DEE2469914100243F37 /* SettingsPage */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -469,7 +441,6 @@
 				6BDFF7E424578B64002A75F2 /* MedicinesViewController.swift in Sources */,
 				6BDEC6362471B5A800D84731 /* CustomMedicineDetailsButton.swift in Sources */,
 				6BDEC6382471CC2C00D84731 /* FavouriteProvider.swift in Sources */,
-				6B3757EE246DF7FE007364EF /* FavouriteTableViewCell.swift in Sources */,
 				6B45E1252468DA0500D6A8CA /* HospitalModel.swift in Sources */,
 				6B807DE32469791200243F37 /* HospitalProvider.swift in Sources */,
 				6BACFD2C24646F3E00DED1A6 /* Constants.swift in Sources */,
@@ -484,15 +455,12 @@
 				6B807DE724698F0B00243F37 /* ProtocolTableViewCell.swift in Sources */,
 				6B3757E4246DA256007364EF /* PageSource.swift in Sources */,
 				6B807DDD24696FEC00243F37 /* FavouritesNavigationController.swift in Sources */,
-				6B3757EC246DF7E6007364EF /* FavouritesViewController+controlling.swift in Sources */,
 				6B807DF324699CC700243F37 /* ProvidingInjecting.swift in Sources */,
 				6B45E1282468DED700D6A8CA /* MedicineModel.swift in Sources */,
 				6B42C140246F21D0000424F9 /* ProtocolShowViewController.swift in Sources */,
 				6B3757F0246E099D007364EF /* HospitalsViewController+presenting.swift in Sources */,
 				6BDFF7EC24578BD0002A75F2 /* SettingsViewController.swift in Sources */,
 				6BDFF7EA24578BC4002A75F2 /* HospitalsViewController.swift in Sources */,
-				6BDFF7E624578B8A002A75F2 /* FavouritesViewController.swift in Sources */,
-				6B3757EA246DF7C3007364EF /* FavouritesViewController+presenting.swift in Sources */,
 				6BDEC6342471B13100D84731 /* CustomDosageButton.swift in Sources */,
 				6BDFF7E824578BAB002A75F2 /* ProtocolsViewController.swift in Sources */,
 				6BDEC63A2472273F00D84731 /* MoreDetailViewController.swift in Sources */,

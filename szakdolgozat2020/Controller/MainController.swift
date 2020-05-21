@@ -6,18 +6,14 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
-//import ConstantStrings
 
+// MainContoller class
 class MainController: UITabBarController {
-    
-    //var medicinePage: MedicinesViewController!
-    //var favouritePage: FavouritesViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //medicinePage.title = NSLocalizedString("medicinesTab.title", comment: "")
-        //favouritePage.title = NSLocalizedString("favouriteTab.title", comment: "")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,14 +23,5 @@ class MainController: UITabBarController {
         let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: NSLocalizedString("launchMessage", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("accpetedMessage", comment: ""), style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-        
-        /*//Show only once
-        if !UserDefaults.standard.bool(forKey: "hasAlreadyLaunched") {
-            let alert = UIAlertController(title: NSLocalizedString("warningMessage", comment: ""), message: NSLocalizedString("launchMessage", comment: ""), preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("accpetedMessage", comment: ""), style: .default, handler: { (action) -> Void in
-                UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
-            }))
-            self.present(alert, animated: true, completion: nil)
-        }*/
     }
 }
