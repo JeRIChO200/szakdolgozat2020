@@ -49,6 +49,7 @@ extension MedicinesViewController: MedicinesPresenting {
 
 // MARK: - UITableViewDataSource
 
+// UITableViewDataSource protocol implement here
 extension MedicinesViewController: UITableViewDataSource {
     
     // Number of raw in a section
@@ -88,7 +89,7 @@ extension MedicinesViewController: UITableViewDataSource {
         return UISwipeActionsConfiguration(actions: [action])
     }
     
-    // Törlés
+    // Delete func
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         guard args.pageSource == .favourites else { return }

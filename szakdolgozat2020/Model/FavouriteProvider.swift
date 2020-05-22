@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import Foundation
 
 // Favourite providing protocol
@@ -18,11 +19,15 @@ protocol FavouriteProviding: MedicineProviding {
 // Favourite provider class
 class FavouriteProvider: FavouriteProviding {
     
+    // Constants
     let medicineProvider: MedicineProviding
     
+    // Initalizion
     init(medicineProvider: MedicineProviding) {
         self.medicineProvider = medicineProvider
     }
+    
+    // Functions
     func getMedicines(onCompletion: @escaping ([MedicineModel]) -> Void) {
         let favouriteMedicineIDs = loadMedicineIDs()
         medicineProvider.getMedicines {
@@ -31,9 +36,11 @@ class FavouriteProvider: FavouriteProviding {
             }))
         }
     }
+    
     func getFavouriteMedicinesIDs() -> [MedicineID] {
         loadMedicineIDs()
     }
+    
     func add(medicineID: MedicineID) {
         var medicineIDs = loadMedicineIDs()
         
@@ -42,14 +49,17 @@ class FavouriteProvider: FavouriteProviding {
             saveMedicineIDs(medicineIDs: medicineIDs)
         }
     }
+    
     func remove(medicineID: MedicineID) {
         var medicineIDs = loadMedicineIDs()
         medicineIDs.removeAll(where: { $0 == medicineID})
         saveMedicineIDs(medicineIDs: medicineIDs)
     }
+    
     private func loadMedicineIDs() -> [MedicineID] {
         UserDefaults.standard.object(forKey: "favourites") as? [MedicineID] ?? []
     }
+    
     private func saveMedicineIDs(medicineIDs: [MedicineID]) {
         UserDefaults.standard.set(medicineIDs, forKey: "favourites")
     }

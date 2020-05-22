@@ -9,6 +9,7 @@
 // Imports
 import UIKit
 
+// CustomMedicineDetailsButton class
 class CustomMedicineDetailsButton: UIButton {
     
     // Initializing

@@ -6,11 +6,13 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Medicine Table View Cell
 class MedicineTableViewCell: UITableViewCell {
     
+    // Functions
     func display(medicineModel: MedicineModel) {
         
         textLabel?.text                 = medicineModel.medicineName + " - " + medicineModel.package

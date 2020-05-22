@@ -12,6 +12,7 @@ import UIKit
 // Custom hospital table view cell class
 class HospitalTableViewCell: UITableViewCell{
     
+    // IB Outlets
     @IBOutlet weak var hospitalIcon: UIImageView!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

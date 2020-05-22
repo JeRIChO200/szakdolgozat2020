@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Medicines page - UIViewController
@@ -21,11 +22,10 @@ class MedicinesViewController: UIViewController, ProvidingInjecting, UITableView
     private(set) lazy var medicineProvier: MedicineProviding = {
         medicineInject(pageSource: args.pageSource)
     }()
-    private var filterString: String?
-
     private(set) lazy var favouriteProvider: FavouriteProviding = {
         favouriteInject()
     }()
+    private var filterString: String?
     
     // IB Outlets
     @IBOutlet weak var medicineSearchBar: UISearchBar!

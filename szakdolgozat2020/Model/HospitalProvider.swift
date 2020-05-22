@@ -34,7 +34,9 @@ private class HospitalProvider : HospitalProviding {
     func getHospitals(onCompletion: @escaping ([HospitalModel]) -> Void) {
         DispatchQueue.global(qos: .default).async {
             onCompletion([
+                
                 // Here is the hospital list that you want to display in hospital page
+                
                 HospitalModel(name: "Dr. Kenessey Albert Kórház-Rendelőintézet", hospitalSCountry: "Nógrád", latitude: 48.080474, longitude: 19.311020, distanceFromUser: 0.0),
                 HospitalModel(name: "Szent Lázár Megyei Kórház", hospitalSCountry: "Nógrád", latitude: 48.117368, longitude: 19.814767, distanceFromUser: 0.0),
                 HospitalModel(name: "Szent Margit Kórház", hospitalSCountry: "Budapest - III. Kerület", latitude: 47.540093, longitude: 19.030192, distanceFromUser: 0.0),

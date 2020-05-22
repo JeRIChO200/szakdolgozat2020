@@ -6,8 +6,10 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
+// MoreDetailsViewController class
 class MoreDetailViewController: UIViewController {
     
     // Struct
@@ -18,6 +20,7 @@ class MoreDetailViewController: UIViewController {
     // Variables
     var medicineDetailArgs = Args(oneMedicineDetail: "")
     
+    // IB Outlets
     @IBOutlet weak var scrollViewDetail: UIScrollView!
     @IBOutlet weak var detailLabel: UILabel!
     

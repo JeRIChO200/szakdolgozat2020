@@ -6,20 +6,23 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
+// Imports
 import UIKit
 import WebKit
 
+// ProtocolShowViewController
 class ProtocolShowViewController : UIViewController {
     
-    @IBOutlet weak var pdfWebKit: WKWebView!
-    
+    // Variables
     struct Args {
         var url: String
     }
-    
     var pdfArgs = Args(url: "")
     
+    // IBOutlets
+    @IBOutlet weak var pdfWebKit: WKWebView!
+    
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let url = URL(string: pdfArgs.url) else {

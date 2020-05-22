@@ -56,6 +56,7 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
         protocolTableView.delegate                          = self
     }
     
+    // Functions
     func selectionCalculator(protocols: [ProtocolModel]) {
         protocolsDictionary = [:]
         for protocolItem in protocols {
@@ -84,6 +85,7 @@ class ProtocolsViewController: UIViewController, ProvidingInjecting, UITableView
 
 //MARK: - ProtocolsViewController - #1 Extension: Hide keyboard
 
+// One extension implement here
 extension ProtocolsViewController {
     func dismissKey() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProtocolsViewController.dismissKeyboard))
@@ -98,6 +100,7 @@ extension ProtocolsViewController {
 
 //MARK: - UISearchBarDelegate
 
+// UISearchBarDelegate implement here
 extension ProtocolsViewController: UISearchBarDelegate {
     
     // run when user choose a letter from keyboard -> searchText changed

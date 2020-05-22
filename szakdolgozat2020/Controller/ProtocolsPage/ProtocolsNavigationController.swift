@@ -6,8 +6,10 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
+// ProtocolsNavigationController class
 class ProtocolsNavigationController : UINavigationController {
     
     // viewDidLoad func

@@ -6,11 +6,16 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import Foundation
 
+// MedicinesID typealias
 typealias MedicineID = Int
 
+// MedicineModel struct
 struct MedicineModel : Codable {
+    
+    // Variables
     let medicineID: MedicineID
     let medicineName: String
     let factoryMedicineName: String
@@ -21,6 +26,7 @@ struct MedicineModel : Codable {
     let suggestionForUse: String
     let warningsContraindications: String
     
+    // Null Object Design Pattern
     static var empty = MedicineModel(
         medicineID: 0,
         medicineName: "",

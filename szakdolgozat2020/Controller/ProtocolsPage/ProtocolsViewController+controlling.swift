@@ -6,9 +6,11 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import Foundation
 import UIKit
 
+// ProtocolControlling protocol
 protocol ProtocolsControlling {
     func start()
     func gatherProtocols()
@@ -16,12 +18,15 @@ protocol ProtocolsControlling {
 
 //MARK: - ProtocolsControlling
 
+// ProtocolsControlling protocol implement here
 extension ProtocolsViewController: ProtocolsControlling {
     
+    // Variables
     var controller: ProtocolsControlling {
         self
     }
     
+    // Functions
     func start() {
         presenter.displayTitle()
         gatherProtocols()

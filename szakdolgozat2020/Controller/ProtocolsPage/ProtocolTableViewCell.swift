@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Protocol Table View Cell
@@ -17,6 +18,7 @@ class ProtocolTableViewCell: UITableViewCell {
         textLabel?.numberOfLines    = 2
         
         imageView?.image            = UIImage(systemName: "staroflife.fill")
+        
         tintColor                   = .red
         selectionStyle              = UITableViewCell.SelectionStyle.none
     }

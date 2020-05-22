@@ -6,15 +6,18 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
-import Foundation
+// Imports
 import UIKit
 import AVFoundation
 
+// QRCodeReaderViewController class
 class QRCodeReaderViewController: UIViewController {
     
+    // Variables
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,6 +71,7 @@ class QRCodeReaderViewController: UIViewController {
         }
     }
     
+    // Functions
     func failed() {
         let alert = UIAlertController(title: "Scanner not supported", message: "Please use a device with a camera. Because this device does not support scanning a code", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -100,6 +104,7 @@ class QRCodeReaderViewController: UIViewController {
     }
 }
 
+// AVCaptureMetadataOutputObjectsDelegate protocol implement here
 extension QRCodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession.stopRunning()

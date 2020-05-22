@@ -6,6 +6,7 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import UIKit
 
 // Dosage page - UIViewController
@@ -19,6 +20,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     // Variables
     var medicineNameArgs = Args(medicineName: "")
     
+    // IB Outlets
     @IBOutlet weak var medicineDosageSubTitle: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var dosageLabel: UILabel!
@@ -26,6 +28,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dosageRecommendedNumber: UITextField!
     @IBOutlet weak var weightDeleteButton: CustomDosageButton!
     
+    // viewDidLoad func
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("medicineDosage.title", comment: "")
@@ -36,21 +39,24 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         weightTextField.delegate = self
     }
     
+    // viewDidAppear func
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         weightTextField.becomeFirstResponder()/*
         weightTextField.addTarget(self, action: #Selector(textFieldDidC), for: .editingChanged)*/
     }
     
-    @IBAction func weightDeleteButtonTapped(_ sender: Any) {
-        weightTextField.text = ""
-    }
-    
+    // Functions
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if weightTextField.text == "" {
             dosageRecommendedNumber.text = "0000"
         } else {
             dosageRecommendedNumber.text = weightTextField.text
         }
+    }
+    
+    // IB Actions
+    @IBAction func weightDeleteButtonTapped(_ sender: Any) {
+        weightTextField.text = ""
     }
 }

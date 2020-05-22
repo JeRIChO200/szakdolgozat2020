@@ -8,6 +8,8 @@
 
 // HospitalModel struct
 struct HospitalModel {
+    
+    // Variables
     var name: String
     var hospitalSCountry: String
     var latitude: Double
