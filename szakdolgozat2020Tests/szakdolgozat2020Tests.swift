@@ -6,8 +6,10 @@
 //  Copyright © 2020. Tóth Zoltán. All rights reserved.
 //
 
+// Imports
 import XCTest
 
+// Test of szakdolgozat2020
 class szakdolgozat2020Tests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -29,4 +31,6 @@ class szakdolgozat2020Tests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    // Tests here
 }
